@@ -1,6 +1,6 @@
 {
   "captured_at_manila": "2026-11-08T19:40:58+08:00",
-  "reviewed_file_count": 160,
+  "reviewed_file_count": 169,
   "commit_groups": [
     {
       "group": 1,
@@ -186,8 +186,17 @@
         "submissions/week-13/reports/reflection-preparation.pdf",
         "submissions/week-13/screenshots/PENDING_CAPTURES.md",
         "submissions/week-13/screenshots/app/APP-00-running-login-desktop.png",
+        "submissions/week-13/screenshots/app/APP-01-student-request-success-desktop.png",
+        "submissions/week-13/screenshots/app/APP-02-adviser-confirmation.png",
+        "submissions/week-13/screenshots/app/APP-03-adviser-action-item.png",
+        "submissions/week-13/screenshots/app/APP-04-validation-error.png",
+        "submissions/week-13/screenshots/app/APP-05-coordinator-manual-review.png",
+        "submissions/week-13/screenshots/app/APP-06-coordinator-metrics.png",
+        "submissions/week-13/screenshots/app/APP-07-narrow-layout.png",
+        "submissions/week-13/screenshots/app/APP-08-tablet-layout.png",
         "submissions/week-13/screenshots/source/SRC-01-laravel-automation.png",
         "submissions/week-13/screenshots/source/SRC-02-flutter-follow-up.png",
+        "submissions/week-13/SUBMISSION_CONTENTS.md",
         "submissions/week-13/source/preparation.md",
         "submissions/week-13/tests/build-reports.py"
       ]
@@ -206,7 +215,7 @@
     "SA7-automation-report.pdf": 3
   },
   "docx_visual_qa": "verified 2026-11-08 using LibreOffice render and nine-page visual inspection",
-  "browser_source_screenshots": "two actual VS Code source captures completed; one actual user-captured running Flutter login screenshot completed at 2026-11-08T19:39:30+08:00; agent observation of the Flutter origin and connected workflow views remain blocked by saved permission/managed policy",
+  "browser_source_screenshots": "two actual VS Code source captures and nine actual user-supplied running Flutter screenshots completed; connected success, role actions, validation, manual review, desktop, tablet and narrow layouts indexed with actual timestamps and hashes",
   "git_branch": "master",
   "git_remotes": "",
   "git_tags": "",
@@ -216,6 +225,14 @@
   "evidence_file_times_manila": {
     "backend/storage/logs/.gitignore": "2025-02-23T14:49:40+08:00",
     "submissions/week-13/screenshots/app/APP-00-running-login-desktop.png": "2026-11-08T19:39:30+08:00",
+    "submissions/week-13/screenshots/app/APP-01-student-request-success-desktop.png": "2026-11-08T19:51:44+08:00",
+    "submissions/week-13/screenshots/app/APP-02-adviser-confirmation.png": "2026-11-08T19:52:47+08:00",
+    "submissions/week-13/screenshots/app/APP-03-adviser-action-item.png": "2026-11-08T19:53:27+08:00",
+    "submissions/week-13/screenshots/app/APP-04-validation-error.png": "2026-11-08T19:54:24+08:00",
+    "submissions/week-13/screenshots/app/APP-05-coordinator-manual-review.png": "2026-11-08T19:57:18+08:00",
+    "submissions/week-13/screenshots/app/APP-06-coordinator-metrics.png": "2026-11-08T19:57:47+08:00",
+    "submissions/week-13/screenshots/app/APP-07-narrow-layout.png": "2026-11-08T19:58:59+08:00",
+    "submissions/week-13/screenshots/app/APP-08-tablet-layout.png": "2026-11-08T19:59:27+08:00",
     "submissions/week-13/screenshots/source/SRC-01-laravel-automation.png": "2026-11-08T19:21:33+08:00",
     "submissions/week-13/screenshots/source/SRC-02-flutter-follow-up.png": "2026-11-08T19:22:18+08:00",
     "submissions/week-13/logs/backend-tests.txt": "2026-11-08T18:19:52.307476+08:00",

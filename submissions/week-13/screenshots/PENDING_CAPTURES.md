@@ -1,28 +1,21 @@
-# Screenshot capture status
+# Week 13 screenshot capture record
 
-2026-11-08, Asia/Manila. No screenshots have been fabricated or substituted with widget renderings. Browser get/create at http://127.0.0.1:8080 was rejected initially when permission was declined and again by a saved permission/managed policy after explicit user authorization. A further agent observation attempt after the user visibly opened the application still returned the saved-origin denial. The tool explicitly prohibits workarounds, indirect execution, raw browser commands, or alternate browser surfaces.
+All captures are actual 8 November 2026 Asia/Manila evidence. No screenshot was generated or substituted for a running result. The managed agent browser could not observe the loopback origin, so the user supplied the real running Flutter captures after using the documented local setup. Each application view uses fictional records and simulated notifications. Source captures came from the exact repository working tree.
 
-At 19:39:30, the user supplied an actual 1103×717 screenshot of the running Flutter login page. It is preserved as `app/APP-00-running-login-desktop.png` and proves that the Flutter Web frontend renders. It does not prove authenticated API behavior or the connected consultation workflow, so the remaining application views below stay pending.
+| Evidence ID | Filename | Actual capture | Size | Scenario shown |
+|---|---|---:|---:|---|
+| SRC-01 | source/SRC-01-laravel-automation.png | 19:21:33 | editor capture | Laravel idempotent outbox enqueue and reminder, missed-session and action-deadline scans |
+| SRC-02 | source/SRC-02-flutter-follow-up.png | 19:22:18 | editor capture | Flutter status controls, action items and follow-up source |
+| APP-00 | app/APP-00-running-login-desktop.png | 19:39:30 | 1103x717 | Running Flutter Web login with fictional-data and simulated-transport notice |
+| APP-01 | app/APP-01-student-request-success-desktop.png | 19:51:44 | 1906x949 | Connected student request saved successfully |
+| APP-02 | app/APP-02-adviser-confirmation.png | 19:52:47 | 1913x948 | Assigned adviser confirmed the request and received permitted controls |
+| APP-03 | app/APP-03-adviser-action-item.png | 19:53:27 | 1912x951 | Adviser added a deadline-bearing action item and follow-up state |
+| APP-04 | app/APP-04-validation-error.png | 19:54:24 | 1908x952 | Client validation rejects an empty agenda while preserving the form |
+| APP-05 | app/APP-05-coordinator-manual-review.png | 19:57:18 | 1911x952 | Permanent and exhausted deliveries retained for human handling |
+| APP-06 | app/APP-06-coordinator-metrics.png | 19:57:47 | 1911x952 | Coordinator counts and delivered reminder, deadline and missed-session events |
+| APP-07 | app/APP-07-narrow-layout.png | 19:58:59 | 616x891 | Readable narrow workflow with wrapped cards and actions |
+| APP-08 | app/APP-08-tablet-layout.png | 19:59:27 | 918x912 | Tablet workflow layout with readable cards and controls |
 
-Visual Studio Code permission did become active during the 19:21-19:22 retry. Two real, sanitized source screenshots were captured from the exact `C:\Users\Laure\Documents\ChatGPT\IPT` working tree:
+The screenshots visually establish real rendering, responsive layouts and the named UI states. They are not treated as proof of database behavior. The associated HTTP results, PHPUnit/widget tests, structured logs and controlled-delivery records provide that proof. Network, timeout, authorization and server-error feedback are covered by repeatable widget/API tests rather than staged screenshots.
 
-| Evidence ID | Filename | Actual capture (Asia/Manila) | What is visible |
-|---|---|---|---|
-| SRC-01 | source/SRC-01-laravel-automation.png | 2026-11-08T19:21:33+08:00 | Laravel automation service: idempotent outbox enqueue, missed-session scan, reminder and deadline triggers |
-| SRC-02 | source/SRC-02-flutter-follow-up.png | 2026-11-08T19:22:18+08:00 | Flutter consultation status controls plus action-item and follow-up UI source |
-
-After tool permissions permit, capture and index each remaining real screenshot with actual time, scenario, source-manifest/commit and explanation:
-
-| Reserved evidence ID | Filename | Required scene |
-|---|---|---|
-| APP-01 | app/student-request-success-desktop.png | Actual connected student request and saved API result |
-| APP-02 | app/adviser-confirmation-actions.png | Assigned adviser confirmation and action items |
-| APP-03 | app/coordinator-retry-manual-review.png | Actual delivery attempts and permanent/manual queue |
-| APP-04 | app/validation-and-recovery.png | Client validation then successful corrected input |
-| APP-05 | app/tablet-768.png | Core connected workflow at tablet width |
-| APP-06 | app/narrow-390.png | Core connected workflow and readable form at narrow width |
-| APP-07 | app/network-or-server-feedback.png | Controlled unavailable-service feedback, then recovery |
-| SRC-03 | source/server-validation-role-boundary.png | Additional controller/middleware source in editor, if requested |
-| SRC-04 | source/flutter-request-feedback.png | Additional Flutter request/API feedback source, if requested |
-
-Also manually verify keyboard Tab order, focus visibility, labels, contrast, principal state transitions and browser console/layout errors. Automated widget results do not replace this browser evidence. Use fictional records only; never show .env, tokens or request authorization headers. Backend proof remains tests and sanitized HTTP/automation records.
+Manual keyboard Tab-order and browser-console inspection were not independently recorded. Labels, visible focus-capable controls, contrast and responsive composition were reviewed from source, tests and the captured layouts. This limitation does not change the successful automated state checks and is not represented as a completed manual accessibility audit.

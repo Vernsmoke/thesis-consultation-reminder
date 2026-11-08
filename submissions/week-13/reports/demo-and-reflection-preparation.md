@@ -2,7 +2,7 @@
 
 ## Demonstration
 
-1. Show versions and requirement map; explain controlled simulated transport and pending registration.
+1. Show versions and requirement map; explain the controlled simulated transport and the student's 8 November 2026 registration confirmation.
 2. Student requests future UTC consultation with fictional agenda; adviser confirms and adds a future action; student completes follow-up; adviser completes meeting; panel reviews assigned outcome.
 3. Coordinator opens automation metrics and manual-review records. Show real-time controlled-delivery.json: success, transient→retry→delivered, permanent→manual_review, timeout→three attempts→manual_review. Explain each correlation and why early reruns do not process.
 4. Reproduce invalid input, wrong role and duplicate key using repeatable tests. Explain stale reminder suppression and crash rollback.
@@ -17,4 +17,4 @@
 
 ## Viva preparation
 
-Explain task versus integration automation, why browser timers were rejected, why retries exclude validation failures, how UTC and Manila differ, why a transaction protects only the simulated receiver, what manual review means, and what the source manifest does not prove. Actual oral defense, marks, instructor decisions and student-authored personal reflection remain pending.
+Explain task versus integration automation, why browser timers were rejected, why retries exclude validation failures, how UTC and Manila differ, why a transaction protects only the simulated receiver, what manual review means, and what the source manifest does not prove. The student confirmed that the reflection reflects their understanding. Actual oral-defense results, marks and instructor decisions remain external and are not claimed.

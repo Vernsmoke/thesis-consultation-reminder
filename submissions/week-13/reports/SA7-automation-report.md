@@ -18,7 +18,7 @@ The selected hybrid handles human state changes through validated API calls and 
 
 ## Evidence scope
 
-The portfolio contains implementation source, configuration examples, repeatable tests, sanitized execution records, editable diagrams, decisions and recovery guidance. Tests cover successful and adverse paths. Real browser demonstration and source screenshots are still pending because the automation permission gates rejected access. A successful web compilation and widget tests do not establish observed browser usability.
+The portfolio contains implementation source, configuration examples, repeatable tests, sanitized execution records, editable diagrams, decisions and recovery guidance. Tests cover successful and adverse paths. Real source captures and user-supplied running Flutter screenshots preserve the request, confirmation, action-item, validation, manual-review, desktop, tablet and narrow-layout states. Automated tests and HTTP/log evidence remain the behavioral proof behind those visual records.
 
 # Reliable Execution and Protected Configuration
 
@@ -66,4 +66,4 @@ An operator must monitor scheduler exit status, pending age and manual-review co
 
 ## Sources and academic responsibility
 
-Teacher Project 29 and Module 13 define the scope. Official Laravel 12 deployment/scheduling documentation, Flutter responsive design guidance and Microsoft Azure Retry pattern informed implementation decisions; URLs are listed in docs/decisions.md. AI assisted source, tests and documentation with user permission. The student must review, reproduce and explain the work and supply a personal reflection. Project registration, final oral assessment and any marks are unconfirmed.
+Teacher Project 29 and Module 13 define the scope. Official Laravel 12 deployment/scheduling documentation, Flutter responsive design guidance and Microsoft Azure Retry pattern informed implementation decisions; URLs are listed in docs/decisions.md. AI assisted source, tests and documentation with user permission. On 8 November 2026, the student confirmed that the reflection reflects their understanding and that Project 29 registration is approved. Any instructor-prescribed acknowledgment wording, final oral assessment and marks remain outside this report.

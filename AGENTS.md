@@ -42,7 +42,7 @@ Do not expand into thesis document management, grading, plagiarism detection, li
 
 Use fictional or appropriately anonymized data. Never place live credentials, tokens, private keys, real student records, or sensitive logs in source, screenshots, or submissions. Flutter is a public client: confidential service credentials belong on the backend. Clarify whether email/SMS or an approved simulated notification service is expected before choosing a transport that changes the scope.
 
-The guide describes this as an individual project. Preserve individual explainability and acknowledge AI assistance and third-party sources according to course policy. Do not fabricate an individual work history, approval, attendance, stakeholder feedback, or oral-defense result. Project approval/registration, course AI rules, and deadline are not yet confirmed; ask once at Week 13 startup and record the user's answer. Do not claim that approval exists. Avoid repeating questions once answered.
+The guide describes this as an individual project. Preserve individual explainability and acknowledge AI assistance and third-party sources according to course policy. Do not fabricate an individual work history, attendance, stakeholder feedback, or oral-defense result. On 8 November 2026, the user confirmed that AI assistance is fine, that the reflection reflects their understanding, and that Project 29 registration is approved. Any instructor-prescribed acknowledgment wording remains unconfirmed. Avoid repeating answered questions.
 
 ## Repository layout
 

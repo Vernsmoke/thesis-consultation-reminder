@@ -1,6 +1,6 @@
 # REVIEWED WEEK 13 COMMAND RECORD - executed under explicit user authorization on 2026-11-08.
 # The six groups below record the exact paths and commit messages used.
-# Required screenshot and instructor-only evidence remain pending; v1.0.0 was not created.
+# The original six groups and later evidence commits were executed under explicit user authorization.
 Set-Location 'C:/Users/Laure/Documents/ChatGPT/IPT'
 git status --short
 
@@ -72,11 +72,25 @@ git commit -m 'Week 13: prepare SA7 activity reports and milestone handoff'
 # Executed successfully: master pushed by direct URL. No remote was configured.
 git push 'https://github.com/Vernsmoke/thesis-consultation-reminder.git' master
 
-# RELEASE ONLY AFTER missing browser evidence, reflection/approval and source provenance are resolved.
-# Do not tag this incomplete evidence package as a completed milestone yet. Never replace an existing tag.
-# Recheck git tag --list v1.0.0 first; never replace or force an existing tag.
-# git tag -a v1.0.0 -m 'Week 13: automation foundation'
-# git push 'https://github.com/Vernsmoke/thesis-consultation-reminder.git' v1.0.0
+# Final evidence reconciliation group: exact paths only; future-week prompts stay untracked.
+git add -- 'AGENTS.md' 'CHANGELOG.md' 'PROJECT_STATUS.md' 'README.md' 'docs/week-13-git-commands.ps1'
+git add -- 'submissions/week-13/EVIDENCE_INDEX.md' 'submissions/week-13/SUBMISSION_CHECKLIST.md' 'submissions/week-13/SUBMISSION_CONTENTS.md'
+git add -- 'submissions/week-13/reports/SA7-automation-report.docx' 'submissions/week-13/reports/SA7-automation-report.md' 'submissions/week-13/reports/SA7-automation-report.pdf'
+git add -- 'submissions/week-13/reports/activity-1-pattern-selection.docx' 'submissions/week-13/reports/activity-1-pattern-selection.md' 'submissions/week-13/reports/activity-1-pattern-selection.pdf'
+git add -- 'submissions/week-13/reports/activity-2-failure-injection.docx' 'submissions/week-13/reports/activity-2-failure-injection.md' 'submissions/week-13/reports/activity-2-failure-injection.pdf'
+git add -- 'submissions/week-13/reports/demo-and-reflection-preparation.md' 'submissions/week-13/reports/reflection-preparation.docx' 'submissions/week-13/reports/reflection-preparation.md' 'submissions/week-13/reports/reflection-preparation.pdf'
+git add -- 'submissions/week-13/screenshots/PENDING_CAPTURES.md' 'submissions/week-13/screenshots/app/APP-01-student-request-success-desktop.png' 'submissions/week-13/screenshots/app/APP-02-adviser-confirmation.png'
+git add -- 'submissions/week-13/screenshots/app/APP-03-adviser-action-item.png' 'submissions/week-13/screenshots/app/APP-04-validation-error.png' 'submissions/week-13/screenshots/app/APP-05-coordinator-manual-review.png'
+git add -- 'submissions/week-13/screenshots/app/APP-06-coordinator-metrics.png' 'submissions/week-13/screenshots/app/APP-07-narrow-layout.png' 'submissions/week-13/screenshots/app/APP-08-tablet-layout.png'
+git add -- 'submissions/week-13/tests/artifact-checks.json' 'submissions/week-13/tests/build-reports.py' 'submissions/week-13/tests/review-package.py' 'submissions/week-13/tests/source-manifest.json'
+git diff --cached --check
+git diff --cached --stat
+git commit -m 'Week 13: finalize browser evidence and submission readiness'
+git push 'https://github.com/Vernsmoke/thesis-consultation-reminder.git' master
 
-# After source commit confirmation, record its exact hash and prepare the source snapshot using source/preparation.md.
+# Release: executed only after final tests, artifact checks and tag-existence check pass.
+git tag --list v1.0.0
+git tag -a v1.0.0 -m 'Week 13: automation foundation'
+git push 'https://github.com/Vernsmoke/thesis-consultation-reminder.git' v1.0.0
+
 # Future-week prompt files are original user context and deliberately excluded; no teacher documents, secrets, caches or ZIPs included.

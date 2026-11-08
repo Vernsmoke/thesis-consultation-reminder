@@ -1,12 +1,12 @@
-# Week Thirteen Reflection Draft
+# Week Thirteen Reflection
 
 Laurence Matthew B Manuel | BSIT 3A | PFEBSIT 002 | Project 29
 
 Prepared 8 November 2026 | Asia/Manila | Week 13 SA7
 
-## Purpose and review requirement
+## Purpose and review confirmation
 
-This draft answers the Week 13 reflection prompts using verified project evidence. It does not claim instructor approval, an oral defense, or work that has not been reproduced by the student. Before submission, each answer must be read carefully, checked against the cited evidence, and revised if the student cannot explain it in their own words.
+This reflection answers the Week 13 prompts using verified project evidence. On 8 November 2026, I reviewed it and confirmed that it reflects my understanding. It does not claim an oral-defense result, an instructor mark, or production readiness.
 
 ## Decision with greatest effect
 
@@ -30,6 +30,6 @@ The most useful part to demonstrate independently is the request-to-follow-up pa
 
 Before broader use, an authorized maintainer should verify HTTPS, a real notification provider, provider-side idempotency, ambiguous timeout reconciliation, retention rules, and ordinary and peak workloads. These items remain outside Week 13 evidence because the current transport writes controlled database receipts, the application runs on loopback HTTP, and the tests use small local fixtures. An independent alert for an old pending event or a growing manual-review queue is also needed because the failed notification channel cannot be the only warning mechanism.
 
-## Acknowledgment and pending actions
+## Acknowledgment and remaining external actions
 
-AI assisted the implementation, tests, diagrams, and this draft with the user permission recorded for the project. I remain responsible for reviewing the evidence, understanding the source, and explaining the final reflection. DOCX and PDF visual verification completed on 8 November 2026. Project registration, any instructor-prescribed acknowledgment wording, browser screenshots, and the actual oral assessment remain pending. The historical deadline was 30 October 2026; the evidence uses its real execution date of 8 November 2026.
+AI assisted the implementation, tests, diagrams, and reflection with my permission. I reviewed the reflection and confirmed that it reflects my understanding on 8 November 2026. Project registration is approved. Real source and running Flutter screenshots were captured with fictional data and indexed using their actual times. Any instructor-prescribed acknowledgment wording and the actual oral assessment remain external actions. The historical deadline was 30 October 2026; the evidence uses its real execution date of 8 November 2026.

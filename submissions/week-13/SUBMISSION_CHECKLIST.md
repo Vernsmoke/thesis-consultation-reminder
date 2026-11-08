@@ -15,7 +15,7 @@ Prepared 2026-11-08, Asia/Manila, before application implementation. Source: ori
 | T4 | Least privilege, secrets, environment separation, validation, safe logs, rotation, dependency control, auditability | docs/security.md; config examples and tests |
 | T4-C | Security checklist and protected configuration evidence | docs/security.md; evidence index |
 | T5 | Structured logs, correlation, metrics/alerts/dashboard/SLIs; runtime, throughput, error/retry rates, queue depth, change impact and ownership | metrics API; logs; SA7 evaluation |
-| H1.1 | Evidence folder, date/environment/runtime/scope log; feature branch | logs/environment; branch pending user (Git ownership overrides procedure) |
+| H1.1 | Evidence folder, date/environment/runtime/scope log; feature branch | logs/environment; work completed on existing `master` because no feature branch was created before implementation |
 | H1.2 | Actors, trigger, trusted inputs, validation, processing, outputs, dependencies, non-goals | architecture |
 | H1.3 | Data flow/sequence: trust boundaries, credentials, sensitive fields, logs, failures, human points | diagrams |
 | H1.4 | Measurable success/invalid/unauthorized/dependency/recovery criteria | tests/scenarios.md |
@@ -50,14 +50,14 @@ Prepared 2026-11-08, Asia/Manila, before application implementation. Source: ori
 | R3 | Security/reliability: justified/tested controls and residual risk | security; tests |
 | R4 | Documentation: setup, decisions, limits, recovery understandable | README, runbook |
 | R5 | Professional defense: requirements → alternatives → evidence → limitations | preparation; real defense pending |
-| F1 | Decision with greatest reliability/security effect and evidence | evidence-based reflection draft completed; student review pending |
-| F2 | Hardest failure/limitation to reproduce; improve test design | evidence-based reflection draft completed; student review pending |
-| F3 | Independently explainable/modifiable work with exact artifact | draft identifies exact source and verification steps; student reproduction/verification pending |
-| F4 | Next maintainer verification and why outside evidence | evidence-based reflection draft completed |
+| F1 | Decision with greatest reliability/security effect and evidence | student-reviewed reflection identifies the durable outbox and REL-01 |
+| F2 | Hardest failure/limitation to reproduce; improve test design | student-reviewed reflection explains test-clock/session-expiry failure and improvement |
+| F3 | Independently explainable/modifiable work with exact artifact | student-reviewed reflection identifies exact source and verification steps |
+| F4 | Next maintainer verification and why outside evidence | student-reviewed reflection identifies transport, HTTPS, retention and workload gaps |
 | WEB | Modern browser, navigation, desktop/tablet/narrow, client/server validation, eight API feedback states, no client secrets, keyboard/labels/contrast/focus | Flutter source and browser evidence |
 | QC | Exact build/environment/fixtures/time, expected/actual, retain failures, no sensitive data, explain controls/limits at all three stages | evidence index and logs |
-| ETH | Approval/registry, AI/source acknowledgment, no fabricated student contribution/marks/feedback, controlled data | status; acknowledgments; pending external items |
-| PACK | Matching source provenance, no dependencies/live env/caches; archive only after checks/commit confirmation | source/preparation.md; final packaging pending user commit |
+| ETH | Approval/registry, AI/source acknowledgment, no fabricated student contribution/marks/feedback, controlled data | registration and reflection confirmed by user; acknowledgments and limits retained |
+| PACK | Matching source provenance, no dependencies/live env/caches; archive only after checks/commit confirmation | source/preparation.md; confirmed source snapshot and release packaging record |
 
 All activities must answer reproducibility, evidential strength, proportional consequences, and unfinished scope. Module completion also requires the student's independent understanding; automation cannot attest to it.
 
@@ -72,14 +72,14 @@ All activities must answer reproducibility, evidential strength, proportional co
 | T4, T4-C, H1.5, H2.3–H2.4 | Private generated config, .env.example, minimum roles, audit fields; SEC-01 scan/audit and API adverse checks |
 | T5 | Coordinator metrics show pending/manual/delivered/attempt counts; command timing and fixture records evaluated in SA7. Operator alert thresholds documented, no independent alert service or production SLI claim |
 | H1.1, H2.6 | Evidence folder/environment ready; six reviewed commit groups executed under the user explicit exception and master pushed by direct URL; no remote configured |
-| H1.7, H2.7, H3.7, WEB | Implemented and widget-tested; browser execution, screenshots, manual keyboard/focus/contrast and actual connected responsive evidence PENDING due tool permissions |
-| H3.5–H3.6 | README/runbook/decisions/diagrams and demo backup ready; actual browser demo pending |
+| H1.7, H2.7, H3.7, WEB | Implemented and widget-tested; APP-00–APP-08 show actual login, connected success, role actions, validation, manual review, desktop, tablet and narrow layouts. Manual Tab-order/browser-console inspection was not independently recorded and is stated as a limitation |
+| H3.5–H3.6 | README/runbook/decisions/diagrams and backup evidence ready; real application captures support the prepared demonstration. The actual assessed presentation remains an instructor event |
 | A1, A1-O | Activity 1 PDF and editable DOCX produced; three cases/matrix, assumptions/alternatives/consequences and one-page interpretation. Other two cases are comparative examples, not implemented |
 | A2, A2-O | Activity 2 PDF/DOCX produced; actual real-time and repeatable controlled failure evidence, interpretation and source/config links |
-| SA7, AS-15, AS-35, AS-25A, AS-25B | Reports/lab source and evidence prepared; DOCX/PDF visual verification complete; required browser evidence and oral assessment remain pending |
-| R1–R4 | Source/tests/docs provide evidence; no rubric mark assigned; browser usability remains unobserved because managed permissions rejected capture; DOCX/PDF layout verified |
-| R5, F1–F4, ETH | Reflection/viva preparation provided; personal reflection, independent explanation, course registration/acceptance remain pending. User confirmed AI assistance is fine |
-| QC | Timestamped real results, initial failures retained, source hashes and secret/file checks; screenshots unavailable rather than invented |
-| PACK | Confirmed source commit and ignored source-only snapshot complete; master push complete. v1.0.0 tag and final submission ZIP withheld pending screenshot and instructor-only evidence completion |
+| SA7, AS-15, AS-35, AS-25A, AS-25B | Reports/lab source, DOCX/PDF soft copies, execution evidence and real application/source captures complete. Actual oral assessment and marking remain external |
+| R1–R4 | Source/tests/docs and real application captures provide evidence; no rubric mark is assigned; DOCX/PDF and responsive layouts visually verified |
+| R5, F1–F4, ETH | Student confirmed the reflection reflects their understanding, AI assistance is fine and Project 29 registration is approved on 2026-11-08. Actual oral-defense result, marks and any instructor-prescribed AI wording remain external |
+| QC | Timestamped real results, initial failures retained, source/screenshot hashes and secret/file checks; no screenshot fabricated |
+| PACK | Confirmed source commit and ignored source-only snapshot complete; master push complete. Final evidence commit, `v1.0.0` tag and release ZIP follow the final verification recorded in this package |
 
-The application and automated evidence are prepared as far as available access permits. An evidence-based reflection draft is complete, but the student must read it, reproduce the cited behavior, and revise any statement they cannot explain. This folder is not labeled fully submission-ready because real app/source screenshots, project-registration confirmation, student verification and oral/instructor actions remain pending. Four DOCX and four PDF soft copies were rendered and visually verified on 2026-11-08. No future week has been started.
+The Week 13 technical and digital submission package is complete and submission-ready for the available course requirements. The student reviewed and confirmed the reflection, confirmed Project 29 registration, and supplied real running-application evidence. Four DOCX and four PDF soft copies were regenerated, rendered and visually verified on 2026-11-08. The actual submission, oral assessment, instructor marking and any prescribed acknowledgment wording remain external actions and are not fabricated. No future week has been started.

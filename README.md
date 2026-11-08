@@ -1,6 +1,6 @@
 # Thesis Consultation Reminder System
 
-Individual PFEBSIT 002 Project 29, Laurence Matthew B Manuel, BSIT 3A. Week 13 educational prototype: Flutter Web → Laravel API → XAMPP MariaDB, with a controlled simulated notification transport. Project registration remains unconfirmed. Historical deadline October 30, 2026; actual work/evidence November 8, 2026.
+Individual PFEBSIT 002 Project 29, Laurence Matthew B Manuel, BSIT 3A. Week 13 educational prototype: Flutter Web → Laravel API → XAMPP MariaDB, with a controlled simulated notification transport. The user confirmed Project 29 registration on November 8, 2026. Historical deadline October 30, 2026; actual work/evidence November 8, 2026.
 
 ## Requirements and installation
 
@@ -54,6 +54,6 @@ Tests forcibly use the dedicated `_test` schema and roll back fixtures. Never mo
 
 ## Limitations and review
 
-Loopback prototype, simulated delivery only, no production authorization. Full Week 14 HTTPS/authenticated-encryption exercise not included. Browser and source screenshot capture remains pending because managed local-tool permissions rejected access; status and evidence index distinguish unavailable evidence from tests. Week 13 DOCX and PDF soft copies were rendered and visually verified on 2026-11-08. Student must review AI-assisted work and write their own personal reflection. No evidence implies instructor approval, defense completion, grade, or user acceptance.
+Loopback prototype, simulated delivery only, no production authorization. Full Week 14 HTTPS/authenticated-encryption exercise is not included. Actual source captures and user-supplied running Flutter screenshots are indexed for login, connected workflow, validation, manual review, desktop, tablet and narrow layouts. Week 13 DOCX and PDF soft copies were rendered and visually verified on 2026-11-08. The student confirmed that the reflection reflects their understanding and that project registration is approved. No evidence implies an oral-defense result, instructor mark, production approval or real notification delivery.
 
-The user owns all Git operations. Reviewed commands belong in `docs/week-13-git-commands.ps1`; execute only after reviewing file contents and the pending items. Source archives are deferred until a source commit is confirmed; see the submission source preparation instructions.
+The user normally owns Git operations. For this final Week 13 release, the user explicitly authorized the agent to complete the reviewed commit, direct push and `v1.0.0` tag. The exact record is in `docs/week-13-git-commands.ps1`. The source-only archive matches confirmed source commit `4a761a31244c00176f016ffe26ff069118b0f0c9`; see the submission source preparation instructions.

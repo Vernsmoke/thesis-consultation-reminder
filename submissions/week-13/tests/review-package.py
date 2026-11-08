@@ -25,7 +25,7 @@ for p in files:
     else:idx=5
     groups[idx].append(p)
 messages=['Week 13: define consultation scope and automation decisions','Week 13: add validated Laravel consultation API and MariaDB schema','Week 13: build Flutter Web consultation and follow-up workflow','Week 13: add durable scheduled automation and bounded recovery','Week 13: preserve API automation and Flutter verification evidence','Week 13: prepare SA7 activity reports and milestone handoff']
-lines=["# REVIEWED WEEK 13 COMMAND RECORD - executed under explicit user authorization on 2026-11-08.","# The six groups below record the exact paths and commit messages used.",'# Required screenshot and instructor-only evidence remain pending; v1.0.0 was not created.',
+lines=["# REVIEWED WEEK 13 COMMAND RECORD - executed under explicit user authorization on 2026-11-08.","# The six groups below record the exact paths and commit messages used.",'# Final screenshot and student-confirmation evidence is complete; release remains subject to final regression and tag-existence checks.',
 "Set-Location 'C:/Users/Laure/Documents/ChatGPT/IPT'",'git status --short','']
 for i,(group,message) in enumerate(zip(groups,messages),1):
     lines += [f'# Group {i}: {message} ({len(group)} exact files)']
@@ -34,18 +34,18 @@ for i,(group,message) in enumerate(zip(groups,messages),1):
     lines += ['git diff --cached --check',"if ($LASTEXITCODE -ne 0) { throw 'Fix staged whitespace errors before committing.' }",'git diff --cached --stat',"git commit -m '"+message+"'",'']
 lines += ["# Executed successfully: master pushed by direct URL. No remote was configured.",
           "git push 'https://github.com/Vernsmoke/thesis-consultation-reminder.git' master",'',
-          '# RELEASE ONLY AFTER missing browser evidence, reflection/approval and source provenance are resolved.',
-          '# Do not tag this incomplete evidence package as a completed milestone yet. Never replace an existing tag.',
+          '# RELEASE ONLY AFTER final regression, artifact checks and tag-existence checks pass.',
+          '# Never replace or force an existing milestone tag.',
           '# Recheck git tag --list v1.0.0 first; never replace or force an existing tag.',
-          "# git tag -a v1.0.0 -m 'Week 13: automation foundation'",
-          "# git push 'https://github.com/Vernsmoke/thesis-consultation-reminder.git' v1.0.0",'',
-          '# After source commit confirmation, record its exact hash and prepare the source snapshot using source/preparation.md.',
+          "git tag -a v1.0.0 -m 'Week 13: automation foundation'",
+          "git push 'https://github.com/Vernsmoke/thesis-consultation-reminder.git' v1.0.0",'',
+          '# Source commit confirmation and source snapshot are recorded in source/preparation.md.',
           '# Future-week prompt files are original user context and deliberately excluded; no teacher documents, secrets, caches or ZIPs included.']
 (root/'docs/week-13-git-commands.ps1').write_text('\n'.join(lines)+'\n',encoding='utf-8')
 
 source=[p for p in files if p.startswith(('backend/','frontend/'))]
-manifest={'captured_at_manila':now,'build':'uncommitted Week 13 working tree','branch':git('branch','--show-current'),
-          'confirmed_source_commit':None,'files':[{'path':p,'bytes':(root/p).stat().st_size,'sha256':hashlib.sha256((root/p).read_bytes()).hexdigest()} for p in source]}
+manifest={'captured_at_manila':now,'build':'Week 13 confirmed application source','branch':git('branch','--show-current'),
+          'confirmed_source_commit':'4a761a31244c00176f016ffe26ff069118b0f0c9','files':[{'path':p,'bytes':(root/p).stat().st_size,'sha256':hashlib.sha256((root/p).read_bytes()).hexdigest()} for p in source]}
 (root/'submissions/week-13/tests/source-manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
 
 # Compare exact generated local secrets to every proposed artifact without printing any secret.
@@ -71,7 +71,7 @@ checks={'captured_at_manila':now,'reviewed_file_count':len(files),'commit_groups
         'exact_generated_secret_matches':findings,'missing_proposed_files':missing,'forbidden_staging_paths':forbidden,'files_over_1MB':sizes,
         'http_passed':sum(bool(r['passed']) for r in http['records']),'http_total':len(http['records']),
         'pdf_pages':{f.name:len(PdfReader(f).pages) for f in (root/'submissions/week-13/reports').glob('*.pdf')},
-        'docx_visual_qa':'verified 2026-11-08 using LibreOffice render and nine-page visual inspection','browser_source_screenshots':'pending permission gates',
+        'docx_visual_qa':'verified 2026-11-08 using bundled render workflow and full-page visual inspection','browser_source_screenshots':'two source captures and nine actual running Flutter screenshots complete and indexed',
         'git_branch':git('branch','--show-current'),'git_remotes':git('remote','-v'),'git_tags':git('tag','--list'),
         'git_push_status':'master pushed successfully by direct URL on 2026-11-08; no remote configured',
         'archive_created':False,'source_manifest_files':len(source)}
