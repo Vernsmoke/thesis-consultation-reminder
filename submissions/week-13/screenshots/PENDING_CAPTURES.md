@@ -1,6 +1,8 @@
 # Screenshot capture status
 
-2026-11-08, Asia/Manila. No screenshots have been fabricated or substituted with widget renderings. Browser get/create at http://127.0.0.1:8080 was rejected initially when permission was declined and again by a saved permission/managed policy after explicit user authorization. At 19:29, a new visible in-app browser tab was attempted after the prior tab had closed; the origin gate again denied network access before the page could be observed. The tool explicitly prohibits workarounds, indirect execution, raw browser commands, or alternate browser surfaces.
+2026-11-08, Asia/Manila. No screenshots have been fabricated or substituted with widget renderings. Browser get/create at http://127.0.0.1:8080 was rejected initially when permission was declined and again by a saved permission/managed policy after explicit user authorization. A further agent observation attempt after the user visibly opened the application still returned the saved-origin denial. The tool explicitly prohibits workarounds, indirect execution, raw browser commands, or alternate browser surfaces.
+
+At 19:39:30, the user supplied an actual 1103×717 screenshot of the running Flutter login page. It is preserved as `app/APP-00-running-login-desktop.png` and proves that the Flutter Web frontend renders. It does not prove authenticated API behavior or the connected consultation workflow, so the remaining application views below stay pending.
 
 Visual Studio Code permission did become active during the 19:21-19:22 retry. Two real, sanitized source screenshots were captured from the exact `C:\Users\Laure\Documents\ChatGPT\IPT` working tree:
 
@@ -9,7 +11,7 @@ Visual Studio Code permission did become active during the 19:21-19:22 retry. Tw
 | SRC-01 | source/SRC-01-laravel-automation.png | 2026-11-08T19:21:33+08:00 | Laravel automation service: idempotent outbox enqueue, missed-session scan, reminder and deadline triggers |
 | SRC-02 | source/SRC-02-flutter-follow-up.png | 2026-11-08T19:22:18+08:00 | Flutter consultation status controls plus action-item and follow-up UI source |
 
-After tool permissions permit, capture and index each real screenshot with actual time, scenario, source-manifest/commit and explanation:
+After tool permissions permit, capture and index each remaining real screenshot with actual time, scenario, source-manifest/commit and explanation:
 
 | Reserved evidence ID | Filename | Required scene |
 |---|---|---|
