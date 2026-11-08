@@ -1,10 +1,12 @@
 # Week 15 Source Manifest
 
-Status: **working-tree preparation record; not a confirmed source snapshot**.
+Status: **confirmed source snapshot prepared from the Week 15 milestone tag**.
 
 - Baseline commit: `133b0c8` on `master`.
-- Week 15 source/tests/evidence were verified on 2026-11-08 Asia/Manila while uncommitted.
-- Intended milestone tag: `v3.0.0`, to be created by the user only after the reviewed commits.
-- No source ZIP is created yet because copying the current tree and labeling it as the milestone would misstate provenance.
+- Confirmed Week 15 source commit and annotated tag target: `134077c9a7ef13dd607c0bc763c80989144fe9bb` (`v3.0.0`).
+- Archive: local ignored `artifacts/week-15-source-v3.0.0.zip`.
+- Contents: 160 tracked entries from `backend`, `frontend`, `tools`, `docs`, `README.md`, and `CHANGELOG.md` at the exact tag.
+- SHA-256: `73773811e9546e57391d2ca174463f20b9e32bb097d3fe2f8e3a1fa4fdd67157`.
+- Excluded by construction: `.git`, submissions, dependencies/build caches, live `.env`, ignored keyrings/private TLS keys, private fixture values, databases, and temporary renders.
 
-After the user confirms the final source commit, create an ignored archive from that exact commit and exclude `.git`, `vendor`, `.dart_tool`, build/cache output, live `.env`, storage secrets/keyrings/private TLS keys, private fixture values, temporary renders, real data, and submission archives. Preserve lockfiles, migrations, seeders with fictional data, `.env.example`, controlled tests, and run instructions. Record the confirmed commit/tag, entry count, creation time, and SHA-256 here before packaging the final submission.
+The source archive is intentionally ignored and must not be committed. Regenerate it from `v3.0.0` if transferred or lost, and verify the hash before submission.

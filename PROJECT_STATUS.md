@@ -12,11 +12,11 @@
 
 ## Confirmed Git state
 
-- Branch: `master`; current HEAD: `133b0c8` (`docs(status): record Week 14 release`).
+- Branch: `master`; confirmed Week 15 release commit: `134077c9a7ef13dd607c0bc763c80989144fe9bb`.
 - Week 14 annotated tag `v2.0.0` remains at `82f005afcb8e9ec94b83299aeb72f0d210a5a2bd`; Week 15 does not rewrite it.
-- No persistent remote is configured. The intended repository remains `https://github.com/Vernsmoke/thesis-consultation-reminder.git`.
-- Week 15 is an uncommitted working tree based on `133b0c8`. The agent performed no Git staging, commit, tag, push, remote, branch, reset, or clean operation.
-- Reviewed exact-path commit, remote, tag, and push commands are in `docs/week-15-git-commands.ps1`. The user must execute them and then confirm the resulting revision before source packaging.
+- `origin` is configured as `https://github.com/Vernsmoke/thesis-consultation-reminder.git`.
+- Five reviewed Week 15 commits were created under the user's explicit authorization. `master` and annotated tag `v3.0.0` were pushed and verified with `git ls-remote`; the tag resolves to release commit `134077c9a7ef13dd607c0bc763c80989144fe9bb`.
+- Reviewed exact-path commands remain recorded in `docs/week-15-git-commands.ps1`; future-week prompts and temporary QA folders were excluded.
 
 ## Week 15 implementation completed
 
@@ -46,11 +46,9 @@
 
 ## Pending external or user actions
 
-1. Review and run the exact-path Git commands; create the five meaningful commits, annotated `v3.0.0` tag, and branch/tag push. No remote currently exists, so the provided command first adds the intended `origin` if still absent.
-2. Confirm the final Week 15 source commit. Then regenerate a clean ignored source archive and final submission ZIP from that exact revision; current packaging is intentionally deferred.
-3. Apply any instructor-prescribed template or AI acknowledgment wording and complete instructor marking/oral assessment. None was supplied or invented.
-4. Remove the controlled local CA from the user trust store when the local evidence environment is no longer needed.
+1. Apply any instructor-prescribed template or AI acknowledgment wording and complete instructor marking/oral assessment. None was supplied or invented.
+2. Remove the controlled local CA from the user trust store when the local evidence environment is no longer needed.
 
 ## Next action
 
-Week 15 technical work and documents are complete for the controlled local scope. Remain on Week 15 until the user confirms Git/source provenance or explicitly requests Week 16. Do not refresh earlier submission evidence with Week 15 output.
+Week 15 technical work, documents, Git release, and source provenance are complete for the controlled local scope. Remain on Week 15 unless the user explicitly requests Week 16. Do not refresh earlier submission evidence with Week 15 output.
