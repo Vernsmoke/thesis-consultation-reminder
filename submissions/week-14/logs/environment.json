@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-11-08T20:51:43.0608130+08:00",
+  "timezone": "Singapore Standard Time",
+  "source_state": "uncommitted Week 14 working tree based on v1.0.0 (707ef93)",
+  "php": "8.2.12",
+  "laravel": "Laravel Framework 12.71.0",
+  "composer": "Composer version 2.10.2 2026-07-01 11:24:45",
+  "flutter": "3.47.8",
+  "dart": "3.13.7",
+  "database_server": "10.4.32-MariaDB",
+  "openssl_extension": true,
+  "sodium_extension": false,
+  "tls_api": "https://localhost:8443",
+  "flutter_web": "https://localhost:8444"
+}

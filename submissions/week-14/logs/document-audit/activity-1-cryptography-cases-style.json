@@ -1,0 +1,111 @@
+{
+  "input": "C:\\Users\\Laure\\Documents\\ChatGPT\\IPT\\submissions\\week-14\\reports\\activity-1-cryptography-cases.docx",
+  "fonts_by_char_count": {
+    "Consolas": 145,
+    "Aptos": 109
+  },
+  "direct_run_formatting_runs": 58,
+  "direct_paragraph_formatting_paragraphs": 45,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 19,
+      "text": "Example proposal",
+      "style": "Normal"
+    },
+    {
+      "para_index": 20,
+      "text": "Security objective",
+      "style": "Normal"
+    },
+    {
+      "para_index": 21,
+      "text": "Assessment and corrected design",
+      "style": "Normal"
+    },
+    {
+      "para_index": 22,
+      "text": "Operational assumptions and safe adverse behavior",
+      "style": "Normal"
+    },
+    {
+      "para_index": 43,
+      "text": "Criterion",
+      "style": "Normal"
+    },
+    {
+      "para_index": 44,
+      "text": "Selected symmetric AEAD plus HTTPS",
+      "style": "Normal"
+    },
+    {
+      "para_index": 45,
+      "text": "Hybrid encryption and signatures",
+      "style": "Normal"
+    },
+    {
+      "para_index": 61,
+      "text": "PFEBSIT 002  /  PROJECT 29  /  WEEK 14",
+      "style": "Header"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 2,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 7,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 9,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 19,
+        "text": "Example proposal",
+        "style": "Normal"
+      },
+      {
+        "para_index": 20,
+        "text": "Security objective",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 3,
+        "run_text": "Student:",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Section:",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Project:",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Assessment:",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Completed:",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

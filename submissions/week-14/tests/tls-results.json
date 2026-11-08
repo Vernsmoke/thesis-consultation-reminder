@@ -1,0 +1,26 @@
+{
+  "executed_at": "2026-11-08T20:37:12.977247+08:00",
+  "trusted_ca_connection": {
+    "protocol": "TLSv1.3",
+    "cipher": "TLS_AES_256_GCM_SHA384",
+    "subject": [
+      [
+        [
+          "commonName",
+          "localhost"
+        ]
+      ]
+    ],
+    "issuer": [
+      [
+        [
+          "commonName",
+          "Week 14 Local Test CA"
+        ]
+      ]
+    ],
+    "not_after": "Nov 15 12:30:31 2026 GMT"
+  },
+  "missing_trust_anchor_rejected": true,
+  "rejection_reason": "unable to get local issuer certificate"
+}

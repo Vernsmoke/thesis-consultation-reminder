@@ -1,0 +1,106 @@
+{
+  "input": "C:\\Users\\Laure\\Documents\\ChatGPT\\IPT\\submissions\\week-14\\reports\\IA5-secure-data-exchange-build.docx",
+  "fonts_by_char_count": {
+    "Consolas": 779,
+    "Aptos": 110
+  },
+  "direct_run_formatting_runs": 92,
+  "direct_paragraph_formatting_paragraphs": 74,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 23,
+      "text": "Layer",
+      "style": "Normal"
+    },
+    {
+      "para_index": 24,
+      "text": "Week 14 implementation",
+      "style": "Normal"
+    },
+    {
+      "para_index": 45,
+      "text": "Case",
+      "style": "Normal"
+    },
+    {
+      "para_index": 46,
+      "text": "Prediction",
+      "style": "Normal"
+    },
+    {
+      "para_index": 47,
+      "text": "Actual safe behavior",
+      "style": "Normal"
+    },
+    {
+      "para_index": 48,
+      "text": "Evidence",
+      "style": "Normal"
+    },
+    {
+      "para_index": 93,
+      "text": "PFEBSIT 002  /  PROJECT 29  /  WEEK 14",
+      "style": "Header"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 2,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 7,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 11,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 14,
+        "text": "Set-Location 'C:\\Users\\Laure\\Documents\\ChatGPT\\IPT\\backend'\n& 'C:\\xampp\\php\\php.exe' artisan test\n\nSet-Location 'C:\\User",
+        "style": "Normal"
+      },
+      {
+        "para_index": 23,
+        "text": "Layer",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 3,
+        "run_text": "Student:",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Section:",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Project:",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Milestone:",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Executed:",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

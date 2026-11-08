@@ -1,0 +1,116 @@
+{
+  "input": "C:\\Users\\Laure\\Documents\\ChatGPT\\IPT\\submissions\\week-14\\reports\\activity-2-secure-exchange-review.docx",
+  "fonts_by_char_count": {
+    "Consolas": 296,
+    "Aptos": 113
+  },
+  "direct_run_formatting_runs": 98,
+  "direct_paragraph_formatting_paragraphs": 70,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 22,
+      "text": "Review area",
+      "style": "Normal"
+    },
+    {
+      "para_index": 23,
+      "text": "Method",
+      "style": "Normal"
+    },
+    {
+      "para_index": 24,
+      "text": "Actual result",
+      "style": "Normal"
+    },
+    {
+      "para_index": 49,
+      "text": "Evidence ID",
+      "style": "Normal"
+    },
+    {
+      "para_index": 50,
+      "text": "Scenario",
+      "style": "Normal"
+    },
+    {
+      "para_index": 51,
+      "text": "Expected",
+      "style": "Normal"
+    },
+    {
+      "para_index": 52,
+      "text": "Actual",
+      "style": "Normal"
+    },
+    {
+      "para_index": 53,
+      "text": "Outcome",
+      "style": "Normal"
+    },
+    {
+      "para_index": 89,
+      "text": "PFEBSIT 002  /  PROJECT 29  /  WEEK 14",
+      "style": "Header"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 2,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 8,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 15,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 22,
+        "text": "Review area",
+        "style": "Normal"
+      },
+      {
+        "para_index": 23,
+        "text": "Method",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 3,
+        "run_text": "Student:",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Section:",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Project:",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Assessment:",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Executed:",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

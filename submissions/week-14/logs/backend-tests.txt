@@ -1,0 +1,32 @@
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true                                                                                            0.01s
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response                                                                0.22s
+
+   PASS  Tests\Feature\SecureExchangeTest
+  ✓ authenticated envelope is accepted once by assigned adviser                                                  0.59s
+  ✓ altered ciphertext and metadata are rejected without receipt                                                 0.05s
+  ✓ expired envelope is rejected without decryption or receipt                                                   0.05s
+  ✓ invalid and unauthorized requests fail safely                                                                0.05s
+  ✓ wrong key and missing key fail then configuration recovers                                                   0.06s
+  ✓ security logs exclude ciphertext and key material                                                            0.05s
+
+   PASS  Tests\Feature\WorkflowTest
+  ✓ complete workflow and owner follow up                                                                        0.07s
+  ✓ invalid missing and past schedule                                                                            0.07s
+  ✓ unauthenticated expired and wrong credentials                                                                0.07s
+  ✓ forbidden roles and other owner                                                                              0.09s
+  ✓ duplicate key and payload conflict                                                                           0.05s
+  ✓ missing entity invalid transition and role selection                                                         0.05s
+  ✓ success and duplicate worker no duplicate receipt                                                            0.05s
+  ✓ transient failure backoff then recovery                                                                      0.06s
+  ✓ permanent failure manual handling without resend                                                             0.07s
+  ✓ exhausted timeout stops after three attempts                                                                 0.08s
+  ✓ scans cover four automations and are idempotent                                                              0.08s
+  ✓ cancelled reminder is superseded                                                                             0.06s
+  ✓ transaction rolls back receipt if delivery crashes                                                           0.05s
+
+  Tests:    21 passed (199 assertions)
+  Duration: 2.14s

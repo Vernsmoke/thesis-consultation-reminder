@@ -1,0 +1,61 @@
+{
+  "executed_at": "2026-11-08T20:37:08.6417791+08:00",
+  "timezone": "Singapore Standard Time",
+  "base_url": "https://localhost:8443/api",
+  "source_state": "uncommitted Week 14 working tree based on v1.0.0 (707ef93)",
+  "envelope_summary": {
+    "algorithm": "AES-256-GCM",
+    "ciphertext_logged": false,
+    "key_logged": false,
+    "ttl_seconds": 300
+  },
+  "passed": 5,
+  "total": 5,
+  "results": [
+    {
+      "id": "SEC-HTTP-01",
+      "scenario": "authenticated envelope accepted",
+      "expected": 200,
+      "actual": 200,
+      "message": "Secure consultation record accepted.",
+      "correlation_id": "7a8cc30b-a21f-4fe0-bc8c-e243e6e20d62",
+      "time": "2026-11-08T20:37:07.1602529+08:00"
+    },
+    {
+      "id": "SEC-HTTP-02",
+      "scenario": "replay rejected",
+      "expected": 409,
+      "actual": 409,
+      "message": "Envelope was already accepted.",
+      "correlation_id": "af3c600f-12a0-4bed-b5a1-81ca0a4904a7",
+      "time": "2026-11-08T20:37:07.3608903+08:00"
+    },
+    {
+      "id": "SEC-HTTP-03",
+      "scenario": "altered ciphertext rejected",
+      "expected": 422,
+      "actual": 422,
+      "message": "Envelope authentication failed.",
+      "correlation_id": "9ceb34d8-282d-4ae1-9307-0cd860e9a774",
+      "time": "2026-11-08T20:37:07.7854056+08:00"
+    },
+    {
+      "id": "SEC-HTTP-04",
+      "scenario": "unauthorized role rejected",
+      "expected": 403,
+      "actual": 403,
+      "message": "Assigned adviser required.",
+      "correlation_id": "e11a0874-1c89-4d65-9dd1-bc1341aae3b2",
+      "time": "2026-11-08T20:37:08.2047784+08:00"
+    },
+    {
+      "id": "SEC-HTTP-05",
+      "scenario": "invalid envelope rejected",
+      "expected": 422,
+      "actual": 422,
+      "message": "The version field is required. (and 9 more errors)",
+      "correlation_id": "46e4db15-f097-41b1-b935-f7fc03e2b6cf",
+      "time": "2026-11-08T20:37:08.4480483+08:00"
+    }
+  ]
+}

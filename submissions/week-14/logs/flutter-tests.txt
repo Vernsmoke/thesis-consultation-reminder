@@ -1,0 +1,30 @@
+Resolving dependencies...
+Downloading packages...
+  cupertino_icons 1.0.9 (2.0.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.0 (2.4.4 available)
+Got dependencies!
+5 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/api_test.dart
+00:00 +0: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/api_test.dart: Safe API error retains correlation and authorization outcome
+00:00 +1: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/workflow_test.dart: Sign in validates fields before any request
+00:00 +2: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/workflow_test.dart: Sign in validates fields before any request
+00:00 +3: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/workflow_test.dart: Sign in validates fields before any request
+00:01 +4: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/secure_exchange_test.dart: Coordinator prepares ciphertext without a client key
+00:01 +5: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/secure_exchange_test.dart: Coordinator prepares ciphertext without a client key
+00:01 +6: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/secure_exchange_test.dart: Coordinator prepares ciphertext without a client key
+00:01 +7: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/secure_exchange_test.dart: Coordinator prepares ciphertext without a client key
+00:01 +8: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/secure_exchange_test.dart: Coordinator prepares ciphertext without a client key
+00:01 +9: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/connected_states_test.dart: Authenticated consultation and updates fit 768.0
+00:01 +10: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/secure_exchange_test.dart: Assigned adviser receives verified record and sees replay-safe UI
+00:01 +11: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/secure_exchange_test.dart: Assigned adviser receives verified record and sees replay-safe UI
+00:01 +12: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/connected_states_test.dart: HTTP 401 gives visible safe feedback
+00:01 +13: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/secure_exchange_test.dart: Malformed local JSON shows validation feedback before network
+00:01 +14: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/secure_exchange_test.dart: Malformed local JSON shows validation feedback before network
+00:01 +15: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/connected_states_test.dart: HTTP 500 gives visible safe feedback
+00:01 +16: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/connected_states_test.dart: Empty response gives an understandable state
+00:02 +17: C:/Users/Laure/Documents/ChatGPT/IPT/frontend/test/connected_states_test.dart: Pending API request displays loading progress
+00:02 +18: All tests passed!
