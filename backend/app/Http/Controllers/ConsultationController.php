@@ -70,11 +70,23 @@ class ConsultationController extends Controller
 
     public function index(Request $r)
     {
-        return ['data' => $this->visible($r)->orderByDesc('id')->limit(100)->get()->map(function ($c) {
+        $validated = $r->validate([
+            'page' => 'sometimes|integer|min:1|max:10000',
+            'per_page' => 'sometimes|integer|min:1|max:100',
+        ]);
+        $page = (int) ($validated['page'] ?? 1);
+        $perPage = (int) ($validated['per_page'] ?? 100);
+        $visible = $this->visible($r);
+        $total = (clone $visible)->count();
+        $data = $visible->orderByDesc('id')->forPage($page, $perPage)->get()->map(function ($c) {
             $c->action_items = DB::table('action_items')->where('consultation_id', $c->id)->get();
 
             return $c;
-        }), 'directory' => DB::table('users')->whereIn('role', ['adviser', 'panel'])->get(['id', 'name', 'role']),
+        });
+
+        return ['data' => $data,
+            'pagination' => ['page' => $page, 'per_page' => $perPage, 'total' => $total, 'has_more' => $page * $perPage < $total],
+            'directory' => DB::table('users')->whereIn('role', ['adviser', 'panel'])->get(['id', 'name', 'role']),
             'notifications' => DB::table('notification_receipts')->where('recipient_id', $this->actor($r)->id)->orderByDesc('id')->limit(50)->get()->map(function ($n) {
                 $n->payload = json_decode($n->payload, true);
 
@@ -231,6 +243,10 @@ class ConsultationController extends Controller
             'tag' => 'required|string|max:64',
         ]);
         $actor = $this->actor($r);
+        // Reject users who cannot be the declared receiver before doing any
+        // expensive cryptographic work. The authenticated envelope still
+        // verifies the same recipient metadata inside SecureExchange::open.
+        abort_unless($actor->role === 'adviser' && $actor->id === (int) $envelope['recipient_user_id'], 403, 'Assigned adviser required.');
         try {
             $payload = $exchange->open($envelope);
         } catch (HttpException $exception) {
@@ -240,7 +256,6 @@ class ConsultationController extends Controller
             }], $actor->id);
             throw $exception;
         }
-        abort_unless($actor->role === 'adviser' && $actor->id === (int) $envelope['recipient_user_id'], 403, 'Assigned adviser required.');
         abort_unless(($payload['record_type'] ?? null) === 'consultation_summary' && is_int($payload['consultation_id'] ?? null), 422, 'Envelope payload is invalid.');
         $consultation = DB::table('consultations')->find($payload['consultation_id']);
         abort_unless($consultation && $consultation->adviser_id === $actor->id, 403, 'This consultation is outside your assignment.');
