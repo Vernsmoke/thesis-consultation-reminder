@@ -1,5 +1,18 @@
 # Thesis Consultation Reminder System
 
+Week 15 extends the same application with an evidence-linked integration and hardening gate. The verified local working tree passes 24 Laravel tests with 227 assertions, 22 Flutter tests, and 14 live HTTPS API scenarios. Five baseline weaknesses were reproduced, fixed, and retested; the evidence is under `submissions/week-15`.
+
+## Week 15 verification
+
+With the Week 14 local HTTPS services and controlled private fixture password available, run from the repository root:
+
+```powershell
+& 'submissions/week-15/tests/Invoke-Week15Api.ps1'
+& 'submissions/week-15/tests/Run-Week15Verification.ps1'
+```
+
+The first script runs deterministic normal, invalid, boundary, unauthorized, forbidden, not-found, duplicate, pagination, dependency-failure, and recovery cases without exporting credentials. The second reruns Laravel, Flutter, static analysis, release build, Composer audit, secret scanning, and environment capture. See `docs/week-15-test-strategy.md` and `submissions/week-15/tests/traceability-matrix.md` before interpreting the results; the findings apply to the controlled local environment, not production readiness.
+
 Week 14 adds a controlled secure-exchange exercise to the Week 13 workflow. The browser uses local HTTPS, Laravel authenticates and authorizes every request, and the server creates AES-256-GCM envelopes for an assigned adviser without exposing the key to Flutter.
 
 ## Week 14 controlled HTTPS setup

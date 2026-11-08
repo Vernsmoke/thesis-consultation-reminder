@@ -1,5 +1,13 @@
 # Changelog
 
+## Week 15 working tree - Integration testing and security hardening
+
+- Added traceable Laravel, Flutter, live HTTPS, Postman-compatible, failure-injection, and recovery tests for the required normal and adverse paths.
+- Fixed five evidenced weaknesses: silent list truncation, late secure-envelope authorization, unsafe timeout advice, malformed-response classification, and missing browser-facing API policies.
+- Aligned client/server input boundaries, retained the initial failures and a discovered layout regression, and reran the complete backend and Flutter regressions.
+- Added controlled fixtures, test strategy and traceability, defect and hardening records, diagrams, actual screenshots/logs, IA6 and activity reports, reflection, and remaining-risk analysis.
+- Preserved the Week 14 milestone and earlier evidence without refreshing it with Week 15 output.
+
 ## Week 14 working tree - Secure data exchange and encryption
 
 - Added server-only AES-256-GCM consultation envelopes with authenticated metadata, five-minute validity, recipient binding, and database-enforced replay rejection.
