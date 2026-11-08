@@ -71,7 +71,7 @@ All activities must answer reproducibility, evidential strength, proportional co
 | T3, T3-C, H3.1–H3.4 | Retry taxonomy/runbook and REL-01/TEST-01; timeouts are controlled simulated outcomes, external network provider timing not claimed |
 | T4, T4-C, H1.5, H2.3–H2.4 | Private generated config, .env.example, minimum roles, audit fields; SEC-01 scan/audit and API adverse checks |
 | T5 | Coordinator metrics show pending/manual/delivered/attempt counts; command timing and fixture records evaluated in SA7. Operator alert thresholds documented, no independent alert service or production SLI claim |
-| H1.1, H2.6 | Evidence folder/environment ready; branch/commits user-owned and not executed; final grouping commands supplied |
+| H1.1, H2.6 | Evidence folder/environment ready; six reviewed commit groups executed under the user explicit exception and master pushed by direct URL; no remote configured |
 | H1.7, H2.7, H3.7, WEB | Implemented and widget-tested; browser execution, screenshots, manual keyboard/focus/contrast and actual connected responsive evidence PENDING due tool permissions |
 | H3.5–H3.6 | README/runbook/decisions/diagrams and demo backup ready; actual browser demo pending |
 | A1, A1-O | Activity 1 PDF and editable DOCX produced; three cases/matrix, assumptions/alternatives/consequences and one-page interpretation. Other two cases are comparative examples, not implemented |
@@ -80,6 +80,6 @@ All activities must answer reproducibility, evidential strength, proportional co
 | R1–R4 | Source/tests/docs provide evidence; no rubric mark assigned; browser usability remains unobserved because managed permissions rejected capture; DOCX/PDF layout verified |
 | R5, F1–F4, ETH | Reflection/viva preparation provided; personal reflection, independent explanation, course registration/acceptance remain pending. User confirmed AI assistance is fine |
 | QC | Timestamped real results, initial failures retained, source hashes and secret/file checks; screenshots unavailable rather than invented |
-| PACK | Instructions supplied; confirmed source commit/snapshot/tag and final ZIP PENDING user Git actions and evidence completion |
+| PACK | Confirmed source commit and ignored source-only snapshot complete; master push complete. v1.0.0 tag and final submission ZIP withheld pending screenshot and instructor-only evidence completion |
 
 The application and automated evidence are prepared as far as available access permits. An evidence-based reflection draft is complete, but the student must read it, reproduce the cited behavior, and revise any statement they cannot explain. This folder is not labeled fully submission-ready because real app/source screenshots, project-registration confirmation, student verification and oral/instructor actions remain pending. Four DOCX and four PDF soft copies were rendered and visually verified on 2026-11-08. No future week has been started.

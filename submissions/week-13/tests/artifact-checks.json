@@ -1,5 +1,5 @@
 {
-  "captured_at_manila": "2026-11-08T19:12:51.122992+08:00",
+  "captured_at_manila": "2026-11-08T19:14:45.115384+08:00",
   "reviewed_file_count": 157,
   "commit_groups": [
     {
@@ -207,6 +207,7 @@
   "git_branch": "master",
   "git_remotes": "",
   "git_tags": "",
+  "git_push_status": "master pushed successfully by direct URL on 2026-11-08; no remote configured",
   "archive_created": false,
   "source_manifest_files": 87,
   "evidence_file_times_manila": {
