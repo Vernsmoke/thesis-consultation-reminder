@@ -1,0 +1,96 @@
+{
+  "input": "C:\\Users\\Laure\\Documents\\ChatGPT\\IPT\\submissions\\week-15\\reports\\activity-1-traceability-matrix.docx",
+  "fonts_by_char_count": {
+    "Aptos": 1302,
+    "Consolas": 120
+  },
+  "direct_run_formatting_runs": 64,
+  "direct_paragraph_formatting_paragraphs": 57,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 21,
+      "text": "Class",
+      "style": "Normal"
+    },
+    {
+      "para_index": 22,
+      "text": "Representative test",
+      "style": "Normal"
+    },
+    {
+      "para_index": 23,
+      "text": "Expected result",
+      "style": "Normal"
+    },
+    {
+      "para_index": 24,
+      "text": "Actual result and evidence",
+      "style": "Normal"
+    },
+    {
+      "para_index": 73,
+      "text": "PFEBSIT 002   PROJECT 29   WEEK 15",
+      "style": "Header"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 8,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 11,
+        "text": "Run the live HTTPS collection with Invoke-Week15Api.ps1; it reads the private fixture password but never saves it.",
+        "style": "List Number"
+      },
+      {
+        "para_index": 12,
+        "text": "Run Run-Week15Verification.ps1 to execute Laravel, Flutter, analysis, build, audit, and environment capture.",
+        "style": "List Number"
+      },
+      {
+        "para_index": 13,
+        "text": "Compare api-results.json, JUnit XML, and logs with the matrix. Use screenshots only as supporting evidence.",
+        "style": "List Number"
+      },
+      {
+        "para_index": 14,
+        "text": "Reproduce an initial weakness with the named targeted test, inspect the defect record, and confirm the final full regres",
+        "style": "List Number"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 9,
+        "run_text": "tests/traceability-matrix.md",
+        "style": "Normal"
+      },
+      {
+        "para_index": 9,
+        "run_text": "diagrams/test-architecture.mmd",
+        "style": "Normal"
+      },
+      {
+        "para_index": 11,
+        "run_text": "Invoke-Week15Api.ps1",
+        "style": "List Number"
+      },
+      {
+        "para_index": 12,
+        "run_text": "Run-Week15Verification.ps1",
+        "style": "List Number"
+      },
+      {
+        "para_index": 13,
+        "run_text": "api-results.json",
+        "style": "List Number"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

@@ -1,0 +1,5 @@
+[style_lint] direct run-formatting runs: 4
+[style_lint] direct paragraph-formatting paragraphs: 0
+[style_lint] top fonts by char count: Aptos(91), Consolas(45)
+[style_lint] heading-like paragraphs not using Heading styles (first 10):
+  - #13: style='Header' text='PFEBSIT 002   PROJECT 29   WEEK 15'

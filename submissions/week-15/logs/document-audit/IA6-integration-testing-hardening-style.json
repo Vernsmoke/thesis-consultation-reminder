@@ -1,0 +1,111 @@
+{
+  "input": "C:\\Users\\Laure\\Documents\\ChatGPT\\IPT\\submissions\\week-15\\reports\\IA6-integration-testing-hardening.docx",
+  "fonts_by_char_count": {
+    "Aptos": 1250,
+    "Consolas": 141
+  },
+  "direct_run_formatting_runs": 59,
+  "direct_paragraph_formatting_paragraphs": 48,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 30,
+      "text": "Evidence set",
+      "style": "Normal"
+    },
+    {
+      "para_index": 31,
+      "text": "Scope",
+      "style": "Normal"
+    },
+    {
+      "para_index": 32,
+      "text": "Result",
+      "style": "Normal"
+    },
+    {
+      "para_index": 48,
+      "text": "Risk",
+      "style": "Normal"
+    },
+    {
+      "para_index": 49,
+      "text": "Current control",
+      "style": "Normal"
+    },
+    {
+      "para_index": 50,
+      "text": "Residual concern",
+      "style": "Normal"
+    },
+    {
+      "para_index": 51,
+      "text": "Priority",
+      "style": "Normal"
+    },
+    {
+      "para_index": 76,
+      "text": "PFEBSIT 002   PROJECT 29   WEEK 15",
+      "style": "Header"
+    }
+  ],
+  "examples": {
+    "direct_run_formatting": [
+      {
+        "para_index": 7,
+        "run_text": "133b0c8",
+        "style": "Normal"
+      },
+      {
+        "para_index": 14,
+        "run_text": "per_page",
+        "style": "Normal"
+      },
+      {
+        "para_index": 15,
+        "run_text": "initial-failure-record.md",
+        "style": "Normal"
+      },
+      {
+        "para_index": 15,
+        "run_text": "defect-records.md",
+        "style": "Normal"
+      },
+      {
+        "para_index": 15,
+        "run_text": "regression-results.md",
+        "style": "Normal"
+      }
+    ],
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 11,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 23,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 30,
+        "text": "Evidence set",
+        "style": "Normal"
+      },
+      {
+        "para_index": 31,
+        "text": "Scope",
+        "style": "Normal"
+      },
+      {
+        "para_index": 32,
+        "text": "Result",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

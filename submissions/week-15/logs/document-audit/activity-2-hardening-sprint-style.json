@@ -1,0 +1,101 @@
+{
+  "input": "C:\\Users\\Laure\\Documents\\ChatGPT\\IPT\\submissions\\week-15\\reports\\activity-2-hardening-sprint.docx",
+  "fonts_by_char_count": {
+    "Aptos": 912,
+    "Consolas": 33
+  },
+  "direct_run_formatting_runs": 39,
+  "direct_paragraph_formatting_paragraphs": 31,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 19,
+      "text": "Finding",
+      "style": "Normal"
+    },
+    {
+      "para_index": 20,
+      "text": "Rank",
+      "style": "Normal"
+    },
+    {
+      "para_index": 21,
+      "text": "Before",
+      "style": "Normal"
+    },
+    {
+      "para_index": 22,
+      "text": "Change",
+      "style": "Normal"
+    },
+    {
+      "para_index": 23,
+      "text": "After",
+      "style": "Normal"
+    },
+    {
+      "para_index": 49,
+      "text": "PFEBSIT 002   PROJECT 29   WEEK 15",
+      "style": "Header"
+    }
+  ],
+  "examples": {
+    "direct_run_formatting": [
+      {
+        "para_index": 6,
+        "run_text": "training-fixture-weak-config.yaml",
+        "style": "Normal"
+      },
+      {
+        "para_index": 14,
+        "run_text": "Observed facts.",
+        "style": "Normal"
+      },
+      {
+        "para_index": 15,
+        "run_text": "Reasoned conclusion.",
+        "style": "Normal"
+      },
+      {
+        "para_index": 16,
+        "run_text": "Recommendation.",
+        "style": "Normal"
+      },
+      {
+        "para_index": 19,
+        "run_text": "Finding",
+        "style": "Normal"
+      }
+    ],
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 9,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 19,
+        "text": "Finding",
+        "style": "Normal"
+      },
+      {
+        "para_index": 20,
+        "text": "Rank",
+        "style": "Normal"
+      },
+      {
+        "para_index": 21,
+        "text": "Before",
+        "style": "Normal"
+      },
+      {
+        "para_index": 22,
+        "text": "Change",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

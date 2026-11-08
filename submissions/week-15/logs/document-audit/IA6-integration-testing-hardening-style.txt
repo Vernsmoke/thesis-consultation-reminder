@@ -1,0 +1,12 @@
+[style_lint] direct run-formatting runs: 59
+[style_lint] direct paragraph-formatting paragraphs: 48
+[style_lint] top fonts by char count: Aptos(1250), Consolas(141)
+[style_lint] heading-like paragraphs not using Heading styles (first 10):
+  - #30: style='Normal' text='Evidence set'
+  - #31: style='Normal' text='Scope'
+  - #32: style='Normal' text='Result'
+  - #48: style='Normal' text='Risk'
+  - #49: style='Normal' text='Current control'
+  - #50: style='Normal' text='Residual concern'
+  - #51: style='Normal' text='Priority'
+  - #76: style='Header' text='PFEBSIT 002   PROJECT 29   WEEK 15'
