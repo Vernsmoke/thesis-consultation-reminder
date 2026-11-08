@@ -1,67 +1,58 @@
 # Project Status
 
-## Project
+## Project and current milestone
 
 - Student: Laurence Matthew B Manuel
 - Section: BSIT 3A
 - Project: Project 29, Thesis Consultation Reminder System
 - Workspace: `C:/Users/Laure/Documents/ChatGPT/IPT`
-- Current authorized milestone: Week 13 complete and submission-ready for the available technical/digital requirements (2026-11-08 Asia/Manila); do not start Week 14 until requested
-- Required stack: Flutter Web, Laravel API, XAMPP MySQL-compatible database
+- Current authorized milestone: Week 14, SA8 and IA5
+- Week 14 work completed on 2026-11-08 Asia/Manila; the historical 2026-11-06 deadline was not used as an evidence date
+- Required stack: Flutter Web, Laravel API, XAMPP MariaDB/MySQL-compatible database
 
 ## Confirmed Git state
 
-- Repository initialized on branch `master`
-- Ten reviewed Week 13 commits currently exist through `8f50df79874f3824bfb20454b2a10257d77f1a29`; confirmed application source revision is `4a761a31244c00176f016ffe26ff069118b0f0c9`
-- No remote currently configured
-- `master` pushed successfully by direct URL to `https://github.com/Vernsmoke/thesis-consultation-reminder.git` on 2026-11-08
-- Standing ownership assigns Git mutations to the user. On 2026-11-08, the user explicitly authorized the agent to perform the final reviewed commit, direct push, source/release packaging and `v1.0.0` tag after checks pass.
+- Branch: `master`
+- Week 14 source/evidence checkpoint: `03d9ed372bbf2e83c59d50c9e5707e0cddf86b7d`; it extends the verified Week 13 milestone without rewriting it
+- No Git remote is configured. The intended repository is `https://github.com/Vernsmoke/thesis-consultation-reminder.git`
+- The user explicitly authorized the Week 14 commit, tag, and direct-push operations in this chat
+- Reviewed exact-path commands and five meaningful commit groups are recorded in `docs/week-14-git-commands.ps1`; future Week 15–18 prompts and temporary QA files are excluded
 
-## Confirmed dates
+## Week 14 implementation completed
 
-- Week 13 deadline supplied by user: October 30, 2026
-- Week 14 deadline supplied by user: November 6, 2026
-- Work and evidence must use their real completion and capture dates
+- Added coordinator-created, adviser-received consultation envelopes using PHP OpenSSL AES-256-GCM with a random 96-bit nonce, 128-bit tag, and canonical authenticated metadata.
+- Bound envelopes to version, key ID, UUID message ID, issue/expiry time, sender, and recipient. The five-minute lifetime, 30-second future-skew allowance, and unique receipt table reject stale or replayed messages.
+- Kept keys outside Flutter and tracked source through an ignored server keyring. Added a provisioning/rotation command that does not print the key and retains only the previous bounded-use key.
+- Enforced expiring authentication, coordinator/adviser roles, exact recipient and consultation assignment, route throttles, server validation, generic safe errors, no-store/security response headers, correlation IDs, and allowlisted security logs.
+- Minimized exchanged plaintext to record type, consultation ID, agenda, scheduled time, status, and open-action count; names, email, action text, sessions, automation history, and audit history are excluded.
+- Added controlled local HTTPS for the Flutter build and API with a short-lived localhost CA/certificate, TLS 1.2 minimum, strict origin allowlist, and no warning bypass. The evidence gateway is explicitly not a production proxy.
+- Extended Flutter Web with coordinator envelope creation, adviser paste/receive, accepted record, replay/auth/network/validation feedback, and HTTPS API default.
 
-## Pending facts
+## Verification and evidence
 
-- User confirmed 2026-11-08: Project 29 registration is approved, AI assistance is fine, and the reflection reflects their understanding. Exact institutional acknowledgment wording remains unspecified.
-- Student ID, only when needed for private submission documents
-- Controlled simulated transport explicitly authorized for Week 13; no instructor approval claimed.
-- Any instructor template or special submission format not contained in the supplied module
+- Backend regression: 21 tests, 199 assertions, all passing. Cases cover normal acceptance, altered ciphertext, altered authenticated metadata, replay, authentic expiry, invalid input, unauthorized/unassigned users, wrong key, missing-key recovery, and safe log contents.
+- Live HTTPS script executed 2026-11-08T20:37:08+08:00: five of five expected outcomes matched (`200`, `409`, `422`, `403`, `422`).
+- TLS verification executed 2026-11-08T20:37:12+08:00: TLS 1.3 with `TLS_AES_256_GCM_SHA384`; the client without the controlled trust anchor rejected the certificate.
+- Flutter regression: 18 tests pass, static analysis reports no issues, and the release web build succeeds with the HTTPS API URL.
+- Laravel Pint passes. Composer audit reports no advisories. Final pre-release secret scan covered 184 candidate text files and found no exact generated key/private fixture-password match; protected private paths remain ignored.
+- Actual Edge and VS Code evidence: APP-01 through APP-04 and SRC-01 through SRC-02, captured 2026-11-08 20:35–20:46 +08:00 with fictional data and indexed SHA-256 hashes.
+- Initial controlled CORS preflight failure, safe behavior, allowlisted fix, and successful browser rerun are preserved. Backend and Flutter test expectation/viewport failures and their regressions are also recorded honestly.
+- Five DOCX reports and matching PDFs were rendered through LibreOffice. All ten pages were visually inspected. Accessibility audits report zero high, medium, or low findings; style-lint reports are retained for transparency.
+
+## Submission artifacts
+
+- Reports: Activity 1, Activity 2, SA8, IA5, and the evidence-grounded technical reflection in Markdown, DOCX, and PDF.
+- Shared records: security architecture, protection requirements, control rationale, cryptographic decision, key lifecycle, residual-risk register, and updated setup/changelog.
+- Diagrams: editable Mermaid, structural JSON, and SVG exports for secure data flow and sender/receiver sequence.
+- Evidence: expected/actual security test record, live HTTPS/TLS JSON, PHPUnit XML, sanitized build/test/audit/scan logs, screenshots, evidence index, and requirement checklist.
+- A clean local ignored archive was generated from source commit `03d9ed3`; it contains 156 entries and has SHA-256 `28e188b53d663d800e36e998899bcb7728f1110aea6e4cfa0fba9b670c5349f7`. Provenance is recorded in `submissions/week-14/source/MANIFEST.md`.
+
+## Pending external or user actions
+
+1. Apply any instructor-prescribed AI acknowledgment wording or submission template; none was supplied.
+2. Conduct any instructor oral assessment, marking, or acceptance. No result is claimed.
+3. Remove the controlled local CA from the user trust store when the evidence environment is no longer needed.
 
 ## Next action
 
-Resume Week 13, not Week 14. Original teacher guide common requirements/Project 29 and complete Module 13 read directly from original DOCX. Detailed checklist preceded implementation. Laravel 12.71.0 / PHP 8.2.12 / Composer 2.10.2 / Flutter 3.47.8 / Dart 3.13.7 / XAMPP MariaDB 10.4.32 verified. Dedicated schemas thesis_consultation_w13 and thesis_consultation_w13_test with local account; generated private credentials in ignored backend/.env. Never stage it, tmp/, vendor or build caches.
-
-## Completed application and documents
-
-- Laravel consultation request/confirmation/agenda/status/action/follow-up API; opaque two-hour hashed sessions, server roles/ownership, validation, safe errors, correlation/audit and request idempotency.
-- Flutter Web connected API client, labeled forms, loading/empty/success/error feedback, role controls, action follow-up, coordinator manual handling and student simulated updates/progress summaries.
-- Durable reminder/missed/deadline/summary outbox, unique keys, transactional simulated receipts, exponential jittered delays, three total attempts, per-batch circuit breaker, stale work suppression and retained manual review.
-- Architecture/API/decisions/security/recovery/setup, activity records, demo material, a student-confirmed evidence-based reflection, four editable diagram sets and readable SVG exports. Four PDF reports and four editable DOCX reports are regenerated from the reconciled text and rendered for final visual verification.
-- Requirement reconciliation, evidence index, sanitized HTTP/automation results, source and screenshot hashes and reviewed exact-path Git groups. See docs/week-13-git-commands.ps1. A local ignored source-only snapshot was created from source commit `4a761a3`; a final release ZIP is created only after the final commit/tag checks.
-
-## Verification and real evidence
-
-- Final backend baseline: 15 tests, 131 assertions pass (13 domain tests + two scaffold tests). Final frontend baseline: 15 tests pass, analysis no issues, web build succeeds. Widget checks include signed-in 390/768/1440px layouts.
-- Actual running Flutter evidence: APP-00 through APP-08 show login, connected request success, adviser confirmation/action item, client validation, coordinator manual review/metrics, and tablet/narrow layouts. Captured 2026-11-08T19:39:30 through 19:59:27+08:00 with fictional data. Manual Tab-order and browser-console inspection were not independently recorded.
-- Actual loopback HTTP script: 22 checks pass, sanitized requests/responses and timestamps in tests/http-results.json.
-- Real-time failure run: 190.52s; success 1 attempt, transient recovery 2 attempts, permanent manual review 1, persistent timeout manual review 3; two receipts, seven attempts, no pending. Captured 2026-11-08T18:09:45+08:00. Earlier working-tree phase, not falsely assigned a final commit.
-- Actual four-trigger fixture scan: all four kinds, repeated count 9→9, five deliveries in 31.14ms, no pending and two retained manual review. Scheduled command executed successfully. Small fixture timing is not capacity evidence.
-- Composer audit: no advisories/abandoned packages at audit. Exact local generated secret comparison found no matches in proposed tracked artifacts; ignored env/database/cache paths verified. No complete security audit claimed.
-- Initial backend fixture failure (clock travel expired sessions), Flutter test syntax failures and corrections retained; final regression passes. No intentionally introduced vulnerability or invented student work history.
-
-## Resolved blockers and external actions
-
-1. RESOLVED for required visual evidence: although the managed agent browser could not observe the loopback origin, the user supplied nine actual running Flutter screenshots. Two actual VS Code source captures are also indexed. Manual keyboard Tab-order and browser-console inspection remain a documented limitation, not a claimed audit.
-2. RESOLVED 2026-11-08: LibreOffice became available at C:/Program Files/LibreOffice/program/soffice.exe. render_docx.py rendered all four DOCX files; all nine current pages were visually inspected. Initial title-border, heading-spacing and reflection page-balance defects were corrected, reports regenerated, rerendered and accepted. Matching PDFs were converted from the final DOCX files and all nine pages were rendered and visually verified. QA removed a fragile independent PDF layout path after inconsistent font rendering was detected.
-3. RESOLVED 2026-11-08: the student confirmed that the reflection reflects their understanding and that Project 29 registration is approved. The actual oral assessment, marks and any instructor-prescribed AI acknowledgment wording remain external and are not claimed.
-4. Git mutation exception authorized by the user in the current chat. Ten reviewed commits exist and master was pushed successfully through `8f50df7` by direct URL. No remote is configured. The final evidence commit and `v1.0.0` tag are authorized after final checks pass.
-5. RESOLVED for source provenance: source commit `4a761a31244c00176f016ffe26ff069118b0f0c9` has a matching ignored snapshot `artifacts/week-13-source-4a761a3.zip` with 136 entries and SHA-256 `762482bf1bfaf7bcc343e8d7f3c044cb7c98b895ccc4b679e5e526a940aa7698`.
-
-## Running local processes and next action
-
-XAMPP MariaDB was started; Laravel loopback server port 8000, built Flutter static server port 8080 and Laravel schedule:work were started for review. No production service or third-party notification. Restart commands are in README if sessions have ended. Fixture password is private DEMO_PASSWORD; do not print it in evidence.
-
-Next action: submit the Week 13 package and complete any instructor-run oral assessment or prescribed acknowledgment. Preserve earlier logs and actual dates. Do not recreate scaffolds, rerun destructive resets on development data or advance to Week 14 until the user requests it. Git mutations return to user ownership after the explicitly authorized Week 13 release operation.
+Week 14 is ready for the `v2.0.0` release operation. After the authorized tag and push complete, remain on Week 14 unless the user explicitly requests Week 15.
