@@ -1,0 +1,76 @@
+{
+  "version": 2,
+  "title": "Consultation workflow and human decisions",
+  "diagrams": [
+    {
+      "id": "workflow",
+      "title": "Consultation workflow and human decisions",
+      "kind": "flowchart",
+      "data": {
+        "direction": "TB",
+        "nodes": [
+          {
+            "id": "student",
+            "label": "Student requests future schedule and agenda"
+          },
+          {
+            "id": "api",
+            "label": "API validates role input and idempotency key"
+          },
+          {
+            "id": "adviser",
+            "label": "Assigned adviser confirms schedule"
+          },
+          {
+            "id": "meeting",
+            "label": "Adviser records meeting outcome"
+          },
+          {
+            "id": "action",
+            "label": "Adviser records action items"
+          },
+          {
+            "id": "follow",
+            "label": "Student completes follow up"
+          },
+          {
+            "id": "manual",
+            "label": "Coordinator reconciles exceptions"
+          }
+        ],
+        "edges": [
+          {
+            "from": "student",
+            "to": "api",
+            "label": "Public client boundary"
+          },
+          {
+            "from": "api",
+            "to": "adviser",
+            "label": "Trusted stored request"
+          },
+          {
+            "from": "adviser",
+            "to": "meeting",
+            "label": "Human authority"
+          },
+          {
+            "from": "meeting",
+            "to": "action",
+            "label": "Progress record"
+          },
+          {
+            "from": "action",
+            "to": "follow",
+            "label": "Owned action"
+          },
+          {
+            "from": "api",
+            "to": "manual",
+            "label": "Invalid or failed processing"
+          }
+        ]
+      }
+    }
+  ]
+}

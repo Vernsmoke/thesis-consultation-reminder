@@ -1,0 +1,81 @@
+{
+  "version": 2,
+  "title": "Durable delivery and safe failure sequence",
+  "diagrams": [
+    {
+      "id": "delivery",
+      "title": "Durable delivery and safe failure sequence",
+      "kind": "sequence",
+      "data": {
+        "participants": [
+          {
+            "id": "scanner",
+            "label": "Minute scanner"
+          },
+          {
+            "id": "db",
+            "label": "MariaDB transaction"
+          },
+          {
+            "id": "transport",
+            "label": "Simulated receiver"
+          },
+          {
+            "id": "human",
+            "label": "Coordinator"
+          }
+        ],
+        "messages": [
+          {
+            "from": "scanner",
+            "to": "db",
+            "text": "Insert unique due event key",
+            "kind": "sync"
+          },
+          {
+            "from": "scanner",
+            "to": "db",
+            "text": "Lock due pending row",
+            "kind": "sync"
+          },
+          {
+            "from": "scanner",
+            "to": "transport",
+            "text": "Attempt delivery with event ID",
+            "kind": "sync"
+          },
+          {
+            "from": "transport",
+            "to": "db",
+            "text": "Success insert unique receipt",
+            "kind": "sync"
+          },
+          {
+            "from": "scanner",
+            "to": "db",
+            "text": "Commit receipt state and audit together",
+            "kind": "sync"
+          },
+          {
+            "from": "transport",
+            "to": "scanner",
+            "text": "Alternative failure outcome transient or permanent",
+            "kind": "reply"
+          },
+          {
+            "from": "scanner",
+            "to": "db",
+            "text": "Retain retry with backoff or manual review",
+            "kind": "sync"
+          },
+          {
+            "from": "human",
+            "to": "db",
+            "text": "Record human handling without resend",
+            "kind": "sync"
+          }
+        ]
+      }
+    }
+  ]
+}

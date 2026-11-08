@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1158" viewBox="0 0 1100 1158">
+<rect width="100%" height="100%" fill="#fafaf6"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#24574c"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#173b33}.title{font-size:26px;font-weight:bold}.label{font-size:17px}.small{font-size:14px}.line{fill:none;stroke:#24574c;stroke-width:2;marker-end:url(#arrow)}</style>
+<text x="40" y="45" class="title" text-anchor="start">Trust boundaries and controlled notification data</text>
+<text x="40" y="76" class="small" text-anchor="start">Architecture export from editable canonical source - not execution evidence</text>
+<path class="line" d="M500,186 L500,236"/>
+<text x="520" y="213" class="small" text-anchor="start">1</text>
+<path class="line" d="M500,296 L500,346"/>
+<text x="520" y="323" class="small" text-anchor="start">2</text>
+<path class="line" d="M500,406 L500,456"/>
+<text x="520" y="433" class="small" text-anchor="start">3</text>
+<path class="line" d="M500,516 L500,566"/>
+<text x="520" y="543" class="small" text-anchor="start">4</text>
+<path class="line" d="M860,488 L920,488 L920,708 L866,708"/>
+<text x="927" y="480" class="small" text-anchor="start">5</text>
+<path class="line" d="M860,488 L956,488 L956,818 L866,818"/>
+<text x="963" y="480" class="small" text-anchor="start">6</text>
+<rect x="140" y="130" width="720" height="56" rx="8" fill="#e5efe9" stroke="#24574c"/>
+<text x="500" y="163" class="label" text-anchor="middle">Public Flutter client no service secrets</text>
+<rect x="140" y="240" width="720" height="56" rx="8" fill="#e5efe9" stroke="#24574c"/>
+<text x="500" y="273" class="label" text-anchor="middle">Loopback API verifies hashed session and role</text>
+<rect x="140" y="350" width="720" height="56" rx="8" fill="#e5efe9" stroke="#24574c"/>
+<text x="500" y="383" class="label" text-anchor="middle">Private MariaDB workflow and outbox</text>
+<rect x="140" y="460" width="720" height="56" rx="8" fill="#e5efe9" stroke="#24574c"/>
+<text x="500" y="493" class="label" text-anchor="middle">Local scheduled worker bounded batch</text>
+<rect x="140" y="570" width="720" height="56" rx="8" fill="#e5efe9" stroke="#24574c"/>
+<text x="500" y="603" class="label" text-anchor="middle">Simulated receipt minimal reference or summary counts</text>
+<rect x="140" y="680" width="720" height="56" rx="8" fill="#e5efe9" stroke="#24574c"/>
+<text x="500" y="713" class="label" text-anchor="middle">Protected structured audit IDs only</text>
+<rect x="140" y="790" width="720" height="56" rx="8" fill="#e5efe9" stroke="#24574c"/>
+<text x="500" y="823" class="label" text-anchor="middle">Coordinator manual review</text>
+<text x="140" y="900" class="small" text-anchor="start">1. Bearer session and validated JSON</text>
+<text x="140" y="928" class="small" text-anchor="start">2. Private env database credential</text>
+<text x="140" y="956" class="small" text-anchor="start">3. Due records unique keys</text>
+<text x="140" y="984" class="small" text-anchor="start">4. Transactional simulated delivery</text>
+<text x="140" y="1012" class="small" text-anchor="start">5. Correlation outcome attempt</text>
+<text x="140" y="1040" class="small" text-anchor="start">6. Permanent or exhausted failure</text>
+</svg>

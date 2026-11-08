@@ -1,0 +1,11 @@
+/tmp/
+/artifacts/
+*.zip
+*.log
+backend/.env
+backend/vendor/
+frontend/.dart_tool/
+frontend/build/
+frontend/.flutter-plugins-dependencies
+**/.DS_Store
+backend/tmp/

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1100" viewBox="0 0 1100 1100">
+<rect width="100%" height="100%" fill="#fafaf6"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#24574c"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#173b33}.title{font-size:26px;font-weight:bold}.label{font-size:17px}.small{font-size:14px}.line{fill:none;stroke:#24574c;stroke-width:2;marker-end:url(#arrow)}</style>
+<text x="40" y="45" class="title" text-anchor="start">Durable delivery and safe failure sequence</text>
+<text x="40" y="76" class="small" text-anchor="start">Architecture export from editable canonical source - not execution evidence</text>
+<rect x="30" y="110" width="200" height="55" rx="6" fill="#e5efe9" stroke="#24574c"/>
+<text x="130" y="142" class="label" text-anchor="middle">Minute scanner</text>
+<path d="M130,165 L130,1060" stroke="#7b938b" stroke-dasharray="6 5"/>
+<rect x="310" y="110" width="200" height="55" rx="6" fill="#e5efe9" stroke="#24574c"/>
+<text x="410" y="142" class="label" text-anchor="middle">MariaDB transaction</text>
+<path d="M410,165 L410,1060" stroke="#7b938b" stroke-dasharray="6 5"/>
+<rect x="590" y="110" width="200" height="55" rx="6" fill="#e5efe9" stroke="#24574c"/>
+<text x="690" y="142" class="label" text-anchor="middle">Simulated receiver</text>
+<path d="M690,165 L690,1060" stroke="#7b938b" stroke-dasharray="6 5"/>
+<rect x="870" y="110" width="200" height="55" rx="6" fill="#e5efe9" stroke="#24574c"/>
+<text x="970" y="142" class="label" text-anchor="middle">Coordinator</text>
+<path d="M970,165 L970,1060" stroke="#7b938b" stroke-dasharray="6 5"/>
+<path class="line" d="M130,240 L410,240"/>
+<text x="270" y="194" class="small" text-anchor="middle">Insert unique due event key</text>
+<path class="line" d="M130,350 L410,350"/>
+<text x="270" y="304" class="small" text-anchor="middle">Lock due pending row</text>
+<path class="line" d="M130,460 L690,460"/>
+<text x="410" y="414" class="small" text-anchor="middle">Attempt delivery with event ID</text>
+<path class="line" d="M690,570 L410,570"/>
+<text x="550" y="524" class="small" text-anchor="middle">Success insert unique receipt</text>
+<path class="line" d="M130,680 L410,680"/>
+<text x="270" y="634" class="small" text-anchor="middle">Commit receipt state and audit</text>
+<text x="270" y="654" class="small" text-anchor="middle">together</text>
+<path class="line" d="M690,790 L130,790"/>
+<text x="410" y="744" class="small" text-anchor="middle">Alternative failure outcome transient or permanent</text>
+<path class="line" d="M130,900 L410,900"/>
+<text x="270" y="854" class="small" text-anchor="middle">Retain retry with backoff or manual</text>
+<text x="270" y="874" class="small" text-anchor="middle">review</text>
+<path class="line" d="M970,1010 L410,1010"/>
+<text x="690" y="964" class="small" text-anchor="middle">Record human handling without resend</text>
+</svg>

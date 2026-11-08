@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="810" viewBox="0 0 960 810">
+<rect width="100%" height="100%" fill="#0b1020"/>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif} .title{font-size:22px;font-weight:700;fill:#f4f7ff}.meta{font-size:12px;fill:#9fb0d0}.node{fill:#18233d;stroke:#71d7ff;stroke-width:1.5}.label{font-size:14px;fill:#f7fbff}.edge{stroke:#b984ff;stroke-width:2;fill:none}.edgeLabel{font-size:11px;fill:#dbc8ff}</style>
+<text class="title" x="32" y="36">Consultation workflow and human decisions</text>
+<rect x="24" y="62" width="912" height="736" rx="18" fill="#10182b" stroke="#253556"/>
+<text class="title" x="48" y="96">Consultation workflow and human decisions</text>
+<text class="meta" x="48" y="116">flowchart · structural preview · static evidence</text>
+<rect class="node" x="64" y="140" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="169">Student requests future schedule and agenda</text>
+<rect class="node" x="516" y="140" width="380" height="48" rx="10"/>
+<text class="label" x="532" y="169">API validates role input and idempotency key</text>
+<rect class="node" x="64" y="216" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="245">Assigned adviser confirms schedule</text>
+<rect class="node" x="516" y="216" width="380" height="48" rx="10"/>
+<text class="label" x="532" y="245">Adviser records meeting outcome</text>
+<rect class="node" x="64" y="292" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="321">Adviser records action items</text>
+<rect class="node" x="516" y="292" width="380" height="48" rx="10"/>
+<text class="label" x="532" y="321">Student completes follow up</text>
+<rect class="node" x="64" y="368" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="397">Coordinator reconciles exceptions</text>
+<path class="edge" d="M254,188 L254,452 L706,452 L706,140"/>
+<text class="edgeLabel" x="48" y="466">Public client boundary</text>
+<path class="edge" d="M706,188 L706,474 L254,474 L254,216"/>
+<text class="edgeLabel" x="48" y="488">Trusted stored request</text>
+<path class="edge" d="M254,264 L254,496 L706,496 L706,216"/>
+<text class="edgeLabel" x="48" y="510">Human authority</text>
+<path class="edge" d="M706,264 L706,518 L254,518 L254,292"/>
+<text class="edgeLabel" x="48" y="532">Progress record</text>
+<path class="edge" d="M254,340 L254,540 L706,540 L706,292"/>
+<text class="edgeLabel" x="48" y="554">Owned action</text>
+<path class="edge" d="M706,188 L706,562 L254,562 L254,368"/>
+<text class="edgeLabel" x="48" y="576">Invalid or failed processing</text>
+</svg>

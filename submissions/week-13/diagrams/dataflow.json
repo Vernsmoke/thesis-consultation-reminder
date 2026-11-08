@@ -1,0 +1,76 @@
+{
+  "version": 2,
+  "title": "Trust boundaries and controlled notification data",
+  "diagrams": [
+    {
+      "id": "dataflow",
+      "title": "Trust boundaries and controlled notification data",
+      "kind": "flowchart",
+      "data": {
+        "direction": "TB",
+        "nodes": [
+          {
+            "id": "browser",
+            "label": "Public Flutter client no service secrets"
+          },
+          {
+            "id": "api",
+            "label": "Loopback API verifies hashed session and role"
+          },
+          {
+            "id": "db",
+            "label": "Private MariaDB workflow and outbox"
+          },
+          {
+            "id": "worker",
+            "label": "Local scheduled worker bounded batch"
+          },
+          {
+            "id": "receipt",
+            "label": "Simulated receipt minimal reference or summary counts"
+          },
+          {
+            "id": "audit",
+            "label": "Protected structured audit IDs only"
+          },
+          {
+            "id": "human",
+            "label": "Coordinator manual review"
+          }
+        ],
+        "edges": [
+          {
+            "from": "browser",
+            "to": "api",
+            "label": "Bearer session and validated JSON"
+          },
+          {
+            "from": "api",
+            "to": "db",
+            "label": "Private env database credential"
+          },
+          {
+            "from": "db",
+            "to": "worker",
+            "label": "Due records unique keys"
+          },
+          {
+            "from": "worker",
+            "to": "receipt",
+            "label": "Transactional simulated delivery"
+          },
+          {
+            "from": "worker",
+            "to": "audit",
+            "label": "Correlation outcome attempt"
+          },
+          {
+            "from": "worker",
+            "to": "human",
+            "label": "Permanent or exhausted failure"
+          }
+        ]
+      }
+    }
+  ]
+}

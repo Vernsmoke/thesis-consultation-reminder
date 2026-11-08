@@ -1,0 +1,68 @@
+{
+  "version": 2,
+  "title": "Flutter screen navigation and feedback",
+  "diagrams": [
+    {
+      "id": "screenflow",
+      "title": "Flutter screen navigation and feedback",
+      "kind": "flowchart",
+      "data": {
+        "direction": "TB",
+        "nodes": [
+          {
+            "id": "login",
+            "label": "Sign in form validation and authentication feedback"
+          },
+          {
+            "id": "list",
+            "label": "Consultations list loading empty success or error"
+          },
+          {
+            "id": "request",
+            "label": "Student request form future UTC time and agenda"
+          },
+          {
+            "id": "detail",
+            "label": "Assigned consultation status and action items"
+          },
+          {
+            "id": "admin",
+            "label": "Coordinator automation and manual handling"
+          }
+        ],
+        "edges": [
+          {
+            "from": "login",
+            "to": "list",
+            "label": "Authenticated"
+          },
+          {
+            "from": "list",
+            "to": "request",
+            "label": "Student request"
+          },
+          {
+            "from": "request",
+            "to": "list",
+            "label": "Save or safe retry same key"
+          },
+          {
+            "from": "list",
+            "to": "detail",
+            "label": "Review and follow up"
+          },
+          {
+            "from": "list",
+            "to": "admin",
+            "label": "Coordinator only"
+          },
+          {
+            "from": "list",
+            "to": "login",
+            "label": "Expired session or logout"
+          }
+        ]
+      }
+    }
+  ]
+}

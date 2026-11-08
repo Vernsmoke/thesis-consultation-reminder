@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="626" viewBox="0 0 960 626">
+<rect width="100%" height="100%" fill="#0b1020"/>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif} .title{font-size:22px;font-weight:700;fill:#f4f7ff}.meta{font-size:12px;fill:#9fb0d0}.node{fill:#18233d;stroke:#71d7ff;stroke-width:1.5}.label{font-size:14px;fill:#f7fbff}.edge{stroke:#b984ff;stroke-width:2;fill:none}.edgeLabel{font-size:11px;fill:#dbc8ff}</style>
+<text class="title" x="32" y="36">Durable delivery and safe failure sequence</text>
+<rect x="24" y="62" width="912" height="552" rx="18" fill="#10182b" stroke="#253556"/>
+<text class="title" x="48" y="96">Durable delivery and safe failure sequence</text>
+<text class="meta" x="48" y="116">sequence · structural preview · static evidence</text>
+<rect class="node" x="64" y="140" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="169">Minute scanner</text>
+<rect class="node" x="516" y="140" width="380" height="48" rx="10"/>
+<text class="label" x="532" y="169">MariaDB transaction</text>
+<rect class="node" x="64" y="216" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="245">Simulated receiver</text>
+<rect class="node" x="516" y="216" width="380" height="48" rx="10"/>
+<text class="label" x="532" y="245">Coordinator</text>
+<path class="edge" d="M254,188 L254,300 L706,300 L706,140"/>
+<text class="edgeLabel" x="48" y="314">Insert unique due event key</text>
+<path class="edge" d="M254,188 L254,322 L706,322 L706,140"/>
+<text class="edgeLabel" x="48" y="336">Lock due pending row</text>
+<path class="edge" d="M254,188 L254,344 L254,344 L254,216"/>
+<text class="edgeLabel" x="48" y="358">Attempt delivery with event ID</text>
+<path class="edge" d="M254,264 L254,366 L706,366 L706,140"/>
+<text class="edgeLabel" x="48" y="380">Success insert unique receipt</text>
+<path class="edge" d="M254,188 L254,388 L706,388 L706,140"/>
+<text class="edgeLabel" x="48" y="402">Commit receipt state and audit together</text>
+<path class="edge" d="M254,264 L254,410 L254,410 L254,140"/>
+<text class="edgeLabel" x="48" y="424">Alternative failure outcome transient or permanent</text>
+<path class="edge" d="M254,188 L254,432 L706,432 L706,140"/>
+<text class="edgeLabel" x="48" y="446">Retain retry with backoff or manual review</text>
+<path class="edge" d="M706,264 L706,454 L706,454 L706,140"/>
+<text class="edgeLabel" x="48" y="468">Record human handling without resend</text>
+</svg>
