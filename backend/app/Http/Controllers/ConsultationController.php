@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Services\Audit;
+use App\Services\SecureExchange;
 use Carbon\Carbon;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class ConsultationController extends Controller
 {
@@ -176,11 +179,92 @@ class ConsultationController extends Controller
         return DB::transaction(function () use ($r, $id, $v) {
             $o = DB::table('outbox')->where('id', $id)->lockForUpdate()->first();
             abort_unless($o, 404);
-            abort_unless($o->status === 'manual_review',409,'Only manual-review items can be resolved.');
-            DB::table('outbox')->where('id',$id)->update(['status' => 'resolved', 'resolution' => $v['resolution'], 'updated_at' => now()]);
-            Audit::record('outbox.resolved',$id,$this->cid($r),[],$this->actor($r)->id);
+            abort_unless($o->status === 'manual_review', 409, 'Only manual-review items can be resolved.');
+            DB::table('outbox')->where('id', $id)->update(['status' => 'resolved', 'resolution' => $v['resolution'], 'updated_at' => now()]);
+            Audit::record('outbox.resolved', $id, $this->cid($r), [], $this->actor($r)->id);
 
             return ['message' => 'Human handling recorded. No automatic resend.'];
         });
+    }
+
+    public function createEnvelope(Request $r, SecureExchange $exchange)
+    {
+        $actor = $this->actor($r);
+        abort_unless($actor->role === 'coordinator', 403, 'Coordinator required.');
+        $validated = $r->validate(['consultation_id' => 'required|integer|exists:consultations,id']);
+        $consultation = DB::table('consultations')->find($validated['consultation_id']);
+        $openActions = DB::table('action_items')->where('consultation_id', $consultation->id)->where('status', 'open')->count();
+        try {
+            $envelope = $exchange->create([
+                'record_type' => 'consultation_summary',
+                'consultation_id' => $consultation->id,
+                'agenda' => $consultation->agenda,
+                'scheduled_at' => Carbon::parse($consultation->scheduled_at)->utc()->format('Y-m-d\TH:i:s\Z'),
+                'status' => $consultation->status,
+                'open_action_count' => $openActions,
+            ], $consultation->adviser_id);
+        } catch (HttpException $exception) {
+            Audit::record('secure_exchange.unavailable', $consultation->id, $this->cid($r), ['reason' => 'key_or_cipher_unavailable'], $actor->id);
+            throw $exception;
+        }
+        Audit::record('secure_exchange.created', $consultation->id, $this->cid($r), [
+            'message_id' => $envelope['message_id'],
+            'key_id' => $envelope['key_id'],
+            'recipient_user_id' => $consultation->adviser_id,
+        ], $actor->id);
+
+        return response()->json(['envelope' => $envelope], 201);
+    }
+
+    public function receiveEnvelope(Request $r, SecureExchange $exchange)
+    {
+        $envelope = $r->validate([
+            'version' => 'required|integer|in:1',
+            'key_id' => 'required|string|max:40',
+            'message_id' => 'required|uuid',
+            'issued_at' => 'required|string|max:30',
+            'expires_at' => 'required|string|max:30',
+            'sender' => 'required|string|max:80',
+            'recipient_user_id' => 'required|integer|min:1',
+            'nonce' => 'required|string|max:64',
+            'ciphertext' => 'required|string|max:8192',
+            'tag' => 'required|string|max:64',
+        ]);
+        $actor = $this->actor($r);
+        try {
+            $payload = $exchange->open($envelope);
+        } catch (HttpException $exception) {
+            Audit::record('secure_exchange.rejected', null, $this->cid($r), ['reason' => match ($exception->getStatusCode()) {
+                503 => 'key_unavailable',
+                default => 'invalid_or_unauthenticated_envelope',
+            }], $actor->id);
+            throw $exception;
+        }
+        abort_unless($actor->role === 'adviser' && $actor->id === (int) $envelope['recipient_user_id'], 403, 'Assigned adviser required.');
+        abort_unless(($payload['record_type'] ?? null) === 'consultation_summary' && is_int($payload['consultation_id'] ?? null), 422, 'Envelope payload is invalid.');
+        $consultation = DB::table('consultations')->find($payload['consultation_id']);
+        abort_unless($consultation && $consultation->adviser_id === $actor->id, 403, 'This consultation is outside your assignment.');
+
+        try {
+            DB::transaction(function () use ($envelope, $payload, $actor) {
+                DB::table('secure_exchange_receipts')->insert([
+                    'message_id' => $envelope['message_id'],
+                    'key_id' => $envelope['key_id'],
+                    'recipient_user_id' => $actor->id,
+                    'consultation_id' => $payload['consultation_id'],
+                    'payload_hash' => hash('sha256', json_encode($payload, JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR)),
+                    'accepted_at' => now(),
+                ]);
+            });
+        } catch (QueryException $exception) {
+            if ((string) $exception->getCode() === '23000') {
+                Audit::record('secure_exchange.replay_rejected', $payload['consultation_id'], $this->cid($r), ['message_id' => $envelope['message_id']], $actor->id);
+                abort(409, 'Envelope was already accepted.');
+            }
+            throw $exception;
+        }
+        Audit::record('secure_exchange.accepted', $payload['consultation_id'], $this->cid($r), ['message_id' => $envelope['message_id'], 'key_id' => $envelope['key_id']], $actor->id);
+
+        return ['message' => 'Secure consultation record accepted.', 'record' => $payload];
     }
 }

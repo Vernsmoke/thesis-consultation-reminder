@@ -14,4 +14,6 @@ Route::middleware(ApiContext::class)->group(function () {
     Route::patch('/actions/{id}/complete', [C::class, 'completeAction'])->whereNumber('id');
     Route::get('/automation', [C::class, 'automation']);
     Route::post('/automation/{id}/resolve', [C::class, 'resolve'])->whereNumber('id');
+    Route::post('/secure-exchange/envelopes', [C::class, 'createEnvelope'])->middleware('throttle:30,1');
+    Route::post('/secure-exchange/receive', [C::class, 'receiveEnvelope'])->middleware('throttle:30,1');
 });
