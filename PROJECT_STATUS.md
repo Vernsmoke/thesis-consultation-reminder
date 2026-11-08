@@ -43,6 +43,8 @@
 - Activity 1, Activity 2, IA6, and evidence-grounded reflection in Markdown, verified DOCX, and PDF.
 - Editable Mermaid, structural JSON, and SVG test-architecture diagram.
 - Evidence index, exhaustive Week 15 requirement checklist, submission contents, and working-tree source manifest.
+- Local ignored `artifacts/week-15-source-v3.0.0.zip`: 160 entries from tagged source commit `134077c`, SHA-256 `73773811e9546e57391d2ca174463f20b9e32bb097d3fe2f8e3a1fa4fdd67157`.
+- Local ignored `artifacts/week-15-submission-v3.0.0.zip`: 82 entries from documentation commit `1cffc3f` plus the tagged source archive, SHA-256 `14bb62e605cbd29b6d10cc3575de3c9e68dbe4af35e1db0588ebb0e267faf2bc`.
 
 ## Pending external or user actions
 
