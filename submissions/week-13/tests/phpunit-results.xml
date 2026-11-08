@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="C:\Users\Laure\Documents\ChatGPT\IPT\backend\phpunit.xml" tests="15" assertions="131" errors="0" failures="0" skipped="0" time="1.448227">
+    <testsuite name="Unit" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.004981">
+      <testsuite name="Tests\Unit\ExampleTest" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Unit\ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.004981">
+        <testcase name="test_that_true_is_true" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Unit\ExampleTest.php" line="12" class="Tests\Unit\ExampleTest" classname="Tests.Unit.ExampleTest" assertions="1" time="0.004981"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Feature" tests="14" assertions="130" errors="0" failures="0" skipped="0" time="1.443246">
+      <testsuite name="Tests\Feature\ExampleTest" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.209534">
+        <testcase name="test_the_application_returns_a_successful_response" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\ExampleTest.php" line="13" class="Tests\Feature\ExampleTest" classname="Tests.Feature.ExampleTest" assertions="1" time="0.209534"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\WorkflowTest" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\WorkflowTest.php" tests="13" assertions="129" errors="0" failures="0" skipped="0" time="1.233712">
+        <testcase name="test_complete_workflow_and_owner_follow_up" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\WorkflowTest.php" line="43" class="Tests\Feature\WorkflowTest" classname="Tests.Feature.WorkflowTest" assertions="13" time="0.524637"/>
+        <testcase name="test_invalid_missing_and_past_schedule" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\WorkflowTest.php" line="53" class="Tests\Feature\WorkflowTest" classname="Tests.Feature.WorkflowTest" assertions="8" time="0.048057"/>
+        <testcase name="test_unauthenticated_expired_and_wrong_credentials" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\WorkflowTest.php" line="60" class="Tests\Feature\WorkflowTest" classname="Tests.Feature.WorkflowTest" assertions="8" time="0.045114"/>
+        <testcase name="test_forbidden_roles_and_other_owner" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\WorkflowTest.php" line="68" class="Tests\Feature\WorkflowTest" classname="Tests.Feature.WorkflowTest" assertions="10" time="0.061059"/>
+        <testcase name="test_duplicate_key_and_payload_conflict" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\WorkflowTest.php" line="77" class="Tests\Feature\WorkflowTest" classname="Tests.Feature.WorkflowTest" assertions="11" time="0.062420"/>
+        <testcase name="test_missing_entity_invalid_transition_and_role_selection" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\WorkflowTest.php" line="87" class="Tests\Feature\WorkflowTest" classname="Tests.Feature.WorkflowTest" assertions="9" time="0.077220"/>
+        <testcase name="test_success_and_duplicate_worker_no_duplicate_receipt" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\WorkflowTest.php" line="103" class="Tests\Feature\WorkflowTest" classname="Tests.Feature.WorkflowTest" assertions="8" time="0.050576"/>
+        <testcase name="test_transient_failure_backoff_then_recovery" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\WorkflowTest.php" line="114" class="Tests\Feature\WorkflowTest" classname="Tests.Feature.WorkflowTest" assertions="10" time="0.052960"/>
+        <testcase name="test_permanent_failure_manual_handling_without_resend" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\WorkflowTest.php" line="128" class="Tests\Feature\WorkflowTest" classname="Tests.Feature.WorkflowTest" assertions="10" time="0.050774"/>
+        <testcase name="test_exhausted_timeout_stops_after_three_attempts" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\WorkflowTest.php" line="140" class="Tests\Feature\WorkflowTest" classname="Tests.Feature.WorkflowTest" assertions="7" time="0.064951"/>
+        <testcase name="test_scans_cover_four_automations_and_are_idempotent" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\WorkflowTest.php" line="151" class="Tests\Feature\WorkflowTest" classname="Tests.Feature.WorkflowTest" assertions="17" time="0.084539"/>
+        <testcase name="test_cancelled_reminder_is_superseded" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\WorkflowTest.php" line="176" class="Tests\Feature\WorkflowTest" classname="Tests.Feature.WorkflowTest" assertions="8" time="0.056768"/>
+        <testcase name="test_transaction_rolls_back_receipt_if_delivery_crashes" file="C:\Users\Laure\Documents\ChatGPT\IPT\backend\tests\Feature\WorkflowTest.php" line="187" class="Tests\Feature\WorkflowTest" classname="Tests.Feature.WorkflowTest" assertions="10" time="0.054637"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

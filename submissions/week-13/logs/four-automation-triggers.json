@@ -1,0 +1,139 @@
+{
+    "run": "fixture:20261108101653",
+    "captured_at_manila": "2026-11-08T18:16:53+08:00",
+    "build": "uncommitted Week 13 working tree",
+    "fixture_note": "Past scheduled\/due timestamps are intentional test data, not backdated creation or evidence.",
+    "fixture_ids": {
+        "future": 2,
+        "past": 3,
+        "action": 2
+    },
+    "scan_count_first": 9,
+    "scan_count_second": 9,
+    "metrics": {
+        "processed": 5,
+        "transient_failures": 0,
+        "elapsed_ms": 31.14,
+        "pending": 0,
+        "manual_review": 2
+    },
+    "events": [
+        {
+            "id": 5,
+            "event_key": "reminder:2",
+            "kind": "consultation_reminder",
+            "entity_id": 2,
+            "status": "delivered",
+            "attempts": 1,
+            "available_at": "2026-11-08 10:17:58",
+            "correlation_id": "760a1baf-74c8-4563-9900-447db04d3d25",
+            "failure_code": null,
+            "simulation": "success",
+            "resolution": null,
+            "created_at": "2026-11-08 10:16:53",
+            "updated_at": "2026-11-08 10:16:53"
+        },
+        {
+            "id": 6,
+            "event_key": "missed:3",
+            "kind": "missed_session",
+            "entity_id": 3,
+            "status": "delivered",
+            "attempts": 1,
+            "available_at": "2026-11-08 10:17:54",
+            "correlation_id": "8eb58697-cf39-4ddb-8f34-6890cb88c2a6",
+            "failure_code": null,
+            "simulation": "success",
+            "resolution": null,
+            "created_at": "2026-11-08 10:16:53",
+            "updated_at": "2026-11-08 10:16:53"
+        },
+        {
+            "id": 7,
+            "event_key": "deadline:2",
+            "kind": "action_deadline",
+            "entity_id": 2,
+            "status": "delivered",
+            "attempts": 1,
+            "available_at": "2026-11-08 10:17:57",
+            "correlation_id": "53a8e81d-771b-44c8-9a2c-4a5bf57ba445",
+            "failure_code": null,
+            "simulation": "success",
+            "resolution": null,
+            "created_at": "2026-11-08 10:16:53",
+            "updated_at": "2026-11-08 10:16:53"
+        },
+        {
+            "id": 8,
+            "event_key": "summary:1:2026-11-08",
+            "kind": "progress_summary",
+            "entity_id": 1,
+            "status": "delivered",
+            "attempts": 1,
+            "available_at": "2026-11-08 10:17:56",
+            "correlation_id": "448a173f-1f3b-4c64-9152-4be8b1e02676",
+            "failure_code": null,
+            "simulation": "success",
+            "resolution": null,
+            "created_at": "2026-11-08 10:16:53",
+            "updated_at": "2026-11-08 10:16:53"
+        },
+        {
+            "id": 9,
+            "event_key": "summary:5:2026-11-08",
+            "kind": "progress_summary",
+            "entity_id": 5,
+            "status": "delivered",
+            "attempts": 1,
+            "available_at": "2026-11-08 10:18:06",
+            "correlation_id": "e765513d-8d86-4b2d-95f7-2e2dff5c87a8",
+            "failure_code": null,
+            "simulation": "success",
+            "resolution": null,
+            "created_at": "2026-11-08 10:16:53",
+            "updated_at": "2026-11-08 10:16:53"
+        }
+    ],
+    "receipts": [
+        {
+            "id": 3,
+            "outbox_id": 5,
+            "kind": "consultation_reminder",
+            "delivered_at": "2026-11-08 10:16:53",
+            "recipient_id": 1,
+            "payload": "{\"kind\":\"consultation_reminder\",\"entity_id\":2,\"scheduled_at\":\"2026-11-08 12:16:53\"}"
+        },
+        {
+            "id": 4,
+            "outbox_id": 6,
+            "kind": "missed_session",
+            "delivered_at": "2026-11-08 10:16:53",
+            "recipient_id": 1,
+            "payload": "{\"kind\":\"missed_session\",\"entity_id\":3,\"scheduled_at\":\"2026-11-08 08:16:53\"}"
+        },
+        {
+            "id": 5,
+            "outbox_id": 7,
+            "kind": "action_deadline",
+            "delivered_at": "2026-11-08 10:16:53",
+            "recipient_id": 1,
+            "payload": "{\"kind\":\"action_deadline\",\"entity_id\":2,\"due_at\":\"2026-11-08 10:11:53\"}"
+        },
+        {
+            "id": 6,
+            "outbox_id": 8,
+            "kind": "progress_summary",
+            "delivered_at": "2026-11-08 10:16:53",
+            "recipient_id": 1,
+            "payload": "{\"kind\":\"progress_summary\",\"entity_id\":1,\"meetings_completed\":1,\"meetings_missed\":1,\"open_actions\":1}"
+        },
+        {
+            "id": 7,
+            "outbox_id": 9,
+            "kind": "progress_summary",
+            "delivered_at": "2026-11-08 10:16:53",
+            "recipient_id": 5,
+            "payload": "{\"kind\":\"progress_summary\",\"entity_id\":5,\"meetings_completed\":0,\"meetings_missed\":0,\"open_actions\":0}"
+        }
+    ]
+}

@@ -1,0 +1,2008 @@
+{
+    "run": "evidence:20261108100635",
+    "build": "uncommitted Week 13 working tree",
+    "transport": "controlled simulated database receipt",
+    "captured_at_manila": "2026-11-08T18:09:45+08:00",
+    "elapsed_seconds": 190.52,
+    "predictions": {
+        "success": "one receipt one attempt",
+        "transient": "one receipt two attempts",
+        "permanent": "manual_review first attempt",
+        "timeout": "manual_review third attempt"
+    },
+    "steps": [
+        {
+            "executed_at_utc": "2026-11-08T10:06:35+00:00",
+            "metrics": {
+                "processed": 4,
+                "transient_failures": 2,
+                "elapsed_ms": 27.8,
+                "pending": 2,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:36",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:35",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:06:40+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.88,
+                "pending": 2,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:36",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:35",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:06:45+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.88,
+                "pending": 2,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:36",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:35",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:06:50+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.92,
+                "pending": 2,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:36",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:35",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:06:55+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.94,
+                "pending": 2,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:36",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:35",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:07:00+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.89,
+                "pending": 2,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:36",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:35",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:07:05+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.88,
+                "pending": 2,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:36",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:35",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:07:10+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 1.04,
+                "pending": 2,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:36",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:35",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:07:15+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.99,
+                "pending": 2,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:36",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:35",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:07:20+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.96,
+                "pending": 2,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:36",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:35",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:07:25+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.96,
+                "pending": 2,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:36",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:35",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:07:30+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.97,
+                "pending": 2,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:36",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:35",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:07:35+00:00",
+            "metrics": {
+                "processed": 1,
+                "transient_failures": 1,
+                "elapsed_ms": 16.45,
+                "pending": 2,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "retry",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:36",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:07:40+00:00",
+            "metrics": {
+                "processed": 1,
+                "transient_failures": 0,
+                "elapsed_ms": 18.57,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:07:45+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.79,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:07:50+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.97,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:07:55+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.95,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:08:00+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.9,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:08:05+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.92,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:08:10+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.97,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:08:15+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 1.09,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:08:20+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.82,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:08:25+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.9,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:08:30+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 1.07,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:08:35+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.99,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:08:40+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.95,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:08:45+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.98,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:08:50+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.95,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:08:55+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.99,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:09:00+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.83,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:09:05+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.91,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:09:10+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.96,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:09:15+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.98,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:09:20+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.89,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:09:25+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.95,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:09:30+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.83,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:09:35+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.85,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:09:40+00:00",
+            "metrics": {
+                "processed": 0,
+                "transient_failures": 0,
+                "elapsed_ms": 0.91,
+                "pending": 1,
+                "manual_review": 1
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "retry",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:45",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        },
+        {
+            "executed_at_utc": "2026-11-08T10:09:45+00:00",
+            "metrics": {
+                "processed": 1,
+                "transient_failures": 1,
+                "elapsed_ms": 15.99,
+                "pending": 0,
+                "manual_review": 2
+            },
+            "events": [
+                {
+                    "id": 1,
+                    "event_key": "evidence:20261108100635:success",
+                    "status": "delivered",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": null,
+                    "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+                },
+                {
+                    "id": 2,
+                    "event_key": "evidence:20261108100635:transient",
+                    "status": "delivered",
+                    "attempts": 2,
+                    "available_at": "2026-11-08 10:09:41",
+                    "failure_code": null,
+                    "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+                },
+                {
+                    "id": 3,
+                    "event_key": "evidence:20261108100635:permanent",
+                    "status": "manual_review",
+                    "attempts": 1,
+                    "available_at": "2026-11-08 10:07:41",
+                    "failure_code": "recipient_invalid",
+                    "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+                },
+                {
+                    "id": 4,
+                    "event_key": "evidence:20261108100635:timeout",
+                    "status": "manual_review",
+                    "attempts": 3,
+                    "available_at": "2026-11-08 10:13:51",
+                    "failure_code": "service_unavailable",
+                    "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+                }
+            ]
+        }
+    ],
+    "final": [
+        {
+            "id": 1,
+            "event_key": "evidence:20261108100635:success",
+            "status": "delivered",
+            "attempts": 1,
+            "available_at": "2026-11-08 10:07:41",
+            "failure_code": null,
+            "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e"
+        },
+        {
+            "id": 2,
+            "event_key": "evidence:20261108100635:transient",
+            "status": "delivered",
+            "attempts": 2,
+            "available_at": "2026-11-08 10:09:41",
+            "failure_code": null,
+            "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb"
+        },
+        {
+            "id": 3,
+            "event_key": "evidence:20261108100635:permanent",
+            "status": "manual_review",
+            "attempts": 1,
+            "available_at": "2026-11-08 10:07:41",
+            "failure_code": "recipient_invalid",
+            "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34"
+        },
+        {
+            "id": 4,
+            "event_key": "evidence:20261108100635:timeout",
+            "status": "manual_review",
+            "attempts": 3,
+            "available_at": "2026-11-08 10:13:51",
+            "failure_code": "service_unavailable",
+            "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6"
+        }
+    ],
+    "receipts": [
+        {
+            "id": 1,
+            "outbox_id": 1,
+            "kind": "progress_summary",
+            "delivered_at": "2026-11-08 10:06:35",
+            "recipient_id": 1,
+            "payload": "{\"kind\":\"progress_summary\",\"entity_id\":1,\"meetings_completed\":0,\"meetings_missed\":0,\"open_actions\":0}"
+        },
+        {
+            "id": 2,
+            "outbox_id": 2,
+            "kind": "progress_summary",
+            "delivered_at": "2026-11-08 10:07:40",
+            "recipient_id": 1,
+            "payload": "{\"kind\":\"progress_summary\",\"entity_id\":1,\"meetings_completed\":0,\"meetings_missed\":0,\"open_actions\":0}"
+        }
+    ],
+    "audits": [
+        {
+            "id": 1,
+            "event": "outbox.delivered",
+            "entity_id": 1,
+            "actor_id": null,
+            "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e",
+            "metadata": "{\"attempt\":1,\"outcome\":\"success\",\"delay_seconds\":0}",
+            "created_at": "2026-11-08 10:06:35"
+        },
+        {
+            "id": 2,
+            "event": "outbox.retry",
+            "entity_id": 2,
+            "actor_id": null,
+            "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb",
+            "metadata": "{\"attempt\":1,\"outcome\":\"transient\",\"delay_seconds\":61}",
+            "created_at": "2026-11-08 10:06:35"
+        },
+        {
+            "id": 3,
+            "event": "outbox.manual_review",
+            "entity_id": 3,
+            "actor_id": null,
+            "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34",
+            "metadata": "{\"attempt\":1,\"outcome\":\"permanent\",\"delay_seconds\":0}",
+            "created_at": "2026-11-08 10:06:35"
+        },
+        {
+            "id": 4,
+            "event": "outbox.retry",
+            "entity_id": 4,
+            "actor_id": null,
+            "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6",
+            "metadata": "{\"attempt\":1,\"outcome\":\"transient\",\"delay_seconds\":60}",
+            "created_at": "2026-11-08 10:06:35"
+        },
+        {
+            "id": 5,
+            "event": "outbox.retry",
+            "entity_id": 4,
+            "actor_id": null,
+            "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6",
+            "metadata": "{\"attempt\":2,\"outcome\":\"transient\",\"delay_seconds\":130}",
+            "created_at": "2026-11-08 10:07:35"
+        },
+        {
+            "id": 6,
+            "event": "outbox.delivered",
+            "entity_id": 2,
+            "actor_id": null,
+            "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb",
+            "metadata": "{\"attempt\":2,\"outcome\":\"success\",\"delay_seconds\":0}",
+            "created_at": "2026-11-08 10:07:40"
+        },
+        {
+            "id": 7,
+            "event": "outbox.manual_review",
+            "entity_id": 4,
+            "actor_id": null,
+            "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6",
+            "metadata": "{\"attempt\":3,\"outcome\":\"transient\",\"delay_seconds\":0}",
+            "created_at": "2026-11-08 10:09:45"
+        }
+    ]
+}

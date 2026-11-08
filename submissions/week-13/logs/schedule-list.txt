@@ -1,0 +1,3 @@
+
+  * * * * *  php artisan consultations:tick ............................................. Next Due: 6 seconds from now
+

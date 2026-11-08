@@ -1,0 +1,1 @@
+{"run":"fixture:20261108101653","scan_count_first":9,"scan_count_second":9,"metrics":{"processed":5,"transient_failures":0,"elapsed_ms":31.14,"pending":0,"manual_review":2},"kinds":["consultation_reminder","missed_session","action_deadline","progress_summary"]}

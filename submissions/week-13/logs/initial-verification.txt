@@ -1,0 +1,6 @@
+Initial verification 2026-11-08 Asia/Manila, uncommitted working tree.
+Command: php artisan test --log-junit ../tmp/phpunit.xml
+Actual: 1 failed, 14 passed (120 assertions), duration 1.61s.
+Failure: scans_cover_four_automations_and_are_idempotent expected 201 but got 401 at WorkflowTest.php:99.
+Diagnosis: fixture moved clock to 2030 after creating 2026 bearer sessions; authentication correctly expired. Improvement: renew only controlled fixture session expiry after clock travel. No production access bypass.
+Flutter initial analysis: obsolete scaffold test referenced MyApp, plus three style info diagnostics. Replaced scaffold test with validation/responsive tests and corrected style.

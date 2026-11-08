@@ -1,0 +1,8 @@
+Recorded UTC: 2026-11-08T10:16:55.6489323+00:00
+Recorded Manila: 2026-11-08T18:16:55.6489323+08:00
+Build: uncommitted Week 13 working tree
+PHP 8.2.12; Composer 2.10.2; Laravel 12.71.0; Flutter 3.47.8; Dart 3.13.7; MariaDB 10.4.32
+OS: Windows; timezone: Asia/Manila; XAMPP local schemas thesis_consultation_w13 and thesis_consultation_w13_test
+No source commit, tags or remote; branch master.
+Browser origin permission blocked; VS Code computer-use permission blocked.
+DOCX render attempt failed: no soffice.exe; PDFs rendered by bundled Poppler and all eight pages visually reviewed.

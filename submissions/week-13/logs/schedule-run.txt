@@ -1,0 +1,4 @@
+
+  2026-11-08 10:16:54 Running ["artisan" consultations:tick] ........................................... 627.25ms DONE
+  ⇂ "C:\xampp\php\php.exe" "artisan" consultations:tick > "NUL" 2>&1  
+

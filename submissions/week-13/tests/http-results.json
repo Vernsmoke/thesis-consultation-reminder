@@ -1,0 +1,562 @@
+{
+  "transport": "actual loopback HTTP API, separate from unavailable browser verification",
+  "build": "uncommitted Week 13 working tree",
+  "completed_at_utc": "2026-11-08T10:15:47.1764419+00:00",
+  "records": [
+    {
+      "scenario": "HTTP-01 unauthenticated",
+      "executed_at_utc": "2026-11-08T10:15:42.7176896+00:00",
+      "method": "GET",
+      "path": "/consultations",
+      "authenticated": false,
+      "idempotency_key": "",
+      "request": null,
+      "expected": 401,
+      "actual": 401,
+      "passed": true,
+      "elapsed_ms": 494,
+      "correlation_id": "791f71e5-b843-417e-a1d2-5f56571da9e1",
+      "response": {
+        "message": "Sign in required.",
+        "correlation_id": "791f71e5-b843-417e-a1d2-5f56571da9e1"
+      }
+    },
+    {
+      "scenario": "HTTP-02 student sign in",
+      "executed_at_utc": "2026-11-08T10:15:43.1370443+00:00",
+      "method": "POST",
+      "path": "/login",
+      "authenticated": false,
+      "idempotency_key": "",
+      "request": {
+        "password": "[omitted]",
+        "email": "student@example.test"
+      },
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "elapsed_ms": 390,
+      "correlation_id": "ec079b41-8b25-4dea-952c-c8c1bdb989c1",
+      "response": {
+        "token": "[omitted]",
+        "user": {
+          "id": 1,
+          "name": "Alex Researcher",
+          "role": "student"
+        }
+      }
+    },
+    {
+      "scenario": "HTTP-03 adviser sign in",
+      "executed_at_utc": "2026-11-08T10:15:43.5193161+00:00",
+      "method": "POST",
+      "path": "/login",
+      "authenticated": false,
+      "idempotency_key": "",
+      "request": {
+        "password": "[omitted]",
+        "email": "adviser@example.test"
+      },
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "elapsed_ms": 381,
+      "correlation_id": "904cf4f6-e7ff-4c4c-95c3-9d53a4cfa9de",
+      "response": {
+        "token": "[omitted]",
+        "user": {
+          "id": 2,
+          "name": "Casey Adviser",
+          "role": "adviser"
+        }
+      }
+    },
+    {
+      "scenario": "HTTP-04 coordinator sign in",
+      "executed_at_utc": "2026-11-08T10:15:43.8917072+00:00",
+      "method": "POST",
+      "path": "/login",
+      "authenticated": false,
+      "idempotency_key": "",
+      "request": {
+        "password": "[omitted]",
+        "email": "coordinator@example.test"
+      },
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "elapsed_ms": 371,
+      "correlation_id": "a2c599e9-7953-4043-a271-25bc790b660c",
+      "response": {
+        "token": "[omitted]",
+        "user": {
+          "id": 4,
+          "name": "Taylor Coordinator",
+          "role": "coordinator"
+        }
+      }
+    },
+    {
+      "scenario": "HTTP-05 panel sign in",
+      "executed_at_utc": "2026-11-08T10:15:44.2716058+00:00",
+      "method": "POST",
+      "path": "/login",
+      "authenticated": false,
+      "idempotency_key": "",
+      "request": {
+        "password": "[omitted]",
+        "email": "panel@example.test"
+      },
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "elapsed_ms": 379,
+      "correlation_id": "64cb6493-62e0-49a0-8a37-3cd1b5638033",
+      "response": {
+        "token": "[omitted]",
+        "user": {
+          "id": 3,
+          "name": "Jordan Panel",
+          "role": "panel"
+        }
+      }
+    },
+    {
+      "scenario": "HTTP-06 invalid input",
+      "executed_at_utc": "2026-11-08T10:15:44.4376465+00:00",
+      "method": "POST",
+      "path": "/consultations",
+      "authenticated": true,
+      "idempotency_key": "",
+      "request": {},
+      "expected": 422,
+      "actual": 422,
+      "passed": true,
+      "elapsed_ms": 163,
+      "correlation_id": "07230954-a3ef-4be6-bdb0-8eb214b9f81a",
+      "response": {
+        "message": "The agenda field is required. (and 2 more errors)",
+        "correlation_id": "07230954-a3ef-4be6-bdb0-8eb214b9f81a",
+        "errors": {
+          "agenda": [
+            "The agenda field is required."
+          ],
+          "scheduled_at": [
+            "The scheduled at field is required."
+          ],
+          "adviser_id": [
+            "The adviser id field is required."
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "HTTP-07 consultation created",
+      "executed_at_utc": "2026-11-08T10:15:44.6484889+00:00",
+      "method": "POST",
+      "path": "/consultations",
+      "authenticated": true,
+      "idempotency_key": "http_1794132944443",
+      "request": {
+        "adviser_id": 2,
+        "agenda": "Fictional consultation to review interview questions",
+        "panel_id": 3,
+        "scheduled_at": "2026-11-08T14:15:44Z"
+      },
+      "expected": 201,
+      "actual": 201,
+      "passed": true,
+      "elapsed_ms": 200,
+      "correlation_id": "bc50aec5-b939-42e0-b2f6-c1d0996ded39",
+      "response": {
+        "id": 1,
+        "message": "Request saved. Awaiting adviser confirmation."
+      }
+    },
+    {
+      "scenario": "HTTP-08 duplicate replay",
+      "executed_at_utc": "2026-11-08T10:15:44.8155449+00:00",
+      "method": "POST",
+      "path": "/consultations",
+      "authenticated": true,
+      "idempotency_key": "http_1794132944443",
+      "request": {
+        "adviser_id": 2,
+        "agenda": "Fictional consultation to review interview questions",
+        "panel_id": 3,
+        "scheduled_at": "2026-11-08T14:15:44Z"
+      },
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "elapsed_ms": 166,
+      "correlation_id": "9a9b6ebf-1e00-4654-bc36-5e47ee39c2cb",
+      "response": {
+        "id": 1,
+        "replayed": true
+      }
+    },
+    {
+      "scenario": "HTTP-09 changed payload conflict",
+      "executed_at_utc": "2026-11-08T10:15:44.9802340+00:00",
+      "method": "POST",
+      "path": "/consultations",
+      "authenticated": true,
+      "idempotency_key": "http_1794132944443",
+      "request": {
+        "adviser_id": 2,
+        "agenda": "Different fictional input under the same key",
+        "panel_id": 3,
+        "scheduled_at": "2026-11-08T14:15:44Z"
+      },
+      "expected": 409,
+      "actual": 409,
+      "passed": true,
+      "elapsed_ms": 162,
+      "correlation_id": "2834d6a3-7865-4cae-8436-7c7a19ecb543",
+      "response": {
+        "message": "Idempotency key already used with different input.",
+        "correlation_id": "2834d6a3-7865-4cae-8436-7c7a19ecb543"
+      }
+    },
+    {
+      "scenario": "HTTP-10 forbidden student confirmation",
+      "executed_at_utc": "2026-11-08T10:15:45.1775570+00:00",
+      "method": "PATCH",
+      "path": "/consultations/1",
+      "authenticated": true,
+      "idempotency_key": "",
+      "request": {
+        "status": "confirmed"
+      },
+      "expected": 403,
+      "actual": 403,
+      "passed": true,
+      "elapsed_ms": 195,
+      "correlation_id": "8481fb11-f1da-4324-94bf-66b3a9d57816",
+      "response": {
+        "message": "Adviser or coordinator required.",
+        "correlation_id": "8481fb11-f1da-4324-94bf-66b3a9d57816"
+      }
+    },
+    {
+      "scenario": "HTTP-11 adviser confirms",
+      "executed_at_utc": "2026-11-08T10:15:45.3678682+00:00",
+      "method": "PATCH",
+      "path": "/consultations/1",
+      "authenticated": true,
+      "idempotency_key": "",
+      "request": {
+        "status": "confirmed"
+      },
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "elapsed_ms": 189,
+      "correlation_id": "745111c3-cc76-4a65-932f-ec0a63225bac",
+      "response": {
+        "message": "Meeting status updated."
+      }
+    },
+    {
+      "scenario": "HTTP-12 action created",
+      "executed_at_utc": "2026-11-08T10:15:45.5630140+00:00",
+      "method": "POST",
+      "path": "/consultations/1/actions",
+      "authenticated": true,
+      "idempotency_key": "",
+      "request": {
+        "due_at": "2026-11-10T10:15:45Z",
+        "description": "Revise the fictional interview questions"
+      },
+      "expected": 201,
+      "actual": 201,
+      "passed": true,
+      "elapsed_ms": 193,
+      "correlation_id": "4a692f0c-16ce-432d-9880-f89550ffe32e",
+      "response": {
+        "id": 1
+      }
+    },
+    {
+      "scenario": "HTTP-13 follow up completed",
+      "executed_at_utc": "2026-11-08T10:15:45.7250801+00:00",
+      "method": "PATCH",
+      "path": "/actions/1/complete",
+      "authenticated": true,
+      "idempotency_key": "",
+      "request": {},
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "elapsed_ms": 160,
+      "correlation_id": "eb705554-bf33-45ab-b3da-4211bce8ef67",
+      "response": {
+        "message": "Action item completed."
+      }
+    },
+    {
+      "scenario": "HTTP-14 meeting completed",
+      "executed_at_utc": "2026-11-08T10:15:45.8921488+00:00",
+      "method": "PATCH",
+      "path": "/consultations/1",
+      "authenticated": true,
+      "idempotency_key": "",
+      "request": {
+        "status": "completed"
+      },
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "elapsed_ms": 166,
+      "correlation_id": "97c215ed-da9a-4750-a459-698239d4d55c",
+      "response": {
+        "message": "Meeting status updated."
+      }
+    },
+    {
+      "scenario": "HTTP-15 assigned panel reads",
+      "executed_at_utc": "2026-11-08T10:15:46.0370846+00:00",
+      "method": "GET",
+      "path": "/consultations",
+      "authenticated": true,
+      "idempotency_key": "",
+      "request": null,
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "elapsed_ms": 144,
+      "correlation_id": "d98ebb3b-7f9b-4c48-ae9b-f8c17539d2b1",
+      "response": {
+        "data": [
+          {
+            "id": 1,
+            "student_id": 1,
+            "adviser_id": 2,
+            "panel_id": 3,
+            "agenda": "Fictional consultation to review interview questions",
+            "scheduled_at": "2026-11-08 14:15:44",
+            "status": "completed",
+            "created_at": "2026-11-08 10:15:44",
+            "updated_at": "2026-11-08 10:15:45",
+            "action_items": [
+              {
+                "id": 1,
+                "consultation_id": 1,
+                "description": "Revise the fictional interview questions",
+                "due_at": "2026-11-10 10:15:45",
+                "status": "done",
+                "created_at": "2026-11-08 10:15:45",
+                "updated_at": "2026-11-08 10:15:45"
+              }
+            ]
+          }
+        ],
+        "directory": [
+          {
+            "id": 2,
+            "name": "Casey Adviser",
+            "role": "adviser"
+          },
+          {
+            "id": 3,
+            "name": "Jordan Panel",
+            "role": "panel"
+          }
+        ],
+        "notifications": []
+      }
+    },
+    {
+      "scenario": "HTTP-16 coordinator manual queue",
+      "executed_at_utc": "2026-11-08T10:15:46.2119296+00:00",
+      "method": "GET",
+      "path": "/automation",
+      "authenticated": true,
+      "idempotency_key": "",
+      "request": null,
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "elapsed_ms": 174,
+      "correlation_id": "44a90018-5b19-4bae-9974-472d77124438",
+      "response": {
+        "data": [
+          {
+            "id": 4,
+            "event_key": "evidence:20261108100635:timeout",
+            "kind": "progress_summary",
+            "entity_id": 1,
+            "status": "manual_review",
+            "attempts": 3,
+            "available_at": "2026-11-08 10:13:51",
+            "correlation_id": "48e34e9d-ca2d-4d0d-8529-39819ce230d6",
+            "failure_code": "service_unavailable",
+            "simulation": "timeout",
+            "resolution": null,
+            "created_at": "2026-11-08 10:06:35",
+            "updated_at": "2026-11-08 10:09:45"
+          },
+          {
+            "id": 3,
+            "event_key": "evidence:20261108100635:permanent",
+            "kind": "progress_summary",
+            "entity_id": 1,
+            "status": "manual_review",
+            "attempts": 1,
+            "available_at": "2026-11-08 10:07:41",
+            "correlation_id": "9daa391e-0033-43b1-a919-d2d226e9af34",
+            "failure_code": "recipient_invalid",
+            "simulation": "permanent",
+            "resolution": null,
+            "created_at": "2026-11-08 10:06:35",
+            "updated_at": "2026-11-08 10:06:35"
+          },
+          {
+            "id": 2,
+            "event_key": "evidence:20261108100635:transient",
+            "kind": "progress_summary",
+            "entity_id": 1,
+            "status": "delivered",
+            "attempts": 2,
+            "available_at": "2026-11-08 10:09:41",
+            "correlation_id": "8c327eda-0036-4a19-ba6b-0c3723da82cb",
+            "failure_code": null,
+            "simulation": "transient",
+            "resolution": null,
+            "created_at": "2026-11-08 10:06:35",
+            "updated_at": "2026-11-08 10:07:40"
+          },
+          {
+            "id": 1,
+            "event_key": "evidence:20261108100635:success",
+            "kind": "progress_summary",
+            "entity_id": 1,
+            "status": "delivered",
+            "attempts": 1,
+            "available_at": "2026-11-08 10:07:41",
+            "correlation_id": "a505f15b-d0c7-4dc1-98a0-c0ac46e6883e",
+            "failure_code": null,
+            "simulation": "success",
+            "resolution": null,
+            "created_at": "2026-11-08 10:06:35",
+            "updated_at": "2026-11-08 10:06:35"
+          }
+        ],
+        "metrics": {
+          "pending": 0,
+          "manual_review": 2,
+          "delivered": 2,
+          "attempts": 7
+        }
+      }
+    },
+    {
+      "scenario": "HTTP-17 student cannot read manual queue",
+      "executed_at_utc": "2026-11-08T10:15:46.3663576+00:00",
+      "method": "GET",
+      "path": "/automation",
+      "authenticated": true,
+      "idempotency_key": "",
+      "request": null,
+      "expected": 403,
+      "actual": 403,
+      "passed": true,
+      "elapsed_ms": 153,
+      "correlation_id": "30e6591c-98fa-4444-bcef-1548681b0028",
+      "response": {
+        "message": "Coordinator required.",
+        "correlation_id": "30e6591c-98fa-4444-bcef-1548681b0028"
+      }
+    },
+    {
+      "scenario": "HTTP-18 not found",
+      "executed_at_utc": "2026-11-08T10:15:46.5397881+00:00",
+      "method": "PATCH",
+      "path": "/consultations/999999",
+      "authenticated": true,
+      "idempotency_key": "",
+      "request": {
+        "status": "confirmed"
+      },
+      "expected": 404,
+      "actual": 404,
+      "passed": true,
+      "elapsed_ms": 172,
+      "correlation_id": "c02ddce5-039d-4799-ba79-bb186a236582",
+      "response": {
+        "message": "Consultation not found.",
+        "correlation_id": "c02ddce5-039d-4799-ba79-bb186a236582"
+      }
+    },
+    {
+      "scenario": "HTTP session logout",
+      "executed_at_utc": "2026-11-08T10:15:46.7113844+00:00",
+      "method": "POST",
+      "path": "/logout",
+      "authenticated": true,
+      "idempotency_key": "",
+      "request": {},
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "elapsed_ms": 171,
+      "correlation_id": "f0dfab60-282b-4817-8576-63a5ed59dc5b",
+      "response": {
+        "message": "Signed out."
+      }
+    },
+    {
+      "scenario": "HTTP session logout",
+      "executed_at_utc": "2026-11-08T10:15:46.8777630+00:00",
+      "method": "POST",
+      "path": "/logout",
+      "authenticated": true,
+      "idempotency_key": "",
+      "request": {},
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "elapsed_ms": 165,
+      "correlation_id": "a8d27b67-f4d6-461d-a1f2-3aa27f1aee8b",
+      "response": {
+        "message": "Signed out."
+      }
+    },
+    {
+      "scenario": "HTTP session logout",
+      "executed_at_utc": "2026-11-08T10:15:47.0249411+00:00",
+      "method": "POST",
+      "path": "/logout",
+      "authenticated": true,
+      "idempotency_key": "",
+      "request": {},
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "elapsed_ms": 146,
+      "correlation_id": "cf9c89a1-59bb-4240-961d-e5996371fcb3",
+      "response": {
+        "message": "Signed out."
+      }
+    },
+    {
+      "scenario": "HTTP session logout",
+      "executed_at_utc": "2026-11-08T10:15:47.1752488+00:00",
+      "method": "POST",
+      "path": "/logout",
+      "authenticated": true,
+      "idempotency_key": "",
+      "request": {},
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "elapsed_ms": 149,
+      "correlation_id": "d7f12159-5968-47aa-a2cd-958ad512c40b",
+      "response": {
+        "message": "Signed out."
+      }
+    }
+  ],
+  "started_at_utc": "2026-11-08T10:15:42.1553753+00:00"
+}

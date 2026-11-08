@@ -1,0 +1,21 @@
+Week 13 DOCX render and visual QA
+Completed: 2026-11-08T18:36:43+08:00 (Asia/Manila)
+Renderer: LibreOffice at C:/Program Files/LibreOffice/program/soffice.exe through the bundled document render workflow
+
+Final files rendered:
+- reports/SA7-automation-report.docx (3 pages)
+- reports/activity-1-pattern-selection.docx (2 pages)
+- reports/activity-2-failure-injection.docx (2 pages)
+- reports/reflection-preparation.docx (2 pages after the evidence-based reflection draft was completed)
+
+Visual inspection result: PASS (9 of 9 current pages)
+- No clipping, overlap, broken glyphs, or unreadable content observed.
+- First-pass title borders and tight heading spacing were identified and corrected.
+- The documents were regenerated, rerendered, and visually reinspected after the correction.
+- Matching PDFs were converted from the final DOCX files with LibreOffice and visually verified after regeneration. A fragile independent PDF layout path was removed after QA exposed inconsistent font rendering.
+
+Final PDF regeneration and inspection completed: 2026-11-08T18:46:20+08:00.
+
+Reflection draft update: 2026-11-08T18:58:45+08:00. The reflection was split into two balanced pages, regenerated as DOCX/PDF, and both pages in both formats passed visual inspection.
+
+This log supersedes the unresolved status in docx-render-attempt.txt while preserving that initial failed attempt as historical evidence.

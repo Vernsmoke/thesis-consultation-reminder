@@ -1,0 +1,443 @@
+{
+  "captured_at_manila": "2026-11-08T19:09:43.269705+08:00",
+  "build": "uncommitted Week 13 working tree",
+  "branch": "master",
+  "confirmed_source_commit": null,
+  "files": [
+    {
+      "path": "backend/.editorconfig",
+      "bytes": 258,
+      "sha256": "d9a5756ca5adea55000be0ee4f5af68946e3554c986981b7f8e35e7acaad28fa"
+    },
+    {
+      "path": "backend/.env.example",
+      "bytes": 355,
+      "sha256": "f0394cc03fa565e3c3238f61e0bc783c8eb3413a83755ecbc2b1f7337e671b6a"
+    },
+    {
+      "path": "backend/.gitattributes",
+      "bytes": 186,
+      "sha256": "a40eb27ee0b545ca5b5542daaf99fec51f84f23b3766a6353864ef2a115bc51c"
+    },
+    {
+      "path": "backend/.gitignore",
+      "bytes": 286,
+      "sha256": "2049db033d4f531564a125d6bb85fef678d924f998b75c895e9d3e5bb2e68cca"
+    },
+    {
+      "path": "backend/README.md",
+      "bytes": 280,
+      "sha256": "3715603494859793c0f347fb08a20067072aceeabe1d0a2b3cf5475ddce205de"
+    },
+    {
+      "path": "backend/app/Console/Commands/Week13Evidence.php",
+      "bytes": 2783,
+      "sha256": "78213c3e0a1485b5e885f43879e9e34c9169f8a2901103f848511a185ee017b7"
+    },
+    {
+      "path": "backend/app/Console/Commands/Week13Fixtures.php",
+      "bytes": 3104,
+      "sha256": "89e7d9471628e943a27bd284bd92128451918c4407605674a62f87d895294243"
+    },
+    {
+      "path": "backend/app/Http/Controllers/ConsultationController.php",
+      "bytes": 9206,
+      "sha256": "791cdf1a117249eb09d84374435667efdc39ab8521744c9e1a1c755f3469d14d"
+    },
+    {
+      "path": "backend/app/Http/Controllers/Controller.php",
+      "bytes": 77,
+      "sha256": "25d1c1ef8e6cc8a376553faacfba2b07d9dfaee9bdbb84f14f77517580e9deb1"
+    },
+    {
+      "path": "backend/app/Http/Middleware/ApiContext.php",
+      "bytes": 965,
+      "sha256": "b06d1803326c722e611a36d297254ed579fae689617eea40a90ca2fb8acfd392"
+    },
+    {
+      "path": "backend/app/Models/User.php",
+      "bytes": 1025,
+      "sha256": "41d800ffd4887c75e66af8eaedc756edce052eb662baae357308c6e364a6c9d2"
+    },
+    {
+      "path": "backend/app/Providers/AppServiceProvider.php",
+      "bytes": 361,
+      "sha256": "caf306ef6a25a547bbb7edd5508a39b51c365083eb6dd58378cf2242018e94c7"
+    },
+    {
+      "path": "backend/app/Services/Audit.php",
+      "bytes": 713,
+      "sha256": "112fbeca74d9ee0dd47f2d3281991929372c204c47c3bbad18476ee933a94949"
+    },
+    {
+      "path": "backend/app/Services/Automation.php",
+      "bytes": 4720,
+      "sha256": "ddf59707dd7cf44d499a0d9ca90dfa1604b147261c7c896fdcd18595a88a01ef"
+    },
+    {
+      "path": "backend/app/Services/SimulatedTransport.php",
+      "bytes": 1914,
+      "sha256": "18de8863b767f555b3e8bd80e3773d0b36029063f78a6a23ef4c860072a41ced"
+    },
+    {
+      "path": "backend/artisan",
+      "bytes": 425,
+      "sha256": "f91a517c0c5d3a904c3f390933964a5e08ec1fc68146882730daac4aca4ffcec"
+    },
+    {
+      "path": "backend/bootstrap/app.php",
+      "bytes": 1589,
+      "sha256": "ad6f453922fc9af723b403ea6e13fe4ca8d98033a5ea2d3d861f2aa087394729"
+    },
+    {
+      "path": "backend/bootstrap/cache/.gitignore",
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    {
+      "path": "backend/bootstrap/providers.php",
+      "bytes": 89,
+      "sha256": "f720e185207a343d4c19fc99dbb317a4187efbcd7d38a303a695bbdd77ffb943"
+    },
+    {
+      "path": "backend/composer.json",
+      "bytes": 2381,
+      "sha256": "2c2ee477271a0dcdf9ae5830b75da13049f5236e556d9e086d8f0cbb5e645bf5"
+    },
+    {
+      "path": "backend/composer.lock",
+      "bytes": 313637,
+      "sha256": "1bfc4f0cc7edf5f94433b06d021dc1b8a7cdc2507469559a6b95cef2a80aefa6"
+    },
+    {
+      "path": "backend/config/app.php",
+      "bytes": 4308,
+      "sha256": "e7e079e20a4e8d5b05f8e6d710bc0c8e8beda0d6c5b97da4632420fc1bbfbcfb"
+    },
+    {
+      "path": "backend/config/auth.php",
+      "bytes": 4040,
+      "sha256": "09c46d5c0e950f0a35ae95c21ff998cc5e4157a78cb3d8ec7b9925322f00869f"
+    },
+    {
+      "path": "backend/config/automation.php",
+      "bytes": 200,
+      "sha256": "dda1160de1cb049d1c1344a1023cbd82dcc46c1d9f22e1ea1e7a5631820b0051"
+    },
+    {
+      "path": "backend/config/cache.php",
+      "bytes": 3476,
+      "sha256": "dc3a64749bc19946ba6a054be0b67ae8c450c9401799cb176ac0a0b8d4756664"
+    },
+    {
+      "path": "backend/config/cors.php",
+      "bytes": 394,
+      "sha256": "f7bf5eb186d28ff6090023d581062f7b0ec68f49458bf9b3c23b4e46bf146fab"
+    },
+    {
+      "path": "backend/config/database.php",
+      "bytes": 6258,
+      "sha256": "4c831a869f4335805c6ca67c3f583e71329622ee8f70dbdc70c57a523a6b6021"
+    },
+    {
+      "path": "backend/config/filesystems.php",
+      "bytes": 2500,
+      "sha256": "46b977d9555ed617aa0d42055a0c76a34c9d16c63ee634ff6683bc95712c9317"
+    },
+    {
+      "path": "backend/config/logging.php",
+      "bytes": 4310,
+      "sha256": "6e0885a09b96f9e3e9ccfae9e536da3c33dbd53a7710a518c05ac0f2b6808fb8"
+    },
+    {
+      "path": "backend/config/mail.php",
+      "bytes": 3539,
+      "sha256": "433acc0d5342a074b32e44b3d7ffba153c3eaf292a5a2fc94d7cb6ee0addb147"
+    },
+    {
+      "path": "backend/config/queue.php",
+      "bytes": 3824,
+      "sha256": "a185a3e86b65db26938204f4f50cf0c0ca99974e9926b9cdcef6b7743feea482"
+    },
+    {
+      "path": "backend/config/services.php",
+      "bytes": 1035,
+      "sha256": "2226be3fa0e560fc8cd628f3e8f50fcd78639a24375f5e931d0c656eaf1d4ce8"
+    },
+    {
+      "path": "backend/config/session.php",
+      "bytes": 7858,
+      "sha256": "c7f637c49f3e61d5488a11653b06a6b5a8a73b335d1dadbd84666be5ec4f6de6"
+    },
+    {
+      "path": "backend/database/.gitignore",
+      "bytes": 10,
+      "sha256": "e758642d95e83e907e010b6e46b07b3f953c7cef11fe5ebefc2a77b9d7b4d5f7"
+    },
+    {
+      "path": "backend/database/factories/UserFactory.php",
+      "bytes": 1044,
+      "sha256": "50bdc543f1b09d1a57260be55ad0e1a68aee4b34f63e1109dc94d9bcd3080526"
+    },
+    {
+      "path": "backend/database/migrations/0001_01_01_000000_create_users_table.php",
+      "bytes": 1473,
+      "sha256": "10d79883bc08ce46510f9ad8b1830b4d06d586dc56ae2c8bac3b3e491f69a90f"
+    },
+    {
+      "path": "backend/database/migrations/0001_01_01_000001_create_cache_table.php",
+      "bytes": 849,
+      "sha256": "20f769d3c11748c1cc42c41cd3789b0b9b2cd0db44ee22d378addac3ff8aed4f"
+    },
+    {
+      "path": "backend/database/migrations/0001_01_01_000002_create_jobs_table.php",
+      "bytes": 1812,
+      "sha256": "7c9c712adf4091c87bf2612f4d0dccdfa1df4501553e4ac068b83d7bd5462fa5"
+    },
+    {
+      "path": "backend/database/migrations/2026_11_08_000001_create_consultation_workflow.php",
+      "bytes": 3417,
+      "sha256": "28a262af21aabaa30259d2ec26267eeccd56554d3027e4e3a52b1b456d546e24"
+    },
+    {
+      "path": "backend/database/migrations/2026_11_08_000002_add_receipt_payload_to_existing_installation.php",
+      "bytes": 599,
+      "sha256": "70e847547bd25d7dba07a0120ddb1a52d20309f4429336ab2a123e60a374ea5e"
+    },
+    {
+      "path": "backend/database/seeders/DatabaseSeeder.php",
+      "bytes": 1063,
+      "sha256": "15cb5c361e328d605fa89170f36d76bf9eb1526ef64b0b02ee8f4ba966aad976"
+    },
+    {
+      "path": "backend/package.json",
+      "bytes": 355,
+      "sha256": "f468a85e1fc5e344ff9505f0aaa407b3307fdc2af2f4ad9891a31c6c5d0a2845"
+    },
+    {
+      "path": "backend/phpunit.xml",
+      "bytes": 1218,
+      "sha256": "f867b79fc2e74d54c4da3267d3d49c9eed32d1dc980eca44eaf7d9c5cd192753"
+    },
+    {
+      "path": "backend/public/.htaccess",
+      "bytes": 740,
+      "sha256": "b7e379c77639fd56144947dbae84c84eb466d9c686ea81f2f013ae85421da923"
+    },
+    {
+      "path": "backend/public/favicon.ico",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/public/index.php",
+      "bytes": 543,
+      "sha256": "eba77cba39695b6bd091fe5211d481f7ebb2ce2d8d26230b5a609465d0a4aff9"
+    },
+    {
+      "path": "backend/public/robots.txt",
+      "bytes": 24,
+      "sha256": "e5c4b84484ee4216e9373be99380320c25dd94805f99f0a805846f087636553f"
+    },
+    {
+      "path": "backend/resources/css/app.css",
+      "bytes": 413,
+      "sha256": "370514b05335f69079d62747e4a119469213de68dc760ed0566ce0f9e22a56fd"
+    },
+    {
+      "path": "backend/resources/js/app.js",
+      "bytes": 22,
+      "sha256": "cf6dab196c721f6911ff99cc4f910897f978599a2d289971a316a5fc33091f94"
+    },
+    {
+      "path": "backend/resources/js/bootstrap.js",
+      "bytes": 127,
+      "sha256": "6fd9fc82e68fa915a882f4e227b9faacbe7bfd66cb953c628840e83bda6b72f4"
+    },
+    {
+      "path": "backend/resources/views/welcome.blade.php",
+      "bytes": 82540,
+      "sha256": "2712f5909e694cf0676ace8a9b9da3e190293e7a6cb5995fde756491c8385521"
+    },
+    {
+      "path": "backend/routes/api.php",
+      "bytes": 851,
+      "sha256": "2f91ad8643fb32ba8b943f1d1d139d5c81abde040d8d847728e54b65aae67a0e"
+    },
+    {
+      "path": "backend/routes/console.php",
+      "bytes": 601,
+      "sha256": "f8c803d27418589bc9d18b196bbc065520ec6a8fe68a1efe53aec3c493fcf497"
+    },
+    {
+      "path": "backend/routes/web.php",
+      "bytes": 108,
+      "sha256": "248c7eeeb43bb61ee4fb6603e52b44843c64f72a841d671bcd41871aab23f970"
+    },
+    {
+      "path": "backend/storage/app/.gitignore",
+      "bytes": 33,
+      "sha256": "993b9e3709d7b5189da331725d1169d79e561a509db2490b722b525073d2d976"
+    },
+    {
+      "path": "backend/storage/app/private/.gitignore",
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    {
+      "path": "backend/storage/app/public/.gitignore",
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    {
+      "path": "backend/storage/framework/.gitignore",
+      "bytes": 119,
+      "sha256": "2d452d65596636197757afa17df52331c84da7bb74ee0f3462fd5be4eb6afdc6"
+    },
+    {
+      "path": "backend/storage/framework/cache/.gitignore",
+      "bytes": 21,
+      "sha256": "32f79194633ddb34f013c6ee8819d112104ff822357adf308ec385b46a7f42f6"
+    },
+    {
+      "path": "backend/storage/framework/cache/data/.gitignore",
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    {
+      "path": "backend/storage/framework/sessions/.gitignore",
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    {
+      "path": "backend/storage/framework/testing/.gitignore",
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    {
+      "path": "backend/storage/framework/views/.gitignore",
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    {
+      "path": "backend/storage/logs/.gitignore",
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    {
+      "path": "backend/tests/Feature/ExampleTest.php",
+      "bytes": 359,
+      "sha256": "aaa4a192fb4aa96d4e81eda06a29968da3d9a73b71026b87a67297e66dd985b8"
+    },
+    {
+      "path": "backend/tests/Feature/WorkflowTest.php",
+      "bytes": 11328,
+      "sha256": "9a574c7e6cb0c591c73006987b6234dfcd15b37224a7a40a82ab8cbaf3ff7a6c"
+    },
+    {
+      "path": "backend/tests/TestCase.php",
+      "bytes": 142,
+      "sha256": "c7c209f5579c42647c1f7b2a79ac828e8b54ac62a98442045a6e94fa2c0d0ebc"
+    },
+    {
+      "path": "backend/tests/Unit/ExampleTest.php",
+      "bytes": 243,
+      "sha256": "ffacae5c1a2a44c809420af5b3b404910da1b12167d58764dac6d10b8ba8cfaf"
+    },
+    {
+      "path": "backend/vite.config.js",
+      "bytes": 331,
+      "sha256": "1bd7f75ae1df969c819e63114e9be5f0e2a69e399d4dcab4373aa680314a93d9"
+    },
+    {
+      "path": "frontend/.gitignore",
+      "bytes": 794,
+      "sha256": "0581d23086f7283dc97d2d5bde4f60724f8115f67baa76949596790ab9800dd7"
+    },
+    {
+      "path": "frontend/.metadata",
+      "bytes": 964,
+      "sha256": "fd14eff939dad5d54ad3a8e3132697bb04dfbc8864d7fe681d397cef581fb4f9"
+    },
+    {
+      "path": "frontend/README.md",
+      "bytes": 451,
+      "sha256": "44abeb5615e7a643048364daa29e52225a776e412ecb757d46d0beb8110e1057"
+    },
+    {
+      "path": "frontend/analysis_options.yaml",
+      "bytes": 1503,
+      "sha256": "5ed95b15f3691d1363eb38408668a5126690898da0fe5afd00c9d1e8dbb50d2e"
+    },
+    {
+      "path": "frontend/lib/api.dart",
+      "bytes": 2037,
+      "sha256": "564c8ef15cf00b0d130ab662fc57885440026dfc1b90cb1b8376eeec029d8724"
+    },
+    {
+      "path": "frontend/lib/main.dart",
+      "bytes": 24392,
+      "sha256": "02c0cbd1cb64fd41244a627f3f0292c9fc3b589a56f86cbe6f40449928be839c"
+    },
+    {
+      "path": "frontend/pubspec.lock",
+      "bytes": 6985,
+      "sha256": "f30f38cc1ca7942743eecda2c725dec53d9cd1c2be1be4ae22f497d6bdf0b21a"
+    },
+    {
+      "path": "frontend/pubspec.yaml",
+      "bytes": 3995,
+      "sha256": "d784354f196d5c4e8b0ae870aa88dfe8508c746df96bf718ee035b97c97e9ac3"
+    },
+    {
+      "path": "frontend/test/api_test.dart",
+      "bytes": 1614,
+      "sha256": "52524dcbf973d9dc3d67925f7a949646ed6def30391f781e8f43644a3b16e9c7"
+    },
+    {
+      "path": "frontend/test/connected_states_test.dart",
+      "bytes": 4930,
+      "sha256": "ff873388bf560fa4ee13907fd193bce17c1bfedbaa6ffb1050c40b31d6a81525"
+    },
+    {
+      "path": "frontend/test/workflow_test.dart",
+      "bytes": 1142,
+      "sha256": "754679fb4d4c91650f9d5a5725f4f0389a32feb75dca30e13389a7f16242694f"
+    },
+    {
+      "path": "frontend/web/favicon.png",
+      "bytes": 917,
+      "sha256": "7ab2525f4b86b65d3e4c70358a17e5a1aaf6f437f99cbcc046dad73d59bb9015"
+    },
+    {
+      "path": "frontend/web/icons/Icon-192.png",
+      "bytes": 5292,
+      "sha256": "3dce99077602f70421c1c6b2a240bc9b83d64d86681d45f2154143310c980be3"
+    },
+    {
+      "path": "frontend/web/icons/Icon-512.png",
+      "bytes": 8252,
+      "sha256": "baccb205ae45f0b421be1657259b4943ac40c95094ab877f3bcbe12cd544dcbe"
+    },
+    {
+      "path": "frontend/web/icons/Icon-maskable-192.png",
+      "bytes": 5594,
+      "sha256": "d2c842e22a9f4ec9d996b23373a905c88d9a203b220c5c151885ad621f974b5c"
+    },
+    {
+      "path": "frontend/web/icons/Icon-maskable-512.png",
+      "bytes": 20998,
+      "sha256": "6aee06cdcab6b2aef74b1734c4778f4421d2da100b0ff9e52b21b55240202929"
+    },
+    {
+      "path": "frontend/web/index.html",
+      "bytes": 1632,
+      "sha256": "a0b86c232c2f0c749c741b1b71933bd99364e6a3cea7f5c928356c1fc7ce5973"
+    },
+    {
+      "path": "frontend/web/manifest.json",
+      "bytes": 992,
+      "sha256": "6bbf95c7bb14617d540da7adb3902e052125d1825ad29200256e6476833744a8"
+    }
+  ]
+}
