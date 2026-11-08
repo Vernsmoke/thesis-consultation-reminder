@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "title": "Week 14 Secure Data Flow",
+  "description": "Trust boundaries, protected configuration, minimized plaintext, ciphertext, audit records, and rejection paths for the Thesis Consultation Reminder System.",
+  "diagrams": [
+    {
+      "id": "secure_data_flow",
+      "title": "Secure Data Flow and Trust Boundaries",
+      "kind": "flowchart",
+      "accessibility": "Coordinator and adviser browsers use the Flutter public client over trusted local HTTPS. Laravel authenticates roles, creates or opens authenticated envelopes through OpenSSL, reads an ignored server keyring, stores workflow and replay receipts in MariaDB, and writes allowlisted audit metadata. Rejected invalid, altered, expired, replayed, or unauthorized requests return safe errors without plaintext.",
+      "data": {
+        "direction": "LR",
+        "nodes": [
+          {"id": "coordinator", "label": "Coordinator browser"},
+          {"id": "adviser", "label": "Assigned adviser browser"},
+          {"id": "flutter", "label": "Flutter Web public client"},
+          {"id": "tls", "label": "Local TLS gateway\nTLS 1.2 or later"},
+          {"id": "auth", "label": "Laravel API\nSession authentication and role authorization"},
+          {"id": "exchange", "label": "SecureExchange service\nAES 256 GCM authenticated encryption"},
+          {"id": "keyring", "label": "Ignored protected keyring\nServer only"},
+          {"id": "database", "label": "MariaDB\nWorkflow and unique replay receipts"},
+          {"id": "audit", "label": "Allowlisted audit records\nNo tokens keys ciphertext or request bodies"},
+          {"id": "reject", "label": "Safe rejection\nCorrelation reference and no plaintext"}
+        ],
+        "edges": [
+          {"from": "coordinator", "to": "flutter", "label": "Fictional controlled input", "arrow": "-->"},
+          {"from": "adviser", "to": "flutter", "label": "Envelope submission", "arrow": "-->"},
+          {"from": "flutter", "to": "tls", "label": "HTTPS JSON and bearer session", "arrow": "-->"},
+          {"from": "tls", "to": "auth", "label": "Loopback forwarding after TLS termination", "arrow": "-->"},
+          {"from": "auth", "to": "database", "label": "Scoped workflow query", "arrow": "-->"},
+          {"from": "auth", "to": "exchange", "label": "Minimized record or envelope", "arrow": "-->"},
+          {"from": "exchange", "to": "keyring", "label": "Active or previous key by key ID", "arrow": "-->"},
+          {"from": "exchange", "to": "database", "label": "One unique accepted message ID", "arrow": "-->"},
+          {"from": "auth", "to": "audit", "label": "Outcome and correlation only", "arrow": "-->"},
+          {"from": "exchange", "to": "reject", "label": "Tamper expiry invalid key or replay", "arrow": "-.->"},
+          {"from": "auth", "to": "reject", "label": "Unauthenticated or unauthorized", "arrow": "-.->"},
+          {"from": "exchange", "to": "auth", "label": "Ciphertext on send or verified plaintext on receive", "arrow": "-->"},
+          {"from": "auth", "to": "tls", "label": "No store response", "arrow": "-->"},
+          {"from": "tls", "to": "flutter", "label": "HTTPS response", "arrow": "-->"}
+        ]
+      },
+      "styles": [
+        {"name": "sensitive", "definition": "fill:#fff3cd,stroke:#8a6d1d,color:#111"}
+      ]
+    }
+  ]
+}

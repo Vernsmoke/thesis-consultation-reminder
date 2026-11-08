@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1214" viewBox="0 0 960 1214">
+<rect width="100%" height="100%" fill="#0b1020"/>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif} .title{font-size:22px;font-weight:700;fill:#f4f7ff}.meta{font-size:12px;fill:#9fb0d0}.node{fill:#18233d;stroke:#71d7ff;stroke-width:1.5}.label{font-size:14px;fill:#f7fbff}.edge{stroke:#b984ff;stroke-width:2;fill:none}.edgeLabel{font-size:11px;fill:#dbc8ff}</style>
+<text class="title" x="32" y="36">Week 14 Secure Data Flow</text>
+<rect x="24" y="62" width="912" height="1140" rx="18" fill="#10182b" stroke="#253556"/>
+<text class="title" x="48" y="96">Secure Data Flow and Trust Boundaries</text>
+<text class="meta" x="48" y="116">flowchart · structural preview · static evidence</text>
+<rect class="node" x="64" y="140" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="169">Coordinator browser</text>
+<rect class="node" x="516" y="140" width="380" height="48" rx="10"/>
+<text class="label" x="532" y="169">Assigned adviser browser</text>
+<rect class="node" x="64" y="216" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="245">Flutter Web public client</text>
+<rect class="node" x="516" y="216" width="380" height="48" rx="10"/>
+<text class="label" x="532" y="245">Local TLS gateway
+TLS 1.2 or later</text>
+<rect class="node" x="64" y="292" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="321">Laravel API
+Session authentication and role authorization</text>
+<rect class="node" x="516" y="292" width="380" height="48" rx="10"/>
+<text class="label" x="532" y="321">SecureExchange service
+AES 256 GCM authenticated encryp…</text>
+<rect class="node" x="64" y="368" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="397">Ignored protected keyring
+Server only</text>
+<rect class="node" x="516" y="368" width="380" height="48" rx="10"/>
+<text class="label" x="532" y="397">MariaDB
+Workflow and unique replay receipts</text>
+<rect class="node" x="64" y="444" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="473">Allowlisted audit records
+No tokens keys ciphertext or …</text>
+<rect class="node" x="516" y="444" width="380" height="48" rx="10"/>
+<text class="label" x="532" y="473">Safe rejection
+Correlation reference and no plaintext</text>
+<path class="edge" d="M254,188 L254,528 L254,528 L254,216"/>
+<text class="edgeLabel" x="48" y="542">Fictional controlled input</text>
+<path class="edge" d="M706,188 L706,550 L254,550 L254,216"/>
+<text class="edgeLabel" x="48" y="564">Envelope submission</text>
+<path class="edge" d="M254,264 L254,572 L706,572 L706,216"/>
+<text class="edgeLabel" x="48" y="586">HTTPS JSON and bearer session</text>
+<path class="edge" d="M706,264 L706,594 L254,594 L254,292"/>
+<text class="edgeLabel" x="48" y="608">Loopback forwarding after TLS termination</text>
+<path class="edge" d="M254,340 L254,616 L706,616 L706,368"/>
+<text class="edgeLabel" x="48" y="630">Scoped workflow query</text>
+<path class="edge" d="M254,340 L254,638 L706,638 L706,292"/>
+<text class="edgeLabel" x="48" y="652">Minimized record or envelope</text>
+<path class="edge" d="M706,340 L706,660 L254,660 L254,368"/>
+<text class="edgeLabel" x="48" y="674">Active or previous key by key ID</text>
+<path class="edge" d="M706,340 L706,682 L706,682 L706,368"/>
+<text class="edgeLabel" x="48" y="696">One unique accepted message ID</text>
+<path class="edge" d="M254,340 L254,704 L254,704 L254,444"/>
+<text class="edgeLabel" x="48" y="718">Outcome and correlation only</text>
+<path class="edge" d="M706,340 L706,726 L706,726 L706,444"/>
+<text class="edgeLabel" x="48" y="740">Tamper expiry invalid key or replay</text>
+<path class="edge" d="M254,340 L254,748 L706,748 L706,444"/>
+<text class="edgeLabel" x="48" y="762">Unauthenticated or unauthorized</text>
+<path class="edge" d="M706,340 L706,770 L254,770 L254,292"/>
+<text class="edgeLabel" x="48" y="784">Ciphertext on send or verified plaintext on receive</text>
+<path class="edge" d="M254,340 L254,792 L706,792 L706,216"/>
+<text class="edgeLabel" x="48" y="806">No store response</text>
+<path class="edge" d="M706,264 L706,814 L254,814 L254,216"/>
+<text class="edgeLabel" x="48" y="828">HTTPS response</text>
+</svg>

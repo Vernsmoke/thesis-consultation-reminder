@@ -1,0 +1,14 @@
+# Week 14 Residual Risk Register
+
+| ID | Residual risk | Likelihood | Impact | Existing evidence-backed control | Next improvement and owner |
+|---|---|---|---|---|---|
+| R14-01 | Local Windows account or malware reads server keyring and database. | Low to medium in controlled lab | High | Ignored server-only keyring, no key output, role boundaries, short envelope TTL | Use OS-protected secrets or approved KMS and host hardening before broader use; operator. |
+| R14-02 | Shared AES key cannot prove which holder created a valid message. | Low in single-server exercise | Medium | One Laravel service owns both operations and audit events identify the application actor | Use separate service identities and signatures only if independent nonrepudiation is required; architect. |
+| R14-03 | Local CA private key could sign another localhost certificate while retained. | Low | Medium | Seven-day certificate, protected ignored directory, narrow localhost SAN | Remove CA from trust store and destroy private key after review; operator. |
+| R14-04 | Loopback gateway-to-Laravel hop is HTTP. | Low on single controlled host | Medium | Listener bound to loopback; browser-to-gateway TLS verified | Use same-host production reverse proxy socket or protected internal TLS; deployer. |
+| R14-05 | Replay receipts grow without a retention job. | Low for prototype | Low | Small bounded records, unique message IDs | Add reviewed retention after evidence/provenance requirements are known; maintainer. |
+| R14-06 | Clock drift rejects valid envelopes or extends perceived freshness. | Medium without time monitoring | Medium | Five-minute TTL and 30-second future-skew check | Monitor time synchronization and alert on drift; operator. |
+| R14-07 | Live session theft permits actions until two-hour expiry. | Low in controlled browser | High | HTTPS, in-memory token, hashed server token, logout, role/ownership checks | Shorter inactivity timeout and session revocation dashboard before broader use; backend maintainer. |
+| R14-08 | Logs or screenshots could expose fictional agendas or correlation metadata. | Medium during evidence capture | Low | Controlled fictional data, allowlisted logs, reviewed screenshots | Add automated evidence redaction/metadata scrub before external sharing; student/operator. |
+| R14-09 | Local certificate has no online revocation check. | High by design | Low in isolated seven-day lab | Explicit CA, short validity, invalid-trust rejection test | Production CA and automated revocation/renewal are required for deployment; deployer. |
+| R14-10 | Browser accessibility tree remained limited for Flutter canvas semantics. | Medium | Medium | Labels, Semantics live region, widget tests at 390/768/1440, keyboard-capable controls | Perform a manual screen-reader and full Tab-order audit; user/instructor review. |

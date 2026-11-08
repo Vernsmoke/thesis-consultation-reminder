@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1052" viewBox="0 0 960 1052">
+<rect width="100%" height="100%" fill="#0b1020"/>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif} .title{font-size:22px;font-weight:700;fill:#f4f7ff}.meta{font-size:12px;fill:#9fb0d0}.node{fill:#18233d;stroke:#71d7ff;stroke-width:1.5}.label{font-size:14px;fill:#f7fbff}.edge{stroke:#b984ff;stroke-width:2;fill:none}.edgeLabel{font-size:11px;fill:#dbc8ff}</style>
+<text class="title" x="32" y="36">Week 14 Secure Exchange Sequence</text>
+<rect x="24" y="62" width="912" height="978" rx="18" fill="#10182b" stroke="#253556"/>
+<text class="title" x="48" y="96">Authenticated Envelope Creation Acceptance and Replay Rejection</text>
+<text class="meta" x="48" y="116">sequence · structural preview · static evidence</text>
+<rect class="node" x="64" y="140" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="169">Coordinator</text>
+<rect class="node" x="516" y="140" width="380" height="48" rx="10"/>
+<text class="label" x="532" y="169">Flutter Web</text>
+<rect class="node" x="64" y="216" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="245">Laravel API</text>
+<rect class="node" x="516" y="216" width="380" height="48" rx="10"/>
+<text class="label" x="532" y="245">OpenSSL AES 256 GCM</text>
+<rect class="node" x="64" y="292" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="321">Protected keyring</text>
+<rect class="node" x="516" y="292" width="380" height="48" rx="10"/>
+<text class="label" x="532" y="321">MariaDB</text>
+<rect class="node" x="64" y="368" width="380" height="48" rx="10"/>
+<text class="label" x="80" y="397">Assigned adviser</text>
+<path class="edge" d="M254,188 L254,452 L706,452 L706,140"/>
+<text class="edgeLabel" x="48" y="466">Choose consultation and prepare secure envelope</text>
+<path class="edge" d="M706,188 L706,474 L254,474 L254,216"/>
+<text class="edgeLabel" x="48" y="488">HTTPS POST with bearer session and consultation ID</text>
+<path class="edge" d="M254,264 L254,496 L706,496 L706,292"/>
+<text class="edgeLabel" x="48" y="510">Authorize coordinator and read minimized assigned record</text>
+<path class="edge" d="M254,264 L254,518 L254,518 L254,292"/>
+<text class="edgeLabel" x="48" y="532">Read active key by key ID</text>
+<path class="edge" d="M254,264 L254,540 L706,540 L706,216"/>
+<text class="edgeLabel" x="48" y="554">Encrypt plaintext with random nonce and authenticated metadata</text>
+<path class="edge" d="M706,264 L706,562 L254,562 L254,216"/>
+<text class="edgeLabel" x="48" y="576">Ciphertext and authentication tag</text>
+<path class="edge" d="M254,264 L254,584 L706,584 L706,140"/>
+<text class="edgeLabel" x="48" y="598">201 short lived envelope without key</text>
+<path class="edge" d="M254,416 L254,606 L706,606 L706,140"/>
+<text class="edgeLabel" x="48" y="620">Paste coordinator provided envelope</text>
+<path class="edge" d="M706,188 L706,628 L254,628 L254,216"/>
+<text class="edgeLabel" x="48" y="642">HTTPS POST envelope with adviser session</text>
+<path class="edge" d="M254,264 L254,650 L254,650 L254,292"/>
+<text class="edgeLabel" x="48" y="664">Load key identified by authenticated metadata</text>
+<path class="edge" d="M254,264 L254,672 L706,672 L706,216"/>
+<text class="edgeLabel" x="48" y="686">Verify tag and decrypt</text>
+<path class="edge" d="M706,264 L706,694 L254,694 L254,216"/>
+<text class="edgeLabel" x="48" y="708">Authenticated plaintext or safe failure</text>
+<path class="edge" d="M254,264 L254,716 L706,716 L706,292"/>
+<text class="edgeLabel" x="48" y="730">Authorize assigned adviser and insert unique message receipt</text>
+<path class="edge" d="M254,264 L254,738 L706,738 L706,140"/>
+<text class="edgeLabel" x="48" y="752">200 minimized record with no store header</text>
+<path class="edge" d="M706,188 L706,760 L254,760 L254,216"/>
+<text class="edgeLabel" x="48" y="774">Repeat the same accepted envelope</text>
+<path class="edge" d="M254,264 L254,782 L706,782 L706,292"/>
+<text class="edgeLabel" x="48" y="796">Unique message ID conflicts</text>
+<path class="edge" d="M254,264 L254,804 L706,804 L706,140"/>
+<text class="edgeLabel" x="48" y="818">409 replay rejected with correlation reference</text>
+</svg>

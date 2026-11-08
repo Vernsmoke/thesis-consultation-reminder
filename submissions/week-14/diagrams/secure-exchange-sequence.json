@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "title": "Week 14 Secure Exchange Sequence",
+  "description": "Ordered sender, receiver, authentication, encryption, authorization, replay control, audit, and safe rejection behavior.",
+  "diagrams": [
+    {
+      "id": "secure_exchange_sequence",
+      "title": "Authenticated Envelope Creation Acceptance and Replay Rejection",
+      "kind": "sequence",
+      "accessibility": "A coordinator signs in and requests an envelope for a consultation. Laravel authorizes the role and assignment, minimizes the record, and asks OpenSSL AES 256 GCM to encrypt it using a key from the ignored keyring. The adviser signs in and submits the envelope. Laravel authenticates the envelope and adviser, stores one unique replay receipt, and returns plaintext. A second submission is rejected with conflict and is audited without plaintext.",
+      "data": {
+        "participants": [
+          {"id": "coordinator", "label": "Coordinator", "actor": true},
+          {"id": "flutter", "label": "Flutter Web", "actor": false},
+          {"id": "api", "label": "Laravel API", "actor": false},
+          {"id": "crypto", "label": "OpenSSL AES 256 GCM", "actor": false},
+          {"id": "keyring", "label": "Protected keyring", "actor": false},
+          {"id": "db", "label": "MariaDB", "actor": false},
+          {"id": "adviser", "label": "Assigned adviser", "actor": true}
+        ],
+        "messages": [
+          {"from": "coordinator", "to": "flutter", "text": "Choose consultation and prepare secure envelope", "kind": "sync"},
+          {"from": "flutter", "to": "api", "text": "HTTPS POST with bearer session and consultation ID", "kind": "sync"},
+          {"from": "api", "to": "db", "text": "Authorize coordinator and read minimized assigned record", "kind": "sync"},
+          {"from": "api", "to": "keyring", "text": "Read active key by key ID", "kind": "sync"},
+          {"from": "api", "to": "crypto", "text": "Encrypt plaintext with random nonce and authenticated metadata", "kind": "sync"},
+          {"from": "crypto", "to": "api", "text": "Ciphertext and authentication tag", "kind": "reply"},
+          {"from": "api", "to": "flutter", "text": "201 short lived envelope without key", "kind": "reply"},
+          {"from": "adviser", "to": "flutter", "text": "Paste coordinator provided envelope", "kind": "sync"},
+          {"from": "flutter", "to": "api", "text": "HTTPS POST envelope with adviser session", "kind": "sync"},
+          {"from": "api", "to": "keyring", "text": "Load key identified by authenticated metadata", "kind": "sync"},
+          {"from": "api", "to": "crypto", "text": "Verify tag and decrypt", "kind": "sync"},
+          {"from": "crypto", "to": "api", "text": "Authenticated plaintext or safe failure", "kind": "reply"},
+          {"from": "api", "to": "db", "text": "Authorize assigned adviser and insert unique message receipt", "kind": "sync"},
+          {"from": "api", "to": "flutter", "text": "200 minimized record with no store header", "kind": "reply"},
+          {"from": "flutter", "to": "api", "text": "Repeat the same accepted envelope", "kind": "sync"},
+          {"from": "api", "to": "db", "text": "Unique message ID conflicts", "kind": "sync"},
+          {"from": "api", "to": "flutter", "text": "409 replay rejected with correlation reference", "kind": "reply"}
+        ]
+      }
+    }
+  ]
+}

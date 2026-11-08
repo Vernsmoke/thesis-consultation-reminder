@@ -1,0 +1,13 @@
+# Week 14 Chat Prompt
+
+Work in `C:/Users/Laure/Documents/ChatGPT/IPT` on my individual PFEBSIT 002 Project 29, Thesis Consultation Reminder System. I am Laurence Matthew B Manuel from BSIT 3A.
+
+Complete Week 14 (SA8 and IA5 Secure Data Exchange and Encryption) from start to finish as an extension of the verified Week 13 project. First read `AGENTS.md`, `PROJECT_STATUS.md`, this prompt, the current source, the Week 13 handoff/evidence, and the complete relevant Week 14 content in both teacher DOCX files listed in `AGENTS.md`. Do not recreate or silently rewrite the Week 13 milestone. Confirm prerequisites and build a requirement-to-artifact checklist covering every Week 14 topic checkpoint, hands-on step, both activities, assessments, rubric, reflection, and Project 29 requirement.
+
+Implement and verify authentication, role-based authorization, HTTPS in the controlled environment, protected configuration, server-side validation, safe logging, and data minimization. Complete the module's controlled sender/receiver secure-exchange exercise using an established authenticated-encryption library, with keys outside Flutter and source control. Demonstrate altered, replayed, expired, invalid, and unauthorized requests being rejected safely. Do not invent cryptography or claim that login and HTTPS alone satisfy the exercise.
+
+Produce the threat summary, protection requirements matrix and data-flow diagram, control rationale and misuse warnings, cryptographic decision/design record, key lifecycle plan, secure configuration and transport evidence, tamper/replay/expired/invalid/unauthorized test results, security test record, residual-risk register, Activity 1, Activity 2, SA8 and IA5 reports, evidence index, submission checklist, and verified DOCX/PDF deliverables where required. Use actual evidence and timestamps; the historical November 6, 2026 deadline must not be used as a fabricated completion date.
+
+You are authorized to use computer/browser automation for real, sanitized evidence screenshots after reading the computer-use skill. Continue all safe in-scope work without routine permission prompts. Ask only for a genuine blocker. Never fabricate instructor approval, stakeholder actions, results, or security evidence.
+
+Do not perform Git mutations. I alone will stage, commit, tag, configure remotes, and push. Prepare several meaningful, reviewed commit groups with exact PowerShell commands and explicit file paths; never use `git add .`. Continue through the full week without waiting for commit confirmation. When verified, provide the `v2.0.0` annotated tag command and branch/tag push commands based on the actual Git state. Update `PROJECT_STATUS.md` before finishing and clearly report completed, verified, and pending items.
