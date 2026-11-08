@@ -14,7 +14,10 @@
 
 - Branch: `master`
 - Week 14 source/evidence checkpoint: `03d9ed372bbf2e83c59d50c9e5707e0cddf86b7d`; it extends the verified Week 13 milestone without rewriting it
-- No Git remote is configured. The intended repository is `https://github.com/Vernsmoke/thesis-consultation-reminder.git`
+- Final Week 14 portfolio/release commit: `82f005afcb8e9ec94b83299aeb72f0d210a5a2bd`
+- Annotated milestone tag `v2.0.0` resolves to `82f005afcb8e9ec94b83299aeb72f0d210a5a2bd`
+- `master` and `v2.0.0` were pushed successfully by direct URL to `https://github.com/Vernsmoke/thesis-consultation-reminder.git` and verified with `git ls-remote` at 2026-11-08T21:21:09+08:00
+- No persistent Git remote is configured
 - The user explicitly authorized the Week 14 commit, tag, and direct-push operations in this chat
 - Reviewed exact-path commands and five meaningful commit groups are recorded in `docs/week-14-git-commands.ps1`; future Week 15–18 prompts and temporary QA files are excluded
 
@@ -55,4 +58,4 @@
 
 ## Next action
 
-Week 14 is ready for the `v2.0.0` release operation. After the authorized tag and push complete, remain on Week 14 unless the user explicitly requests Week 15.
+Week 14 is complete and released as `v2.0.0`. Remain on Week 14 unless the user explicitly requests Week 15; future-week prompts and temporary QA folders remain intentionally untracked.
