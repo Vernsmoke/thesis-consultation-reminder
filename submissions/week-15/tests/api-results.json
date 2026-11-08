@@ -1,0 +1,166 @@
+{
+  "executed_at": "2026-11-08T21:42:17.6021814+08:00",
+  "completed_at": "2026-11-08T21:42:25.1845588+08:00",
+  "timezone": "Singapore Standard Time",
+  "base_url": "https://localhost:8443/api",
+  "source_state": "uncommitted Week 15 working tree based on 133b0c8",
+  "fixture": "fictional example.test users and controlled records",
+  "passed": 14,
+  "total": 14,
+  "results": [
+    {
+      "id": "API-01",
+      "category": "normal",
+      "scenario": "valid consultation request",
+      "expected": 201,
+      "actual": 201,
+      "passed": true,
+      "message": "Request saved. Awaiting adviser confirmation.",
+      "correlation_id": "f9f88fb4-3bcc-4050-bf19-ae85666368ba",
+      "time": "2026-11-08T21:42:20.8925683+08:00"
+    },
+    {
+      "id": "API-02",
+      "category": "duplicate",
+      "scenario": "same key and payload is replayed once",
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "message": "Replayed original resource without duplication.",
+      "correlation_id": "798a4bfa-add7-45c3-af89-71eeb88ef2e4",
+      "time": "2026-11-08T21:42:21.0692350+08:00"
+    },
+    {
+      "id": "API-03",
+      "category": "duplicate",
+      "scenario": "same key with changed payload conflicts",
+      "expected": 409,
+      "actual": 409,
+      "passed": true,
+      "message": "Idempotency key already used with different input.",
+      "correlation_id": "88e03dcc-c6af-4f52-a280-5827ae10718f",
+      "time": "2026-11-08T21:42:21.2651888+08:00"
+    },
+    {
+      "id": "API-04",
+      "category": "invalid",
+      "scenario": "missing fields and short agenda",
+      "expected": 422,
+      "actual": 422,
+      "passed": true,
+      "message": "The agenda field must be at least 5 characters. (and 2 more errors)",
+      "correlation_id": "d0069f18-d3f4-4001-9e89-c762b5b43fa5",
+      "time": "2026-11-08T21:42:21.4519515+08:00"
+    },
+    {
+      "id": "API-05",
+      "category": "boundary",
+      "scenario": "maximum 1000-character agenda",
+      "expected": 201,
+      "actual": 201,
+      "passed": true,
+      "message": "Maximum accepted boundary saved.",
+      "correlation_id": "0a789053-0dce-4c82-98f3-6fd34c6bf82c",
+      "time": "2026-11-08T21:42:21.6622030+08:00"
+    },
+    {
+      "id": "API-06",
+      "category": "unauthorized",
+      "scenario": "missing bearer token",
+      "expected": 401,
+      "actual": 401,
+      "passed": true,
+      "message": "Sign in required.",
+      "correlation_id": "aec560e9-d6e8-4c51-a7a3-37effeef5d4c",
+      "time": "2026-11-08T21:42:21.8261266+08:00"
+    },
+    {
+      "id": "API-07",
+      "category": "forbidden",
+      "scenario": "student requests coordinator metrics",
+      "expected": 403,
+      "actual": 403,
+      "passed": true,
+      "message": "Coordinator required.",
+      "correlation_id": "8386792a-4afe-4986-b2e4-4af26c2e01a3",
+      "time": "2026-11-08T21:42:22.0593308+08:00"
+    },
+    {
+      "id": "API-08",
+      "category": "not-found",
+      "scenario": "unknown action item",
+      "expected": 404,
+      "actual": 404,
+      "passed": true,
+      "message": "Action item not found.",
+      "correlation_id": "23cb14e1-4b1c-406f-9243-8990fcc5d0bb",
+      "time": "2026-11-08T21:42:22.2195064+08:00"
+    },
+    {
+      "id": "API-09",
+      "category": "contract",
+      "scenario": "bounded page and metadata",
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "message": "One record plus pagination metadata returned.",
+      "correlation_id": "cac07006-a36b-49da-af80-9512912c6019",
+      "time": "2026-11-08T21:42:22.4293319+08:00"
+    },
+    {
+      "id": "API-10",
+      "category": "boundary",
+      "scenario": "invalid zero page size",
+      "expected": 422,
+      "actual": 422,
+      "passed": true,
+      "message": "The per page field must be at least 1.",
+      "correlation_id": "67539d34-ff2e-4019-99b5-943bd5989f02",
+      "time": "2026-11-08T21:42:22.5913799+08:00"
+    },
+    {
+      "id": "API-11",
+      "category": "authorization",
+      "scenario": "panel rejected before cryptographic detail",
+      "expected": 403,
+      "actual": 403,
+      "passed": true,
+      "message": "Assigned adviser required.",
+      "correlation_id": "cce6df26-8e19-45a9-b8bf-fd020213d1e9",
+      "time": "2026-11-08T21:42:22.7919925+08:00"
+    },
+    {
+      "id": "API-12",
+      "category": "security",
+      "scenario": "HTTPS API hardening headers",
+      "expected": "CSP, Permissions-Policy, HSTS",
+      "actual": "Strict-Transport-Security, Permissions-Policy, Content-Security-Policy, X-Correlation-ID",
+      "passed": true,
+      "message": "Required response headers present.",
+      "correlation_id": "854645c9-ca8f-4986-ae13-2f3f1ec457d4",
+      "time": "2026-11-08T21:42:22.9975994+08:00"
+    },
+    {
+      "id": "API-13",
+      "category": "dependency-failure",
+      "scenario": "unavailable endpoint is bounded by client timeout/error",
+      "expected": "connection failure within 2 seconds",
+      "actual": "MethodInvocationException",
+      "passed": true,
+      "message": "No retry loop or sensitive response.",
+      "correlation_id": "",
+      "time": "2026-11-08T21:42:25.0156817+08:00"
+    },
+    {
+      "id": "API-14",
+      "category": "recovery",
+      "scenario": "approved endpoint works after unavailable probe",
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "message": "Healthy service remained usable after controlled failure.",
+      "correlation_id": "d19286ee-ef08-4405-82f3-daeb8f20cb93",
+      "time": "2026-11-08T21:42:25.1820016+08:00"
+    }
+  ]
+}

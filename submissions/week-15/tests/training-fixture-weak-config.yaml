@@ -1,0 +1,11 @@
+# Self-created, inert Week 15 training fixture. Not loaded by the application.
+# It models weak choices for Activity 2 analysis; values are labels, not secrets.
+transport: plain_http
+cors_origin: wildcard
+client_role_trusted: true
+debug_errors: stack_trace
+pagination: unbounded
+write_rate_limit: none
+retry_limit: unlimited
+log_payloads: full
+secret_storage: inline_placeholder

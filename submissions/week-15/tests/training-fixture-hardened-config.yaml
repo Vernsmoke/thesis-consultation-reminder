@@ -1,0 +1,10 @@
+# Self-created, inert Week 15 comparison fixture. Not loaded by the application.
+transport: local_https_required
+cors_origin: explicit_allowlist
+client_role_trusted: false_server_session_only
+debug_errors: safe_message_with_correlation
+pagination: validated_1_to_100
+write_rate_limit: endpoint_and_user_policy_pending_measurement
+retry_limit: three_then_manual_review
+log_payloads: minimized_metadata_only
+secret_storage: backend_private_environment_or_ignored_keyring

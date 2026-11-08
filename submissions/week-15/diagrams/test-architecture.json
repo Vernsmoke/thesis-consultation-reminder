@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "title": "Week 15 Integration Test Architecture",
+  "description": "Traceable test layers, trust boundaries, controlled failures, and retained evidence for Project 29.",
+  "diagrams": [
+    {
+      "id": "week15_test_architecture",
+      "title": "Week 15 Integration Test Architecture",
+      "kind": "flowchart",
+      "accessibility": "Flutter and API collection tests cross the HTTPS boundary into Laravel, which enforces validation and authorization before MySQL and simulated transport dependencies. Results are retained as evidence and defects feed the hardening backlog.",
+      "data": {
+        "direction": "LR",
+        "nodes": [
+          { "id": "flutter", "label": "Public client boundary: Flutter Web states and validation" },
+          { "id": "collection", "label": "Test client boundary: Postman and PowerShell collection" },
+          { "id": "https", "label": "HTTPS and CORS boundary" },
+          { "id": "middleware", "label": "Laravel API context: session, role, correlation, headers" },
+          { "id": "controller", "label": "Workflow contract: validation, pagination, idempotency" },
+          { "id": "database", "label": "MariaDB controlled fixture store" },
+          { "id": "transport", "label": "Simulated notification and secure exchange dependency" },
+          { "id": "failure", "label": "Controlled timeout, unavailable service, duplicate, rollback" },
+          { "id": "evidence", "label": "Sanitized results, logs, screenshots, JUnit" },
+          { "id": "backlog", "label": "Defect record, priority, fix, retest, remaining risk" }
+        ],
+        "edges": [
+          { "from": "flutter", "to": "https", "label": "normal and UI adverse states", "arrow": "-->" },
+          { "from": "collection", "to": "https", "label": "positive, negative, boundary, auth", "arrow": "-->" },
+          { "from": "https", "to": "middleware", "label": "JSON plus bearer token", "arrow": "-->" },
+          { "from": "middleware", "to": "controller", "label": "authorized actor and correlation ID", "arrow": "-->" },
+          { "from": "controller", "to": "database", "label": "transactional state", "arrow": "-->" },
+          { "from": "controller", "to": "transport", "label": "bounded external work", "arrow": "-->" },
+          { "from": "failure", "to": "flutter", "label": "safe loading and error feedback", "arrow": "-.->" },
+          { "from": "failure", "to": "controller", "label": "retry, rollback, manual review", "arrow": "-.->" },
+          { "from": "flutter", "to": "evidence", "label": "widget and browser evidence", "arrow": "-->" },
+          { "from": "collection", "to": "evidence", "label": "expected versus actual", "arrow": "-->" },
+          { "from": "middleware", "to": "evidence", "label": "safe correlated outcomes", "arrow": "-->" },
+          { "from": "evidence", "to": "backlog", "label": "evidence-supported finding", "arrow": "-->" },
+          { "from": "backlog", "to": "collection", "label": "targeted retest and regression", "arrow": "-->" }
+        ]
+      }
+    }
+  ]
+}
