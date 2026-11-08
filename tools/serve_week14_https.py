@@ -29,6 +29,9 @@ SAFE_RESPONSE_HEADERS = {
     "x-correlation-id",
     "x-content-type-options",
     "referrer-policy",
+    "content-security-policy",
+    "permissions-policy",
+    "strict-transport-security",
 }
 
 
@@ -76,7 +79,8 @@ class ProxyHandler(http.server.BaseHTTPRequestHandler):
         for key, value in response.headers.items():
             if key.lower() in SAFE_RESPONSE_HEADERS:
                 self.send_header(key, value)
-        self.send_header("Strict-Transport-Security", "max-age=300")
+        if "Strict-Transport-Security" not in response.headers:
+            self.send_header("Strict-Transport-Security", "max-age=31536000")
         self.send_header("Content-Length", str(len(payload)))
         self.end_headers()
         self.wfile.write(payload)

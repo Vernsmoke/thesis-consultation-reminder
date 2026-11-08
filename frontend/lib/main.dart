@@ -45,7 +45,7 @@ class _WorkspaceState extends State<Workspace> {
   final loginForm = GlobalKey<FormState>();
   Map<String, dynamic>? user;
   List<dynamic> items = [], directory = [], events = [], notifications = [];
-  Map<String, dynamic> metrics = {};
+  Map<String, dynamic> metrics = {}, pagination = {};
   Map<String, dynamic>? acceptedSecureRecord;
   String? preparedSecureEnvelope;
   bool busy = false;
@@ -106,6 +106,7 @@ class _WorkspaceState extends State<Workspace> {
         items = result['data'];
         directory = result['directory'];
         notifications = result['notifications'] ?? [];
+        pagination = result['pagination'] ?? {};
         if (automation != null) {
           events = automation['data'];
           metrics = automation['metrics'];
@@ -182,7 +183,7 @@ class _WorkspaceState extends State<Workspace> {
               ),
               const SizedBox(height: 8),
               const Text(
-                'Controlled Week 14 prototype • Fictional data • Protected API and secure exchange',
+                'Controlled Week 15 prototype • Fictional data • Tested and hardened integration',
               ),
               const SizedBox(height: 24),
               if (busy)
@@ -222,6 +223,11 @@ class _WorkspaceState extends State<Workspace> {
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 const SizedBox(height: 12),
+                if (pagination['has_more'] == true)
+                  status(
+                    'Showing ${items.length} of ${pagination['total']} consultations. Narrow the dataset or use the API page parameter to review the remaining records.',
+                    false,
+                  ),
                 if (items.isEmpty)
                   const Card(
                     child: Padding(
@@ -367,7 +373,7 @@ class _WorkspaceState extends State<Workspace> {
                   decoration: const InputDecoration(labelText: 'Email'),
                   keyboardType: TextInputType.emailAddress,
                   validator: (v) =>
-                      v != null &&
+                      v != null && v.length <= 100 &&
                           RegExp(r'^[^@\s]+@[^@\s]+\.[^@\s]+$').hasMatch(v)
                       ? null
                       : 'Enter a valid email.',
@@ -377,8 +383,11 @@ class _WorkspaceState extends State<Workspace> {
                   controller: password,
                   decoration: const InputDecoration(labelText: 'Password'),
                   obscureText: true,
-                  validator: (v) =>
-                      v == null || v.isEmpty ? 'Enter your password.' : null,
+                  validator: (v) => v == null || v.isEmpty
+                      ? 'Enter your password.'
+                      : v.length > 128
+                      ? 'Use no more than 128 characters.'
+                      : null,
                   onFieldSubmitted: (_) {
                     if (!busy && loginForm.currentState!.validate()) signIn();
                   },

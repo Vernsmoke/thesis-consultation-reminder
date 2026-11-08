@@ -39,7 +39,22 @@ class Api {
       final response = await http.Response.fromStream(
         await client.send(request).timeout(const Duration(seconds: 8)),
       ).timeout(const Duration(seconds: 8));
-      final data = jsonDecode(response.body) as Map<String, dynamic>;
+      late final Map<String, dynamic> data;
+      try {
+        data = jsonDecode(response.body) as Map<String, dynamic>;
+      } on FormatException {
+        throw ApiFailure(
+          'The service returned an unexpected response. Try again or contact the coordinator.',
+          502,
+          response.headers['x-correlation-id'],
+        );
+      } on TypeError {
+        throw ApiFailure(
+          'The service returned an unexpected response. Try again or contact the coordinator.',
+          502,
+          response.headers['x-correlation-id'],
+        );
+      }
       if (response.statusCode >= 400) {
         final errors = (data['errors'] as Map?)?.values
             .expand((e) => e as List)
@@ -55,7 +70,9 @@ class Api {
       rethrow;
     } on TimeoutException {
       throw ApiFailure(
-        'The service timed out. Your request may have saved; retry with the same form.',
+        key == null
+            ? 'The service timed out. Check the current status before retrying to avoid a duplicate action.'
+            : 'The service timed out. Your request may have saved; retry with the same form and idempotency key.',
         0,
       );
     } catch (_) {

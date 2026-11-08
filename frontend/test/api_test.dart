@@ -47,7 +47,7 @@ void main() {
       ),
     );
     await expectLater(
-      api.call('POST', '/consultations'),
+      api.call('POST', '/consultations', key: 'controlled_retry_key'),
       throwsA(
         isA<ApiFailure>().having(
           (e) => e.message,
