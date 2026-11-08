@@ -1,5 +1,12 @@
 # Changelog
 
+## Week 14 working tree - Secure data exchange and encryption
+
+- Added server-only AES-256-GCM consultation envelopes with authenticated metadata, five-minute validity, recipient binding, and database-enforced replay rejection.
+- Added protected ignored keyring provisioning/rotation, HTTPS-only Flutter configuration, a short-lived controlled localhost CA/gateway, stricter CORS, and security response headers.
+- Added secure sender/receiver Flutter states, adverse-case Laravel and live HTTPS tests, TLS validation, browser evidence, diagrams, security decisions, key lifecycle, and residual-risk documentation.
+- Preserved Week 13 `v1.0.0` source and evidence without refreshing it with Week 14 output.
+
 ## Week 13 working tree 2026-11-08
 
 - Established original-reference requirement map and bounded Project 29 decisions.

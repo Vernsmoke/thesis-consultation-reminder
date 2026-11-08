@@ -16,7 +16,7 @@ class ApiFailure implements Exception {
 class Api {
   static const base = String.fromEnvironment(
     'API_URL',
-    defaultValue: 'http://127.0.0.1:8000/api',
+    defaultValue: 'https://localhost:8443/api',
   );
   final http.Client client;
   String? token;

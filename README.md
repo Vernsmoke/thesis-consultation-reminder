@@ -1,5 +1,19 @@
 # Thesis Consultation Reminder System
 
+Week 14 adds a controlled secure-exchange exercise to the Week 13 workflow. The browser uses local HTTPS, Laravel authenticates and authorizes every request, and the server creates AES-256-GCM envelopes for an assigned adviser without exposing the key to Flutter.
+
+## Week 14 controlled HTTPS setup
+
+1. Provision the ignored server keyring from `backend` with `C:\xampp\php\php.exe artisan secure-exchange:key`.
+2. Build Flutter with `E:\Flutter\flutter_windows_3.47.8-stable\flutter\bin\flutter.bat build web --release --dart-define=API_URL=https://localhost:8443/api`.
+3. Provision the seven-day localhost certificate with the bundled workspace Python runtime and `tools/provision_week14_tls.py --output backend/storage/app/private/tls`.
+4. Trust only the generated public `ca.crt` in the current-user root store for the controlled exercise. Do not trust or share either private key.
+5. Start Laravel on loopback port 8000. Start `tools/serve_week14_https.py` as an API proxy on 8443 and a static Flutter server on 8444 with the protected certificate and key.
+6. Open `https://localhost:8444`. A certificate warning is a failed setup condition; do not bypass it.
+7. Run `submissions/week-14/tests/Invoke-Week14Security.ps1` and `tools/verify_week14_tls.py` for repeatable HTTPS and certificate evidence.
+
+The localhost gateway is a controlled nonproduction transport. For broader use, replace it with a maintained reverse proxy, approved certificate lifecycle, and protected secret service. Detailed rotation, recovery, and CA removal guidance is in `docs/key-lifecycle.md`.
+
 Individual PFEBSIT 002 Project 29, Laurence Matthew B Manuel, BSIT 3A. Week 13 educational prototype: Flutter Web → Laravel API → XAMPP MariaDB, with a controlled simulated notification transport. The user confirmed Project 29 registration on November 8, 2026. Historical deadline October 30, 2026; actual work/evidence November 8, 2026.
 
 ## Requirements and installation

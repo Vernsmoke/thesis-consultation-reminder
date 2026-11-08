@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 
 import 'api.dart';
@@ -39,10 +41,13 @@ class _WorkspaceState extends State<Workspace> {
 
   final email = TextEditingController();
   final password = TextEditingController();
+  final secureEnvelope = TextEditingController();
   final loginForm = GlobalKey<FormState>();
   Map<String, dynamic>? user;
   List<dynamic> items = [], directory = [], events = [], notifications = [];
   Map<String, dynamic> metrics = {};
+  Map<String, dynamic>? acceptedSecureRecord;
+  String? preparedSecureEnvelope;
   bool busy = false;
   String? error, notice;
   String get role => user?['role'] ?? '';
@@ -52,6 +57,7 @@ class _WorkspaceState extends State<Workspace> {
   void dispose() {
     email.dispose();
     password.dispose();
+    secureEnvelope.dispose();
     api.client.close();
     super.dispose();
   }
@@ -176,7 +182,7 @@ class _WorkspaceState extends State<Workspace> {
               ),
               const SizedBox(height: 8),
               const Text(
-                'Controlled Week 13 prototype • Fictional data • Simulated notifications',
+                'Controlled Week 14 prototype • Fictional data • Protected API and secure exchange',
               ),
               const SizedBox(height: 24),
               if (busy)
@@ -226,6 +232,9 @@ class _WorkspaceState extends State<Workspace> {
                     ),
                   ),
                 ...items.map((c) => consultation(c as Map<String, dynamic>)),
+                if (role == 'coordinator' && preparedSecureEnvelope != null)
+                  secureSenderResult(),
+                if (role == 'adviser') secureReceiver(),
                 if (notifications.isNotEmpty) ...[
                   const SizedBox(height: 16),
                   Text(
@@ -447,6 +456,14 @@ class _WorkspaceState extends State<Workspace> {
                     onPressed: busy ? null : () => actionDialog(c['id']),
                     child: const Text('Add action item'),
                   ),
+                if (role == 'coordinator')
+                  TextButton.icon(
+                    onPressed: busy
+                        ? null
+                        : () => prepareSecureEnvelope(c['id']),
+                    icon: const Icon(Icons.lock_outline),
+                    label: const Text('Prepare secure envelope'),
+                  ),
               ],
             ),
           const SizedBox(height: 12),
@@ -487,6 +504,113 @@ class _WorkspaceState extends State<Workspace> {
       ),
     ),
   );
+
+  Widget secureSenderResult() => Card(
+    margin: const EdgeInsets.only(bottom: 16),
+    child: Padding(
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Encrypted adviser envelope',
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
+          const SizedBox(height: 8),
+          const Text(
+            'The API encrypted a minimized consultation record. The key remains on the server; transfer only this short-lived envelope to the assigned adviser.',
+          ),
+          const SizedBox(height: 12),
+          SelectableText(
+            preparedSecureEnvelope!,
+            maxLines: 14,
+            style: const TextStyle(fontFamily: 'monospace', fontSize: 12),
+          ),
+        ],
+      ),
+    ),
+  );
+
+  Widget secureReceiver() => Card(
+    margin: const EdgeInsets.only(bottom: 16),
+    child: Padding(
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(
+            'Receive protected consultation record',
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
+          const SizedBox(height: 8),
+          const Text(
+            'Paste the coordinator-provided envelope. The server verifies its authenticated metadata, expiry, assigned adviser, and replay status before returning plaintext.',
+          ),
+          const SizedBox(height: 12),
+          TextField(
+            controller: secureEnvelope,
+            minLines: 4,
+            maxLines: 8,
+            decoration: const InputDecoration(
+              labelText: 'Encrypted envelope JSON',
+              helperText: 'Required fields are validated by the API.',
+            ),
+          ),
+          const SizedBox(height: 12),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: FilledButton.icon(
+              onPressed: busy ? null : receiveSecureEnvelope,
+              icon: const Icon(Icons.verified_user_outlined),
+              label: const Text('Verify and receive'),
+            ),
+          ),
+          if (acceptedSecureRecord != null) ...[
+            const SizedBox(height: 16),
+            Text(
+              'Accepted consultation #${acceptedSecureRecord!['consultation_id']}',
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+            Text(acceptedSecureRecord!['agenda']),
+            Text(
+              '${acceptedSecureRecord!['status']} • ${time(acceptedSecureRecord!['scheduled_at'])} • open actions ${acceptedSecureRecord!['open_action_count']}',
+            ),
+          ],
+        ],
+      ),
+    ),
+  );
+
+  Future<void> prepareSecureEnvelope(int consultationId) => run(() async {
+    final result = await api.call(
+      'POST',
+      '/secure-exchange/envelopes',
+      body: {'consultation_id': consultationId},
+    );
+    setState(() {
+      preparedSecureEnvelope = const JsonEncoder.withIndent('  ')
+          .convert(result['envelope']);
+      notice = 'Short-lived authenticated envelope prepared.';
+    });
+  });
+
+  Future<void> receiveSecureEnvelope() => run(() async {
+    Map<String, dynamic> envelope;
+    try {
+      envelope = jsonDecode(secureEnvelope.text) as Map<String, dynamic>;
+    } catch (_) {
+      throw ApiFailure('Enter a valid JSON envelope.', 422);
+    }
+    final result = await api.call(
+      'POST',
+      '/secure-exchange/receive',
+      body: envelope,
+    );
+    setState(() {
+      acceptedSecureRecord = result['record'];
+      notice = result['message'];
+    });
+  });
 
   Future<void> changeStatus(int id, String status) => run(() async {
     await api.call('PATCH', '/consultations/$id', body: {'status': status});
