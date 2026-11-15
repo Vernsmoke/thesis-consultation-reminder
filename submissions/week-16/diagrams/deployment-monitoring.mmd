@@ -1,0 +1,13 @@
+flowchart LR
+  B[Edge browser] -->|HTTPS 8444| F[Flutter release build]
+  F -->|HTTPS 8443 API| G[TLS gateway]
+  G -->|HTTP loopback 8000| L[Laravel API]
+  L -->|SQL 3306| D[(MariaDB)]
+  S[Scheduler] --> L
+  P[Health probe] -->|liveness| U[/up/]
+  P -->|readiness| R[/ready/]
+  U --> L
+  R -->|socket and query| D
+  L --> A[Structured logs and correlation IDs]
+  D -. unavailable .-> R
+  R -->|HTTP 503| O[Local operator]
