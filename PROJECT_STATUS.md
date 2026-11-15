@@ -12,11 +12,11 @@
 
 ## Confirmed Git state
 
-- Branch: `master`; local Week 16 report revision is `e93f9a59be4628b77e19aa530dd818e278dd66b1`; `origin/master` remains at the verified Week 15 handoff until the authorized release push.
+- Branch: `master`; the Week 16 annotated tag `v4.0.0` and remote release commit are verified at `a519377a9a32e969b4119f5d5c0dba404543cc7c`.
 - Verified Week 15 tag `v3.0.0` remains at source release commit `134077c9a7ef13dd607c0bc763c80989144fe9bb`. Week 16 does not rewrite it.
 - `origin` is `https://github.com/Vernsmoke/thesis-consultation-reminder.git`.
 - At the user's explicit request on 2026-11-15, Week 16 was divided into four coherent commits: `2eaa689` readiness implementation, `db97652` evaluation design, `4574797` actual evidence, and `e93f9a5` reports.
-- `v4.0.0` does not yet exist at this checkpoint. The reviewed release record is in `docs/week-16-git-commands.ps1`.
+- `master` and annotated tag `v4.0.0` were pushed to `origin` and verified with `git ls-remote`; the tag object is `18d9be4f57f4741da2a58b02b5ebff4fd66071b3` and dereferences to `a519377a9a32e969b4119f5d5c0dba404543cc7c`.
 - Unrelated untracked future prompts, generated caches and prior `tmp` folders remain excluded from the release.
 
 ## Week 16 implementation completed
@@ -53,16 +53,17 @@
 - Monitoring map, detection walkthrough, environment comparison, deployment checklist, rollback plan and recovery record.
 - Activity 1, Activity 2, main Week 16 evaluation and reflection preparation in Markdown, DOCX and PDF.
 - Editable Mermaid deployment/monitoring diagram source, actual screenshots, evidence index, submission checklist, contents list and source manifest.
-- Source and submission ZIPs will be generated locally from the confirmed `v4.0.0` tag after the release is pushed and verified.
+- Local ignored package `artifacts/week-16-source-v4.0.0.zip` was generated directly from tag `v4.0.0`: 161 entries, no excluded dependency/secret paths, SHA-256 `B294EE1577A3A58E5283DD23C9CE53EB946A4AF1184D92CF022F7C1C1083E338`.
+- Local ignored package `artifacts/week-16-submission-v4.0.0.zip` was generated directly from tag `v4.0.0`: 60 entries, no temporary/cache/private-key paths, SHA-256 `C3288B33E50149ABFB5086EBE02507D8045F5C2E940D0D877FC4A8AA77802FB0`.
 
 ## Pending external or user actions
 
 1. Review and confirm that `reports/reflection-preparation.*` reflects the student's own understanding and individual contribution.
 2. Apply any instructor-prescribed template or AI acknowledgment wording and complete instructor marking or oral assessment.
-3. Create and verify annotated tag `v4.0.0`, push `master` and the tag, and build provenance-checked local packages.
+3. Preserve the verified `v4.0.0` tag and package hashes; do not move or recreate the tag.
 4. Remove the local test CA from the current-user trust store after the controlled HTTPS environment is no longer needed.
 5. Before peak-deadline or broader use, test an approved multi-worker staging topology, automated monitoring, supervised restart, backup restoration, endurance and institutional certificate/secret lifecycles.
 
 ## Next action
 
-Remain on Week 16 until the Git release and packages are verified. Do not begin Week 17 or refresh earlier submission evidence. Student confirmation of the reflection's personal voice remains an external submission check and must not be fabricated.
+Week 16 implementation, evidence, reports, GitHub release and local packages are complete. Do not begin Week 17 until the user requests it. Student confirmation of the reflection's personal voice remains an external submission check and must not be fabricated.

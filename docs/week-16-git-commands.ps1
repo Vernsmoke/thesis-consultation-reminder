@@ -31,3 +31,7 @@ git push origin v4.0.0
 # Verify the pushed branch and annotated tag without changing repository state.
 git ls-remote --heads origin master
 git ls-remote --tags origin v4.0.0 'v4.0.0^{}'
+
+# Verified release result:
+# annotated tag object 18d9be4f57f4741da2a58b02b5ebff4fd66071b3
+# v4.0.0 release commit a519377a9a32e969b4119f5d5c0dba404543cc7c
