@@ -54,12 +54,12 @@
 - Activity 1, Activity 2, main Week 16 evaluation and final reflection in Markdown, DOCX and PDF.
 - Editable Mermaid deployment/monitoring diagram source, actual screenshots, evidence index, submission checklist, contents list and source manifest.
 - Local ignored package `artifacts/week-16-source-v4.0.0.zip` was generated directly from tag `v4.0.0`: 161 entries, no excluded dependency/secret paths, SHA-256 `B294EE1577A3A58E5283DD23C9CE53EB946A4AF1184D92CF022F7C1C1083E338`.
-- Local ignored package `artifacts/week-16-submission-v4.0.0.zip` was generated directly from tag `v4.0.0`: 60 entries, no temporary/cache/private-key paths, SHA-256 `C3288B33E50149ABFB5086EBE02507D8045F5C2E940D0D877FC4A8AA77802FB0`.
+- Local ignored package `artifacts/week-16-submission-v4.0.0.zip` was regenerated from documentation revision `82121531c20c5e555f544bd58d7111854a87b318` after student approval: 61 entries, final `reflection.*` present, draft filenames absent, no temporary/cache/private-key paths, SHA-256 `AE9FF08DA21F0C4BFF00616E8C8979146B9BCA3533CBC41E391C814B8D719F9C`.
 
 ## Pending external or user actions
 
 1. Apply any instructor-prescribed template or AI acknowledgment wording and complete instructor marking or oral assessment.
-2. Preserve the verified `v4.0.0` tag and package hashes; do not move or recreate the tag.
+2. Preserve the verified `v4.0.0` tag and recorded package hashes; do not move or recreate the tag.
 3. Remove the local test CA from the current-user trust store after the controlled HTTPS environment is no longer needed.
 4. Before peak-deadline or broader use, test an approved multi-worker staging topology, automated monitoring, supervised restart, backup restoration, endurance and institutional certificate/secret lifecycles.
 
