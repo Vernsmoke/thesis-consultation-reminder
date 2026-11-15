@@ -1,0 +1,34 @@
+{
+  "predicted": {
+    "liveness": 200,
+    "readiness": 503,
+    "main_environment_after_fixture": 200
+  },
+  "started_at": "2026-11-15T21:56:01.847006+08:00",
+  "fixture": "isolated Laravel process with unreachable DB port 65530",
+  "actual": {
+    "liveness_status": 200,
+    "liveness_body_excerpt": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta nam",
+    "readiness_status": 503,
+    "readiness_body": {
+      "status": "not_ready",
+      "checks": {
+        "database": "down"
+      },
+      "duration_ms": 1022.44
+    }
+  },
+  "passed": true,
+  "completed_at": "2026-11-15T21:56:03.283549+08:00",
+  "main_environment_after_fixture": {
+    "status": 200,
+    "body": {
+      "status": "ready",
+      "checks": {
+        "database": "up"
+      },
+      "duration_ms": 8.77
+    },
+    "passed": true
+  }
+}

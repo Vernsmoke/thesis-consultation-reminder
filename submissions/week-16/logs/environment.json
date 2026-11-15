@@ -1,0 +1,15 @@
+{
+  "executed_at": "2026-11-15T21:59:55.7555738+08:00",
+  "timezone": "Singapore Standard Time",
+  "source_base": "v3.0.0 at 134077c; master 17e8860",
+  "source_state": "uncommitted Week 16 working tree",
+  "php": "8.2.12",
+  "laravel": "Laravel Framework 12.71.0",
+  "database": "C:\\xampp\\mysql\\bin\\mysqld.exe  Ver 10.4.32-MariaDB for Win64 on AMD64 (mariadb.org binary distribution)",
+  "flutter": "3.47.8",
+  "dart": "3.13.7",
+  "frontend_build_bytes": 2603440,
+  "deployment": "loopback HTTPS 8444 Flutter, HTTPS 8443 API gateway, Laravel 8000, MariaDB 3306, scheduler",
+  "certificate_not_after": "2026-11-22T21:31:56+08:00",
+  "fictional_data": true
+}

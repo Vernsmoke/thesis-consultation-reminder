@@ -1,0 +1,30 @@
+[
+  {
+    "name": "activity-1-workload-models",
+    "docx_paragraphs": 18,
+    "docx_tables": 1,
+    "pdf_pages": 1,
+    "pdf_text_chars": 3358
+  },
+  {
+    "name": "activity-2-deployment-review",
+    "docx_paragraphs": 22,
+    "docx_tables": 1,
+    "pdf_pages": 2,
+    "pdf_text_chars": 4191
+  },
+  {
+    "name": "week-16-deployment-evaluation",
+    "docx_paragraphs": 30,
+    "docx_tables": 1,
+    "pdf_pages": 2,
+    "pdf_text_chars": 6079
+  },
+  {
+    "name": "reflection-preparation",
+    "docx_paragraphs": 12,
+    "docx_tables": 0,
+    "pdf_pages": 1,
+    "pdf_text_chars": 2490
+  }
+]

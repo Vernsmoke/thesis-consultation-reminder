@@ -1,0 +1,50 @@
+{
+  "executed_at": "2026-11-15T21:52:07.433094+08:00",
+  "completed_at": "2026-11-15T21:54:24.840097+08:00",
+  "timezone": "Asia/Manila",
+  "source_state": "Week 16 uncommitted working tree based on v3.0.0 / 17e8860",
+  "environment": "loopback HTTPS gateway, Laravel CLI server, XAMPP MariaDB, release Flutter build",
+  "request_mix": {
+    "authenticated_consultation_read_percent": 70,
+    "liveness_percent": 15,
+    "readiness_percent": 15
+  },
+  "ordinary": {
+    "name": "ordinary",
+    "requests": 60,
+    "elapsed_seconds": 66.67,
+    "throughput_requests_per_second": 0.9,
+    "errors": 0,
+    "error_rate_percent": 0.0,
+    "latency_ms": {
+      "minimum": 2169.821,
+      "mean": 2219.843,
+      "p50": 2217.348,
+      "p95": 2254.645,
+      "p99": 2311.13,
+      "maximum": 2375.521
+    }
+  },
+  "peak": {
+    "name": "peak",
+    "requests": 240,
+    "elapsed_seconds": 46.622,
+    "throughput_requests_per_second": 5.148,
+    "errors": 0,
+    "error_rate_percent": 0.0,
+    "latency_ms": {
+      "minimum": 2161.196,
+      "mean": 2278.812,
+      "p50": 2224.943,
+      "p95": 2497.231,
+      "p99": 3516.902,
+      "maximum": 3904.088
+    }
+  },
+  "dependency_failure_and_recovery_passed": true,
+  "limitations": [
+    "Single-machine loopback measurements include a fresh TLS connection per request.",
+    "The PHP CLI server and Python TLS gateway are evaluation tools, not a production topology.",
+    "The short run does not establish endurance, multi-host capacity, or internet latency."
+  ]
+}
