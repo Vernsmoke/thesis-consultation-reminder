@@ -1,5 +1,7 @@
 # Thesis Consultation Reminder System
 
+Week 16 evaluates the existing bounded application in a controlled local nonproduction deployment. It adds separate liveness (`/up`) and database-backed readiness (`/ready`) signals, reproducible ordinary and peak workload measurements, resource sampling, a safe dependency-failure exercise, and rollback/recovery guidance. The resulting recommendation is conditional for controlled UAT only; it is not a production-readiness claim. See `submissions/week-16` for the evidence and interpretation.
+
 Week 15 extends the same application with an evidence-linked integration and hardening gate. The verified local working tree passes 24 Laravel tests with 227 assertions, 22 Flutter tests, and 14 live HTTPS API scenarios. Five baseline weaknesses were reproduced, fixed, and retested; the evidence is under `submissions/week-15`.
 
 ## Week 15 verification

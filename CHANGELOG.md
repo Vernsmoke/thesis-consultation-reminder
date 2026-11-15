@@ -1,5 +1,12 @@
 # Changelog
 
+## Week 16 working tree - Performance reliability and deployment evaluation
+
+- Added distinct Laravel liveness and database-backed readiness signals with safe failure responses and structured warning logs.
+- Added a reproducible controlled-local deployment, ordinary and peak workload harness, response-time/throughput/error/resource evidence, and a database-dependency failure/recovery exercise.
+- Added environment comparison, monitoring and rollback guidance, activity records, conditional readiness analysis, and submission traceability without changing the bounded consultation workflow.
+- Preserved the Week 15 `v3.0.0` milestone and earlier evidence without refreshing it with Week 16 output.
+
 ## Week 15 working tree - Integration testing and security hardening
 
 - Added traceable Laravel, Flutter, live HTTPS, Postman-compatible, failure-injection, and recovery tests for the required normal and adverse paths.
