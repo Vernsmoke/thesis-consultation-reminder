@@ -8,4 +8,4 @@
 - Two actual Edge screenshots and one actual VS Code source screenshot.
 - Evidence index, exhaustive requirement checklist and source provenance note.
 
-Pending external actions: student confirmation of the reflection draft, instructor-prescribed acknowledgment wording, instructor marking/oral defense, and authorization/infrastructure for broader deployment.
+Pending external actions: instructor-prescribed acknowledgment wording, instructor marking/oral defense, and authorization/infrastructure for broader deployment. The student confirmed the final reflection on 15 November 2026.

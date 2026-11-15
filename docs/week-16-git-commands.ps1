@@ -21,7 +21,7 @@ git add -- 'submissions/week-16/reports/activity-1-workload-models.md' 'submissi
 git diff --cached --check
 git commit -m 'docs(week16): complete deployment evaluation portfolio'
 
-# Provenance handoff and release. The reflection remains explicitly marked as preparation until the student confirms its personal voice.
+# Provenance handoff and release. The student confirmed the reflection on 2026-11-15.
 git status --short --branch
 git log -4 --oneline
 git tag -a v4.0.0 -m 'Week 16: performance reliability and deployment evaluation'

@@ -1,6 +1,6 @@
-# Week 16 Reflection Preparation
+# Week 16 Reflection
 
-**Student:** Laurence Matthew B Manuel | **Section:** BSIT 3A | **Status:** Draft requiring student confirmation
+**Student:** Laurence Matthew B Manuel | **Section:** BSIT 3A | **Status:** Confirmed by the student on 15 November 2026
 
 ## Decision with the greatest effect
 
@@ -12,12 +12,12 @@ The most difficult issue was separating application latency from the test enviro
 
 ## Work that can be explained and modified
 
-The exact artifact proposed for the student's explanation is `backend/routes/web.php`, supported by `SRC-01-readiness-implementation.png` and the failure/recovery record. It contains the liveness/readiness distinction, bounded socket preflight, real database query, safe 503 response and protected warning log. The student should confirm that this statement matches what they can explain and modify independently.
+The artifact I can explain and modify is `backend/routes/web.php`, supported by `SRC-01-readiness-implementation.png` and the failure/recovery record. It contains the liveness/readiness distinction, bounded socket preflight, real database query, safe 503 response and protected warning log.
 
 ## What a maintainer should verify next
 
 An authorized maintainer should replace the single-worker local server with an approved multi-worker staging topology and rerun the unchanged peak workload. Peak throughput failed at 6.648 requests/second against the 8 requests/second target even though p95 and errors passed. That work is outside the current evidence because no staging infrastructure, public hosting, certificate lifecycle or operational owner was approved.
 
-## Confirmation note
+## Confirmation
 
-Before submission, the student should revise any wording that does not reflect their own understanding and confirm the stated individual contribution. No instructor mark, oral-defense result or personal experience is claimed.
+I reviewed this reflection and confirmed on 15 November 2026 that it represents my understanding and individual contribution. No instructor mark or oral-defense result is claimed.

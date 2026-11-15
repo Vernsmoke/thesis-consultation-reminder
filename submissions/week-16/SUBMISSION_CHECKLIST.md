@@ -25,7 +25,7 @@ Evidence date: 2026-11-15 Asia/Manila
 | Activity 1: ordinary and peak workload models, limits of inference, adverse case and one-page interpretation | `reports/activity-1-workload-models.*` | Complete |
 | Activity 2: incomplete-release tabletop review, blockers, conditional risks and prioritized evidence-linked plan | `reports/activity-2-deployment-review.*` | Complete |
 | Assessment: measurements, configuration, monitoring, recovery, rollback, limitations and readiness recommendation | `reports/week-16-deployment-evaluation.*` | Complete |
-| Reflection prompts answered from evidence without inventing personal experience | `reports/reflection-preparation.*` | Draft complete; student confirmation pending |
+| Reflection prompts answered from evidence without inventing personal experience | `reports/reflection.*` | Complete; student confirmed the reflection on 15 November 2026 |
 | Rubric: technical correctness | full regression, live deployment and failure evidence | Complete within stated scope |
 | Rubric: reproducible and traceable evidence | scripts, raw results, index and hashes | Complete |
 | Rubric: justified security and reliability with residual risk | evaluation and limitation records | Complete |

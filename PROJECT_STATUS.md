@@ -45,25 +45,24 @@
 - Final secret scan: 287 candidate text files, zero generated-secret or private-key matches; protected paths remain ignored.
 - Actual sanitized evidence captured in Edge and VS Code: trusted HTTPS Flutter login, live database readiness, and readiness source implementation.
 - Four DOCX reports and four matching PDFs were created. Six final A4 pages were rendered and visually inspected; no clipping, overlap, broken tables or missing glyphs were found.
-- The reflection document is an evidence-grounded preparation draft. Student confirmation of personal voice and independent contribution remains pending.
+- The student confirmed on 2026-11-15 that the evidence-grounded reflection represents his understanding and individual contribution. Final `reflection.md`, DOCX and PDF artifacts replace the preparation filenames.
 
 ## Submission artifacts
 
 - Workload definitions and acceptance criteria, raw/final/failed performance results, resource samples and reproducible harness.
 - Monitoring map, detection walkthrough, environment comparison, deployment checklist, rollback plan and recovery record.
-- Activity 1, Activity 2, main Week 16 evaluation and reflection preparation in Markdown, DOCX and PDF.
+- Activity 1, Activity 2, main Week 16 evaluation and final reflection in Markdown, DOCX and PDF.
 - Editable Mermaid deployment/monitoring diagram source, actual screenshots, evidence index, submission checklist, contents list and source manifest.
 - Local ignored package `artifacts/week-16-source-v4.0.0.zip` was generated directly from tag `v4.0.0`: 161 entries, no excluded dependency/secret paths, SHA-256 `B294EE1577A3A58E5283DD23C9CE53EB946A4AF1184D92CF022F7C1C1083E338`.
 - Local ignored package `artifacts/week-16-submission-v4.0.0.zip` was generated directly from tag `v4.0.0`: 60 entries, no temporary/cache/private-key paths, SHA-256 `C3288B33E50149ABFB5086EBE02507D8045F5C2E940D0D877FC4A8AA77802FB0`.
 
 ## Pending external or user actions
 
-1. Review and confirm that `reports/reflection-preparation.*` reflects the student's own understanding and individual contribution.
-2. Apply any instructor-prescribed template or AI acknowledgment wording and complete instructor marking or oral assessment.
-3. Preserve the verified `v4.0.0` tag and package hashes; do not move or recreate the tag.
-4. Remove the local test CA from the current-user trust store after the controlled HTTPS environment is no longer needed.
-5. Before peak-deadline or broader use, test an approved multi-worker staging topology, automated monitoring, supervised restart, backup restoration, endurance and institutional certificate/secret lifecycles.
+1. Apply any instructor-prescribed template or AI acknowledgment wording and complete instructor marking or oral assessment.
+2. Preserve the verified `v4.0.0` tag and package hashes; do not move or recreate the tag.
+3. Remove the local test CA from the current-user trust store after the controlled HTTPS environment is no longer needed.
+4. Before peak-deadline or broader use, test an approved multi-worker staging topology, automated monitoring, supervised restart, backup restoration, endurance and institutional certificate/secret lifecycles.
 
 ## Next action
 
-Week 16 implementation, evidence, reports, GitHub release and local packages are complete. Do not begin Week 17 until the user requests it. Student confirmation of the reflection's personal voice remains an external submission check and must not be fabricated.
+Week 16 implementation, evidence, reports, student-confirmed reflection, GitHub release and local packages are complete. Do not begin Week 17 until the user requests it.

@@ -20,6 +20,6 @@ Source state: uncommitted Week 16 working tree based on `v3.0.0` (`134077c`) and
 | DOC-01 | `reports/week-16-deployment-evaluation.docx/.pdf` | Main assessment report after render verification. |
 | DOC-02 | `reports/activity-1-workload-models.docx/.pdf` | Activity 1 decision/test record and interpretation. |
 | DOC-03 | `reports/activity-2-deployment-review.docx/.pdf` | Activity 2 tabletop review and improvement plan. |
-| DOC-04 | `reports/reflection-preparation.docx/.pdf` | Evidence-grounded reflection draft; student confirmation remains pending. |
+| DOC-04 | `reports/reflection.docx/.pdf` | Evidence-grounded final reflection confirmed by the student on 15 November 2026. |
 
 Screenshots are actual Windows captures saved from the controlled browser/editor sessions. Raw performance rows and logs, not screenshots, are the primary proof of backend behavior.

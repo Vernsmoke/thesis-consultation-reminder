@@ -21,7 +21,7 @@
     "pdf_text_chars": 6079
   },
   {
-    "name": "reflection-preparation",
+    "name": "reflection",
     "docx_paragraphs": 12,
     "docx_tables": 0,
     "pdf_pages": 1,

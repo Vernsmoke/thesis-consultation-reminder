@@ -12,7 +12,7 @@ FILES = [
     "activity-1-workload-models.md",
     "activity-2-deployment-review.md",
     "week-16-deployment-evaluation.md",
-    "reflection-preparation.md",
+    "reflection.md",
 ]
 
 spec = importlib.util.spec_from_file_location(
